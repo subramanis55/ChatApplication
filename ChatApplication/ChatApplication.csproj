@@ -32,8 +32,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DatabaseLibrary">
+      <HintPath>..\..\Database\MySQL\DatabaseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="GoLibrary">
+      <HintPath>..\..\Database\MySQL\GoLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\Database\MySQL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup">
+      <HintPath>..\..\Database\MySQL\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQLDatabase">
+      <HintPath>..\..\Database\MySQL\MySQLDatabase.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\Database\MySQL\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,31 +63,93 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ChatApplicationDatabaseManager.cs" />
+    <Compile Include="ChatApplicationNetworkManager.cs" />
+    <Compile Include="ChatU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChatU.designer.cs">
+      <DependentUpon>ChatU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DpPictureU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DpPictureU.Designer.cs">
+      <DependentUpon>DpPictureU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EllipseButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EllipseControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HoverButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HoverMessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="HoverMessageForm.designer.cs">
+      <DependentUpon>HoverMessageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="HoverMessageU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HoverMessageU.Designer.cs">
+      <DependentUpon>HoverMessageU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuControl.designer.cs">
+      <DependentUpon>MenuControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TcpTestForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="TextBox.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TcpTestForm.Designer.cs">
-      <DependentUpon>TcpTestForm.cs</DependentUpon>
+    <Compile Include="TextBox.Designer.cs">
+      <DependentUpon>TextBox.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ChatU.resx">
+      <DependentUpon>ChatU.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="DpPictureU.resx">
+      <DependentUpon>DpPictureU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoverMessageForm.resx">
+      <DependentUpon>HoverMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoverMessageU.resx">
+      <DependentUpon>HoverMessageU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuControl.resx">
+      <DependentUpon>MenuControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,9 +159,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TcpTestForm.resx">
-      <DependentUpon>TcpTestForm.cs</DependentUpon>
+    <EmbeddedResource Include="TextBox.resx">
+      <DependentUpon>TextBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -95,6 +176,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\happy_569501 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HluF7g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-align-left-19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-box-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chat-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-connection-status-on-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-create-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-done-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-done-14 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-guardian-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-guardian-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-phone-18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-phone-22 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-setting-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-star-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whatsapp-sixteen_nine.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginimage.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-24 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-24 %284%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
