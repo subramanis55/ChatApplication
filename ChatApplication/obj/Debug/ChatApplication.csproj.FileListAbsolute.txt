@@ -77,4 +77,3 @@ C:\Users\Lucid\source\repos\ChatApplication\ChatApplication\obj\Debug\ChatApplic
 C:\Users\Lucid\source\repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.exe
 C:\Users\Lucid\source\repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.pdb
 C:\Users\Lucid\source\repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.SAMPLEform.resources
-C:\Users\Lucid\source\repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache

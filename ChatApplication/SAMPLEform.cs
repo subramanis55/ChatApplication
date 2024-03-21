@@ -28,8 +28,9 @@ namespace ChatApplication
         private TcpClient Client;
         static List<TcpClient> clients = new List<TcpClient>();
         private TcpClient MClient;
-        private bool madan;
-        private bool subramani;
+        
+        private string selectedIP;
+        private int selectedSenterId;
 
 
         private void StartServerButton_Click(object sender, EventArgs e)
@@ -73,21 +74,33 @@ namespace ChatApplication
         }
 
 
-        private void ConnectButton_Click(object sender, EventArgs e)
+        private void ConnectMadan_Click(object sender, EventArgs e)
         {
             MClient = new TcpClient();
             MClient.Connect("192.168.3.59", 12345);
-            madan = true;subramani = false;
+            selectedIP = "192.168.3.59";
+            selectedSenterId = 1;
             Log("Connected to server.");
         }
         private void ConnectSubramani(object sender, EventArgs e)
         {
             MClient = new TcpClient();
             MClient.Connect("192.168.3.50", 12345);
+            selectedIP = "192.168.3.50";
+            selectedSenterId = 4;
 
             Log("Connected to server.");
+            
+        }
+        private void ConnectSiva(object sender, EventArgs e)
+        {
+            MClient = new TcpClient();
+            MClient.Connect("192.168.3.52", 12345);
+            selectedIP = "192.168.3.52";
+            selectedSenterId = 3;
 
-            madan = false; subramani = true;
+            Log("Connected to server.");
+            
         }
         private async void SendButton_Click(object sender, EventArgs e)
         {
@@ -109,7 +122,9 @@ namespace ChatApplication
             byte[] responseBuffer = new byte[1024];
             int bytesRead = await stream.ReadAsync(responseBuffer, 0, responseBuffer.Length);
             string response = Encoding.ASCII.GetString(responseBuffer, 0, bytesRead);
-            ChatApplicationDatabaseManager.CreateMessage();
+            //   public static bool CreateMessage(int fromID, int toID, DateTime dateAndTime, string message, string isGroup)
+            
+            ChatApplicationDatabaseManager.CreateMessage(2,selectedSenterId,DateTime.Now,LogTextBox.Text,"No");
            // Log($"Received: {response}");
         }
 
