@@ -12,6 +12,7 @@ namespace ChatApplication
     {
         protected override void OnPaint(PaintEventArgs args)
         {
+            args.Graphics.CompositingQuality = CompositingQuality.HighQuality;
             args.Graphics.SmoothingMode= SmoothingMode.AntiAlias;
         
             GraphicsPath path = new GraphicsPath();

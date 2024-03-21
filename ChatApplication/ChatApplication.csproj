@@ -65,6 +65,12 @@
   <ItemGroup>
     <Compile Include="ChatApplicationDatabaseManager.cs" />
     <Compile Include="ChatApplicationNetworkManager.cs" />
+    <Compile Include="ChatPageTitleBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChatPageTitleBar.Designer.cs">
+      <DependentUpon>ChatPageTitleBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChatU.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <Compile Include="TextBox.Designer.cs">
       <DependentUpon>TextBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChatPageTitleBar.resx">
+      <DependentUpon>ChatPageTitleBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChatU.resx">
       <DependentUpon>ChatU.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +254,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-add-24 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-18.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
