@@ -16,5 +16,16 @@ namespace ChatApplication
         {
             InitializeComponent();
         }
+
+        private void ChatPage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+           // ChatApplicationDatabaseManager c = new ChatApplicationDatabaseManager();
+            ChatApplicationDatabaseManager.DatabaseConnection();
+        }
     }
 }

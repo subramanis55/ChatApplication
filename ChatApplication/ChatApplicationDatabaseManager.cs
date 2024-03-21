@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace ChatApplication
 {
-    internal class ChatApplicationDatabaseManager
+    public class ChatApplicationDatabaseManager
     {
         public static DatabaseManager Manager;
         public static bool DatabaseConnection()
         {
 
-            Manager = new MySqlHandler("localhost", "root", "$uppu424*", "chatapplication");
+            Manager = new MySqlHandler("localhost", "root", "Kowshik#2003", "chatapplication");
             var result = Manager.Connect();
             if (result.Result == true)
             {
