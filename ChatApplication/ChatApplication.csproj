@@ -71,6 +71,12 @@
     <Compile Include="ChatFilter.Designer.cs">
       <DependentUpon>ChatFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChatSenter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChatSenter.Designer.cs">
+      <DependentUpon>ChatSenter.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChatU.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,6 +136,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SAMPLEform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +155,9 @@
     </Compile>
     <EmbeddedResource Include="ChatFilter.resx">
       <DependentUpon>ChatFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatSenter.resx">
+      <DependentUpon>ChatSenter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChatU.resx">
       <DependentUpon>ChatU.cs</DependentUpon>
@@ -168,14 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="SAMPLEform.resx">
       <DependentUpon>SAMPLEform.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +272,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-add-24 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-happy-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper-clip %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-happy-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-happy-601.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-happy-602.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send %283%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

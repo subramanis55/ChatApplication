@@ -54,7 +54,7 @@ namespace ChatApplication
         }
         public static bool CreateContactTable()
         {
-            string query = "CREATE TABLE CONTACT ( CONTACTID INT PRIMARY KEY AUTO_INCREMENT,   FIRSTNAME VARCHAR(50),    LASTNAME VARCHAR(50),  IPADDRESS VARCHAR(50));";
+            string query = "CREATE TABLE CONTACT ( CONTACTID INT PRIMARY KEY AUTO_INCREMENT,   FIRSTNAME VARCHAR(50),    LASTNAME VARCHAR(50),  IPADDRESS VARCHAR(50),LASTTIME DATETIME);";
             var result = Manager.ExecuteQuery(query);
             return result.Result;
         }
@@ -72,14 +72,14 @@ namespace ChatApplication
         }
 
         // contact Method
-        public static bool ContactCreate(string firstName,string lastName,string ipAddress) {
+        public static bool ContactCreate(string firstName,string lastName,string ipAddress,DateTime T) {
           
-          var result= Manager.InsertData("CONTACT", new ParameterData[] {new ParameterData("FIRSTNAME",firstName),new ParameterData("LASTNAME",lastName),new ParameterData("IPADDRESS", ipAddress) });
+          var result= Manager.InsertData("CONTACT", new ParameterData[] {new ParameterData("FIRSTNAME",firstName),new ParameterData("LASTNAME",lastName),new ParameterData("IPADDRESS", ipAddress),new ParameterData("LASTTIME",T) });
             return result.Result;
         }
-        public static bool ChangeContactName(int contactID,string firstName, string lastName)
+        public static bool ChangeContactName(int contactID,string firstName, string lastName, DateTime T)
         {
-            var result = Manager.UpdateData("CONTACT", $"CONTACTID={contactID}", new ParameterData[] { new ParameterData("FIRSTNAME", firstName), new ParameterData("LASTNAME", lastName) });
+            var result = Manager.UpdateData("CONTACT", $"CONTACTID={contactID}", new ParameterData[] { new ParameterData("FIRSTNAME", firstName), new ParameterData("LASTNAME", lastName),new ParameterData("LASTTIME", T) });
             return result.Result;
         }
         public static string GetContactFirstname(string ipAddress)
@@ -103,12 +103,14 @@ namespace ChatApplication
         //Message Method
         public static bool CreateMessage(int fromID,int toID,DateTime dateAndTime,string message,string isGroup)
         {
+
             var result = Manager.InsertData("MESSAGE", new ParameterData[] { new ParameterData("FROMID", fromID), new ParameterData("TOID", toID), new ParameterData("DATEANDTIME", dateAndTime), new ParameterData("MESSAGETEXT", message), new ParameterData("ISGROUP", isGroup) });
             return result.Result;
         } 
         public static bool DeleteMessage(int messageID)
         {
             var result = Manager.DeleteData("MESSAGE", $"WHERE={messageID}");
+            
             return result.Result;
         }
 

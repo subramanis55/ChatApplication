@@ -1,131 +1,194 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Sockets;
-using System.Text;
 using System.Windows.Forms;
 using System.Net;
+using System.Net.Configuration;
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Drawing;
+
+
+
 
 namespace ChatApplication
 {
     public partial class SAMPLEform : Form
     {
+        private static TcpListener listener;
+        private static TcpClient server;
+        private static TcpClient client;
+        private string selectedIP;
+        private int selectedSenterId;
+        private Thread ListenerThread;
+
         public SAMPLEform()
         {
+
+            ChatApplicationDatabaseManager.DatabaseConnection();
             InitializeComponent();
-            listener = new TcpListener(IPAddress.Any, 12345);
-            listener.Start();
+
+            ListenerThread = new Thread(StartServerConnection);
+            // ListenerThread.Start();
+            StartServerConnection();
             Log("Server started. Waiting for connections...");
 
             AcceptClient();
+
+
+
+            Checker();
+            
         }
-        private TcpListener listener;
-        private TcpClient Client;
-        static List<TcpClient> clients = new List<TcpClient>();
-        private TcpClient MClient;
-        
-        private string selectedIP;
-        private int selectedSenterId;
-
-
-        private void StartServerButton_Click(object sender, EventArgs e)
+        private async void Checker()
         {
-            //listener = new TcpListener(IPAddress.Any, 12345);
-            //listener.Start();
-            //Log("Server started. Waiting for connections...");
+            Task<bool> task1 = Task.Run(() => IsClientOnline("192.168.3.59", 12345));
+            Task<bool> task2 = Task.Run(() => IsClientOnline("192.168.3.52", 12345));
+            Task<bool> task3 = Task.Run(() => IsClientOnline("192.168.3.50", 12345));
 
-            //AcceptClient();
+            bool c1 = await task1;
+            bool c2 = await task2;
+            bool c3 = await task3;
+
+
+            
+           if (c1) Mathanbtn.BackColor = Color.LightGreen;
+           if (c2) SivaBtn.BackColor = Color.LightGreen;
+           if (c3) Subramanibtn.BackColor = Color.LightGreen;
+
+
+        }
+        public string GetPcIPAddress()
+        {
+            IPAddress[] iparray = Dns.GetHostAddresses(Dns.GetHostName());
+            foreach (IPAddress ip in iparray)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            return null;
+        }
+        public string GetSenter(string SenterIP)
+        {
+
+            if (SenterIP.Equals("192.168.3.59")) return "Mathan";
+            if (SenterIP.Equals("192.168.3.50")) return "Subramani";
+            if (SenterIP.Equals("192.168.3.62")) return "Siva Suriya";
+            return "";
+
+        }
+        //Server Connection for recieve Request
+
+        public void StartServerConnection()
+        {
+            listener = new TcpListener(IPAddress.Any, 12345);
+            listener.Start();
+            AcceptClient();
         }
 
-        private async void AcceptClient()
+        public async void AcceptClient()
         {
-            Client = await listener.AcceptTcpClientAsync();
-            clients.Add(Client);
-            Log("Client connected.");
-
+            client = await listener.AcceptTcpClientAsync();
             HandleClient();
         }
 
-        private async void HandleClient()
+        public async void HandleClient()
         {
-            NetworkStream stream = Client.GetStream();
-
+            NetworkStream stream = client.GetStream();
             byte[] buffer = new byte[1024];
             int bytesRead;
-
-            while ((bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+            string data;
+            try
             {
-                string data = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                Log($"Received: {data}");
-
-                // Echo back to the client
-                byte[] response = Encoding.ASCII.GetBytes("Server: " + data);
-                await stream.WriteAsync(response, 0, response.Length);
+                while ((bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+                {
+                    data = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+                    Log($"Received form {GetSenter(client.Client.RemoteEndPoint.ToString().Substring(0,12))} : {data}");
+                }
             }
+            catch
+            {
+                client.Close();
+            }
+                   
 
-            Client.Close();
-            Log("Client disconnected.");
-            AcceptClient(); // Wait for another client
+            AcceptClient();
         }
+
+        //Requset to Server for Connection
+
+        private static bool ConnectToServer(string ipAddress, int port)
+        {
+            server = new TcpClient();
+            server.Connect(ipAddress, port);
+            return true;
+        }
+
+
 
 
         private void ConnectMadan_Click(object sender, EventArgs e)
         {
-            MClient = new TcpClient();
-            MClient.Connect("192.168.3.59", 12345);
+            server = new TcpClient();
+            server.Connect("192.168.3.59", 12345);
             selectedIP = "192.168.3.59";
             selectedSenterId = 1;
-            Log("Connected to server.");
+            Log("Connected to Mathan server");
+            
         }
         private void ConnectSubramani(object sender, EventArgs e)
         {
-            MClient = new TcpClient();
-            MClient.Connect("192.168.3.50", 12345);
+            server = new TcpClient();
+            server.Connect("192.168.3.50", 12345);
             selectedIP = "192.168.3.50";
             selectedSenterId = 4;
 
-            Log("Connected to server.");
-            
+            Log("Connected to Subramani server");
+           
+
         }
-        private void ConnectSiva(object sender, EventArgs e)
+        private async void ConnectSiva(object sender, EventArgs e)
         {
-            MClient = new TcpClient();
-            MClient.Connect("192.168.3.52", 12345);
+            server = new TcpClient();
+            server.Connect("192.168.3.52", 8888);
             selectedIP = "192.168.3.52";
             selectedSenterId = 3;
 
-            Log("Connected to server.");
-            
-        }
-        private async void SendButton_Click(object sender, EventArgs e)
-        {
-            if (MClient == null || !MClient.Connected)
+            Log("Connected to Siva server.");
+            int bytesRead;
+            NetworkStream stream = server.GetStream();
+            byte[] buffer = new byte[1024];
+            while (true)
             {
-                MessageBox.Show("Not connected to the server.");
-                return;
+                while ((bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length)) != 0)
+                {
+                    string Message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+                    Log($"Received : {Message}");
+                }
             }
 
-            NetworkStream stream = MClient.GetStream();
-            string message = LogTextBox.Text;
+        }
+       
+        private async void SendButton_Click(object sender, EventArgs e)
+        {
+            if (!(server == null || !server.Connected))
+            {
+                NetworkStream stream = server.GetStream();
 
-            byte[] data = Encoding.ASCII.GetBytes(message);
-            await stream.WriteAsync(data, 0, data.Length);
+                byte[] data = Encoding.ASCII.GetBytes(LogTextBox.Text);
+                await stream.WriteAsync(data, 0, data.Length);
+                Log($"Sent to {GetSenter(selectedIP.ToString())}: "+LogTextBox.Text);
+                server.Close();
+            }
 
-            Log($"Sent: {message}");
 
-            // Receive response from server
-            byte[] responseBuffer = new byte[1024];
-            int bytesRead = await stream.ReadAsync(responseBuffer, 0, responseBuffer.Length);
-            string response = Encoding.ASCII.GetString(responseBuffer, 0, bytesRead);
-            //   public static bool CreateMessage(int fromID, int toID, DateTime dateAndTime, string message, string isGroup)
-            
-            ChatApplicationDatabaseManager.CreateMessage(2,selectedSenterId,DateTime.Now,LogTextBox.Text,"No");
-           // Log($"Received: {response}");
+            ChatApplicationDatabaseManager.CreateMessage(2, selectedSenterId, DateTime.Now, LogTextBox.Text, "No");
+           
         }
 
         private void Log(string message)
@@ -133,8 +196,24 @@ namespace ChatApplication
             MessageTextBox.AppendText(message + Environment.NewLine);
         }
 
+        private bool IsClientOnline(string ipAddress, int port)
+        {
+            try
+            {
+                using (TcpClient tempClient = new TcpClient())
+                {
+                    tempClient.Connect(ipAddress, port);
+                    return tempClient.Connected;
+                }
+            }
+            catch (SocketException)
+            {
+                // If an exception occurs (e.g., connection refused), consider the client offline
+                return false;
+            }
+        }
 
 
-        
+
     }
 }

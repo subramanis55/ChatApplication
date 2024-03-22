@@ -15,6 +15,7 @@ namespace ChatApplication
         public MainForm()
         {
             InitializeComponent();
+            chatSenter2.initialLocation = chatSenter2.Location;
         }
 
         private void ChatPage_Click(object sender, EventArgs e)
