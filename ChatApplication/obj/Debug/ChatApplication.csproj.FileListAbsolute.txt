@@ -1,0 +1,707 @@
+D:\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe.config
+D:\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe
+D:\ChatApplication\ChatApplication\bin\Debug\ChatApplication.pdb
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.exe
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.pdb
+D:\ChatApplication\ChatApplication\bin\Debug\DatabaseLibrary.dll
+D:\ChatApplication\ChatApplication\bin\Debug\GoLibrary.dll
+D:\ChatApplication\ChatApplication\bin\Debug\MySql.Data.dll
+D:\ChatApplication\ChatApplication\bin\Debug\MySqlBackup.dll
+D:\ChatApplication\ChatApplication\bin\Debug\MySQLDatabase.dll
+D:\ChatApplication\ChatApplication\bin\Debug\System.Data.SQLite.dll
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.exe.config
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+D:\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.AssemblyReference.cache
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.SuggestedBindingRedirects.cache
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.exe.config
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatAppl.565FB39C.Up2Date
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\ayyan\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\ayyan\source\repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.AssemblyReference.cache
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatAppl.565FB39C.Up2Date
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.exe.config
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.FilterChatsByU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\New folder\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.FilterChatsByU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\ayyan\Desktop\ProjectFiles\ChatApplication\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ProjectGit\ChatApplication\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\bin\Debug\ChatApplication.exe.config
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\bin\Debug\ChatApplication.exe
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\bin\Debug\ChatApplication.pdb
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.exe
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.pdb
+E:\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.MessageF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.profileImageViewF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-22-04-2024\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\ChatApplication.exe.config
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\ChatApplication.exe
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\ChatApplication.pdb
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.MessageF.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.profileImageViewF.resources
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.exe
+E:\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.MessageF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.profileImageViewF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactInformationF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupInformationF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\DatabaseLibrary.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\GoLibrary.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\MySql.Data.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\MySqlBackup.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\MySQLDatabase.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\System.Data.SQLite.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactInformationF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupInformationF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.MessageF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.profileImageViewF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ProfileSettingU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.SettingF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.SettingMenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatPageColor.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatWallPaper.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverButton.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-24-04-2024\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\DatabaseLibrary.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\GoLibrary.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\MySql.Data.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\MySqlBackup.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\MySQLDatabase.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\System.Data.SQLite.dll
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverButton.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatPageColor.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatWallPaper.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ProfileSettingU.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.SettingMenuControl.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactInformationF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupInformationF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.MessageF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.profileImageViewF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.SettingF.resources
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\Lucid\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverButton.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatPageColor.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatWallPaper.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ProfileSettingU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UControl.SettingMenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactInformationF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupInformationF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.MessageF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.profileImageViewF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.UForms.SettingF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-29-04-2024\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.HoverButton.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatPageColor.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatWallPaper.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.GroupChatU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ProfileSettingU.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.SettingMenuControl.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactInformationF.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupInformationF.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.MessageF.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.profileImageViewF.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.SettingF.resources
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\Lucid\Desktop\New folder (2)\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.HoverButton.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatPageColor.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatWallPaper.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.SettingMenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactInformationF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupInformationF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.MessageF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.profileImageViewF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.SettingF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.csproj.AssemblyReference.cache
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.HoverButton.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatPageColor.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatTitleU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.ChatWallPaper.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.HoverMessageU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UControl.SettingMenuControl.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactInformationF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupInformationF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.MessageF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.profileImageViewF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.UForms.SettingF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatAppl.565FB39C.Up2Date
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\ayyan\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.MessageDateU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-final-02-05-2024\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.HoverButton.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.ChatPageColor.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.ChatWallPaper.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.MessageDateU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.SettingMenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.ContactInformationF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.GroupInformationF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.MessageF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.profileImageViewF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.SettingF.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.csproj.CopyComplete
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.SelectedMessageOperationForm.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.StaredMessageContactU.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\ChatApplication.exe.config
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\ChatApplication.exe
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\ChatApplication.pdb
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.csproj.AssemblyReference.cache
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.HoverButton.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.NotificationForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.ChatPageColor.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.ChatWallPaper.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.ChatPageTitleU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.ChatU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.ContactListU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.ContactSimpleU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.ContactU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.CustomSearchBox.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.DpPictureU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.EditSheet.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.FilterChatByF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.HoverMessageForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.MessageDateU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.LoginForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.MainForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.MenuControl.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.Properties.Resources.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.TextBoxU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.SelectedMessageOperationForm.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.SettingMenuControl.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.StaredMessageContactU.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.ContactInformationF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.ContactListF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.GroupInformationF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.GroupMemberF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.MessageF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.profileImageViewF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UForms.SettingF.resources
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.csproj.GenerateResource.cache
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.csproj.CoreCompileInputs.cache
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatAppl.565FB39C.Up2Date
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.exe
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.pdb
+C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.GroupMenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.GroupMenuControl.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.TransparentForm2.resources

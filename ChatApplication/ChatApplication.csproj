@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AB6ACE0-E5CB-4906-B991-FC193BE206E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ChatApplication</RootNamespace>
+    <AssemblyName>ChatApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8-chat-100.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DatabaseLibrary">
+      <HintPath>..\..\Database\MySQL\DatabaseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="GoLibrary">
+      <HintPath>..\..\Database\MySQL\GoLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\Database\MySQL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup">
+      <HintPath>..\..\Database\MySQL\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQLDatabase">
+      <HintPath>..\..\Database\MySQL\MySQLDatabase.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\Database\MySQL\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonUserControl\NotificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserControl\NotificationForm.Designer.cs">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserControl\NotificationThrowManager.cs" />
+    <Compile Include="Manager\SettingManager.cs" />
+    <Compile Include="MessageConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageConfirmForm.designer.cs">
+      <DependentUpon>MessageConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransparentForm.Designer.cs">
+      <DependentUpon>TransparentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransparentForm2.Designer.cs">
+      <DependentUpon>TransparentForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\AddGroupSimpleU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\AddGroupSimpleU.Designer.cs">
+      <DependentUpon>AddGroupSimpleU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\ChatPageColor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ChatPageColor.designer.cs">
+      <DependentUpon>ChatPageColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\ChatSenter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ChatSenter.designer.cs">
+      <DependentUpon>ChatSenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\ChatUPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UControl\ChatWallPaper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ChatWallPaper.designer.cs">
+      <DependentUpon>ChatWallPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\CreateGroupPageU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\CreateGroupPageU.Designer.cs">
+      <DependentUpon>CreateGroupPageU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\FeaturesMethods.cs" />
+    <Compile Include="Manager\Classes\GroupMember.cs" />
+    <Compile Include="Manager\ChatApplicationDatabaseManager.cs" />
+    <Compile Include="Manager\ChatApplicationNetworkManager.cs" />
+    <Compile Include="Manager\FilesManager.cs" />
+    <Compile Include="Manager\QueueUnSentMessageManager.cs" />
+    <Compile Include="UControl\ChatPageTitleU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ChatPageTitleU.Designer.cs">
+      <DependentUpon>ChatPageTitleU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ContactsManager.cs" />
+    <Compile Include="Manager\GroupsManager.cs" />
+    <Compile Include="Manager\MessagesManager.cs" />
+    <Compile Include="UControl\ChatU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ChatU.designer.cs">
+      <DependentUpon>ChatU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Classes\Contact.cs" />
+    <Compile Include="UControl\ContactListU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ContactListU.Designer.cs">
+      <DependentUpon>ContactListU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\ContactSimpleU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ContactSimpleU.Designer.cs">
+      <DependentUpon>ContactSimpleU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\ContactU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ContactU.Designer.cs">
+      <DependentUpon>ContactU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserControl\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonUserControl\CustomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonUserControl\CustomSearchBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonUserControl\CustomSearchBox.designer.cs">
+      <DependentUpon>CustomSearchBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserControl\CustomTooltip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonUserControl\DpPictureU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonUserControl\DpPictureU.Designer.cs">
+      <DependentUpon>DpPictureU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserControl\EllipseButton.cs" />
+    <Compile Include="CommonUserControl\EllipseControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UControl\EditSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UControl\EditSheet.Designer.cs">
+      <DependentUpon>EditSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\FilterChatsByU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UControl\FilterChatsByU.Designer.cs">
+      <DependentUpon>FilterChatsByU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Classes\Group.cs" />
+    <Compile Include="CommonUserControl\HoverButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonUserControl\HoverMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserControl\HoverMessageForm.designer.cs">
+      <DependentUpon>HoverMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserControl\HoverMessageU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonUserControl\HoverMessageU.Designer.cs">
+      <DependentUpon>HoverMessageU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\GroupMenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\GroupMenuControl.Designer.cs">
+      <DependentUpon>GroupMenuControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\MenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\MenuControl.designer.cs">
+      <DependentUpon>MenuControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Classes\Message.cs" />
+    <Compile Include="CommonUserControl\PlaceHolderTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommonUserControl\TextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonUserControl\TextBox.Designer.cs">
+      <DependentUpon>TextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\SelectedMessageOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UControl\SelectedMessageOperationForm.Designer.cs">
+      <DependentUpon>SelectedMessageOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\SettingMenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\SettingMenuControl.Designer.cs">
+      <DependentUpon>SettingMenuControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\StaredMessageContactU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\StaredMessageContactU.Designer.cs">
+      <DependentUpon>StaredMessageContactU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UForms\ContactInformationF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UForms\ContactInformationF.Designer.cs">
+      <DependentUpon>ContactInformationF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UForms\ContactListF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UForms\ContactListF.Designer.cs">
+      <DependentUpon>ContactListF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UForms\GroupInformationF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UForms\GroupInformationF.Designer.cs">
+      <DependentUpon>GroupInformationF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UForms\GroupMemberF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UForms\GroupMemberF.Designer.cs">
+      <DependentUpon>GroupMemberF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UForms\MessageF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UForms\MessageF.Designer.cs">
+      <DependentUpon>MessageF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UForms\profileImageViewF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UForms\profileImageViewF.Designer.cs">
+      <DependentUpon>profileImageViewF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UForms\SettingF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UForms\SettingF.Designer.cs">
+      <DependentUpon>SettingF.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CommonUserControl\HoverButton.resx">
+      <DependentUpon>HoverButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserControl\NotificationForm.resx">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageConfirmForm.resx">
+      <DependentUpon>MessageConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransparentForm.resx">
+      <DependentUpon>TransparentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransparentForm2.resx">
+      <DependentUpon>TransparentForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\AddGroupSimpleU.resx">
+      <DependentUpon>AddGroupSimpleU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ChatPageColor.resx">
+      <DependentUpon>ChatPageColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ChatSenter.resx">
+      <DependentUpon>ChatSenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ChatWallPaper.resx">
+      <DependentUpon>ChatWallPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\CreateGroupPageU.resx">
+      <DependentUpon>CreateGroupPageU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ChatPageTitleU.resx">
+      <DependentUpon>ChatPageTitleU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ChatU.resx">
+      <DependentUpon>ChatU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ContactListU.resx">
+      <DependentUpon>ContactListU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ContactSimpleU.resx">
+      <DependentUpon>ContactSimpleU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ContactU.resx">
+      <DependentUpon>ContactU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserControl\CustomSearchBox.resx">
+      <DependentUpon>CustomSearchBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserControl\DpPictureU.resx">
+      <DependentUpon>DpPictureU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\EditSheet.resx">
+      <DependentUpon>EditSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\FilterChatsByU.resx">
+      <DependentUpon>FilterChatsByU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserControl\HoverMessageForm.resx">
+      <DependentUpon>HoverMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserControl\HoverMessageU.resx">
+      <DependentUpon>HoverMessageU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\GroupMenuControl.resx">
+      <DependentUpon>GroupMenuControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\MenuControl.resx">
+      <DependentUpon>MenuControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="CommonUserControl\TextBox.resx">
+      <DependentUpon>TextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\SelectedMessageOperationForm.resx">
+      <DependentUpon>SelectedMessageOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\SettingMenuControl.resx">
+      <DependentUpon>SettingMenuControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\StaredMessageContactU.resx">
+      <DependentUpon>StaredMessageContactU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UForms\ContactInformationF.resx">
+      <DependentUpon>ContactInformationF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UForms\ContactListF.resx">
+      <DependentUpon>ContactListF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UForms\GroupInformationF.resx">
+      <DependentUpon>GroupInformationF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UForms\GroupMemberF.resx">
+      <DependentUpon>GroupMemberF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UForms\MessageF.resx">
+      <DependentUpon>MessageF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UForms\profileImageViewF.resx">
+      <DependentUpon>profileImageViewF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UForms\SettingF.resx">
+      <DependentUpon>SettingF.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\happy_569501 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HluF7g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-box-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chat-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-connection-status-on-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-done-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-done-14 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-guardian-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-guardian-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-phone-18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-phone-22 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-setting-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-star-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginimage.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-24 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-24 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-align-left-191.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-create-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-01-27 125613.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-01-27 130201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-align-left-19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-contact-28 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-contact-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block-user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-double-tick-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-double-tick-15 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double-check %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\read.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-male-user-group-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people %285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groups.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-male-user-group-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-male-user-group-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile-user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-book-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-book-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-25 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-avatar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ErrorIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InformationIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuccessIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-box-move-left-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chat-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8-chat-100.ico" />
+    <None Include="Resources\SelectIcon.png" />
+    <None Include="Resources\ArchivedIcon.png" />
+    <None Include="Resources\AddArchiveIcon.png" />
+    <None Include="Resources\AddToArchivedIcon.png" />
+    <None Include="Resources\AddToArchivedIcon1.png" />
+    <Content Include="Resources\bin.png" />
+    <None Include="Resources\RefreshIcon %282%29.png" />
+    <None Include="Resources\RefreshIcon.png" />
+    <None Include="Resources\WhiteDoubleTick.png" />
+    <None Include="Resources\WhiteSingleTick.png" />
+    <None Include="Resources\SentIconBlack.png" />
+    <None Include="Resources\SentIconWhite.png" />
+    <None Include="Resources\send %283%29.png" />
+    <None Include="Resources\paper-clip %283%29.png" />
+    <None Include="Resources\bin1.png" />
+    <Content Include="Resources\chat-balloons.png" />
+    <None Include="Resources\open-file1.png" />
+    <None Include="Resources\chat-balloons1.png" />
+    <None Include="Resources\chatPageBackground.jpg" />
+    <None Include="Resources\CloseChatIcon.png" />
+    <None Include="Resources\CloseChatIcon1.png" />
+    <Content Include="Resources\CopyIcon.png" />
+    <None Include="Resources\copy1.png" />
+    <None Include="Resources\icons8-information-24.png" />
+    <None Include="Resources\edit-24-Black.png" />
+    <None Include="Resources\icons8-edit-18.png" />
+    <None Include="Resources\edit-24-Black1.png" />
+    <None Include="Resources\FileIcon.png" />
+    <None Include="Resources\icons8-attachment-24.png" />
+    <None Include="Resources\icons8-file-48.png" />
+    <None Include="Resources\FileImageBlack.png" />
+    <None Include="Resources\FolderIcon.png" />
+    <None Include="Resources\Icon_Blue.png" />
+    <None Include="Resources\Icon_Yellow.png" />
+    <None Include="Resources\Icon_Purple.png" />
+    <None Include="Resources\Icon_LightGreen.png" />
+    <None Include="Resources\Icon_Yellow.ico" />
+    <None Include="Resources\Icon_Purple.ico" />
+    <None Include="Resources\Icon_Blue.ico" />
+    <None Include="Resources\Icon_LightGreen.ico" />
+    <None Include="Resources\Icon_SkyBlue.png" />
+    <None Include="Resources\EditProfileDpIcon.png" />
+    <None Include="Resources\EditProfileDpIcon %282%29.png" />
+    <None Include="Resources\icons8-delete-24.png" />
+    <Content Include="Resources\open-file.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
