@@ -343,7 +343,7 @@ namespace ChatApplication
             {
                 if (endPoint < (((Height / 4) - 2) * 3))
                 {
-                    endPoint = endPoint + Height / 5;
+                    endPoint = endPoint + Height / 4;
                     Invalidate();
                 }
                 else
@@ -358,7 +358,7 @@ namespace ChatApplication
             {
                 if (startPoint > (Height / 4 + 2))
                 {
-                    startPoint = startPoint - Height / 5;
+                    startPoint = startPoint - Height / 4;
                     Invalidate();
                 }
                 else
@@ -377,7 +377,7 @@ namespace ChatApplication
             {
                 if (startPoint > -3)
                 {
-                    startPoint = startPoint - Height / 5;
+                    startPoint = startPoint - Height / 4;
                     Invalidate();
                 }
                 else
@@ -394,7 +394,7 @@ namespace ChatApplication
             {
                 if (endPoint < Height)
                 {
-                    endPoint = endPoint + Height / 5;
+                    endPoint = endPoint + Height / 4;
                     Invalidate();
                 }
                 else

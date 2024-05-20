@@ -230,6 +230,36 @@ namespace ChatApplication
             if (contactDpPicturePB.Image != null)
                 contactDpPicturePB.Image.Dispose();
         }
+        public Form InformationForm;
+        private void nameLBEnter(object sender, EventArgs e)
+        {
+            Point point = nameLB.PointToScreen(new Point(0, 0));
 
+
+            if (IsGroup)
+            {
+                GroupInformationF groupInformationF = new GroupInformationF(Group);
+                groupInformationF.Location = new Point(point.X, point.Y + 25);
+                groupInformationF.Show();
+                InformationForm = groupInformationF;
+            }
+            else
+            {
+
+                ContactInformationF contactInformationF = new ContactInformationF(Contact);
+                contactInformationF.Location = new Point(point.X, point.Y + 25);
+                contactInformationF.Show();
+                InformationForm = contactInformationF;
+            }
+
+        }
+
+        private void nameLBLeave(object sender, EventArgs e)
+        {
+            if (InformationForm != null)
+            {
+                InformationForm.Dispose();
+            }
+        }
     }
 }

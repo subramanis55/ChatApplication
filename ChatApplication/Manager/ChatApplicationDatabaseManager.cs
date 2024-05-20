@@ -196,7 +196,7 @@ namespace ChatApplication
         }
         public static bool CreateSettingTable()
         {
-            var result = Manager.CreateTable("SETTING", new ColumnDetails[] { new ColumnDetails("CHATPAGEBACKGROUNDCOLOR", BaseDatatypes.VARCHAR, length: 20), new ColumnDetails("THEMENUMBER", BaseDatatypes.INT, notNull: true) });
+            var result = Manager.CreateTable("SETTING", new ColumnDetails[] { new ColumnDetails("CHATPAGEBACKGROUNDCOLOR", BaseDatatypes.VARCHAR, length: 20), new ColumnDetails("THEMENUMBER", BaseDatatypes.INT, notNull: true), new ColumnDetails("MUTETHEMESSAGENOTIFICATION", BaseDatatypes.BOOLEAN, notNull: true) });
             SettingManager.InsertSettingValues(Color.FromArgb(250, 246, 243), 0);
             return result.Result;
         }

@@ -36,6 +36,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.accountPage = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.deleteAllMessagesBtn = new ChatApplication.EllipseButton();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -71,6 +74,8 @@
             this.panel5.SuspendLayout();
             this.accountPage.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel3.SuspendLayout();
             this.aboutPage.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -117,7 +122,7 @@
             this.chatWallPaperColorChangeU.BackColor = System.Drawing.Color.White;
             this.chatWallPaperColorChangeU.Dock = System.Windows.Forms.DockStyle.Top;
             this.chatWallPaperColorChangeU.Location = new System.Drawing.Point(0, 59);
-            this.chatWallPaperColorChangeU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chatWallPaperColorChangeU.Margin = new System.Windows.Forms.Padding(4);
             this.chatWallPaperColorChangeU.Name = "chatWallPaperColorChangeU";
             this.chatWallPaperColorChangeU.Size = new System.Drawing.Size(299, 240);
             this.chatWallPaperColorChangeU.TabIndex = 3;
@@ -157,14 +162,44 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.deleteAllMessagesBtn);
-            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.panel12);
+            this.panel4.Controls.Add(this.panel11);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 59);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 15);
+            this.panel4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.panel4.Size = new System.Drawing.Size(299, 378);
             this.panel4.TabIndex = 2;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.label9);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(5, 117);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(294, 117);
+            this.panel12.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gray;
+            this.label9.Location = new System.Drawing.Point(12, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 17);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Mute the Messages";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.deleteAllMessagesBtn);
+            this.panel11.Controls.Add(this.label5);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(5, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(294, 117);
+            this.panel11.TabIndex = 2;
             // 
             // deleteAllMessagesBtn
             // 
@@ -178,7 +213,7 @@
             this.deleteAllMessagesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteAllMessagesBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteAllMessagesBtn.ForeColor = System.Drawing.Color.Red;
-            this.deleteAllMessagesBtn.Location = new System.Drawing.Point(64, 55);
+            this.deleteAllMessagesBtn.Location = new System.Drawing.Point(55, 55);
             this.deleteAllMessagesBtn.Name = "deleteAllMessagesBtn";
             this.deleteAllMessagesBtn.Size = new System.Drawing.Size(152, 35);
             this.deleteAllMessagesBtn.SlowMotionInterval = 5;
@@ -192,7 +227,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(21, 21);
+            this.label5.Location = new System.Drawing.Point(12, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(209, 17);
             this.label5.TabIndex = 0;
@@ -470,7 +505,7 @@
             this.ThemePage.Controls.Add(this.themeCB);
             this.ThemePage.Controls.Add(this.panel10);
             this.ThemePage.Location = new System.Drawing.Point(4, 9);
-            this.ThemePage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ThemePage.Margin = new System.Windows.Forms.Padding(2);
             this.ThemePage.Name = "ThemePage";
             this.ThemePage.Size = new System.Drawing.Size(299, 437);
             this.ThemePage.TabIndex = 4;
@@ -481,7 +516,7 @@
             this.themeCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.themeCB.FormattingEnabled = true;
             this.themeCB.Location = new System.Drawing.Point(45, 86);
-            this.themeCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.themeCB.Margin = new System.Windows.Forms.Padding(2);
             this.themeCB.Name = "themeCB";
             this.themeCB.Size = new System.Drawing.Size(207, 28);
             this.themeCB.TabIndex = 2;
@@ -515,7 +550,7 @@
             // 
             this.settingMenuControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.settingMenuControl.Location = new System.Drawing.Point(0, 0);
-            this.settingMenuControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.settingMenuControl.Margin = new System.Windows.Forms.Padding(4);
             this.settingMenuControl.Name = "settingMenuControl";
             this.settingMenuControl.Size = new System.Drawing.Size(143, 450);
             this.settingMenuControl.TabIndex = 4;
@@ -544,7 +579,10 @@
             this.panel5.PerformLayout();
             this.accountPage.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.aboutPage.ResumeLayout(false);
@@ -604,5 +642,8 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox themeCB;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel11;
     }
 }

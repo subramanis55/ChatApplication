@@ -554,7 +554,7 @@ namespace ChatApplication
 
         private void SentBtnClick(object sender, EventArgs e)
         {
-            if ((this.Contact != null || this.Group != null) && messageTB.Text != "")
+            if ((this.Contact != null || this.Group != null) && messageTB.Text != "" && messageTB.Text != "\n")
             {
                 sendingText = messageTB.Text;
                 MessageSent();
@@ -1206,6 +1206,7 @@ namespace ChatApplication
             if (e.KeyCode == Keys.Enter)
             {
                 SentBtnClick((object)sentBtn, EventArgs.Empty);
+                messageTB.Text = "";
                 messageTB.TabIndex = 0;
             }
           

@@ -18,6 +18,7 @@ namespace ChatApplication.Manager
         public static Color SecontroyThemeColor= ColorTranslator.FromHtml("#B8FBC7");
         public static Color FontThemeColor = Color.Black;
         public static int ThemeNumber=0;
+        public static bool IsMuteTheMessageNotification = false;
         public static void SettingSetUP(){
             ChatPageBackGroundColor = getChatPageBackGroundColor();
             ThemeNumber = getTheme();
@@ -28,6 +29,7 @@ namespace ChatApplication.Manager
             PrimaryThemeColor= ThemeColorList["PrimaryColor"][ThemeNumber];
             SecontroyThemeColor = ThemeColorList["SecondaryColor"][ThemeNumber];
             FontThemeColor= ThemeColorList["FontColor"][ThemeNumber];
+            IsMuteTheMessageNotification = getMuteMessageNotification();
             ThemeSetUpInvoke?.Invoke(new object(),EventArgs.Empty);
         }
         public static bool ChangeChatPageBackGroundColor(Color color){
@@ -35,6 +37,18 @@ namespace ChatApplication.Manager
             ChatPageBackGroundColor = color;
             return result.Result;
         }
+        public static bool ChangeMuteMessageNotification(bool value)
+        {
+            var result = DatabaseManager.Manager.UpdateData("SETTING", "", new ParameterData("MUTETHEMESSAGENOTIFICATION", value));
+            IsMuteTheMessageNotification = value;
+            return result.Result;
+        }
+        public static bool getMuteMessageNotification()
+        {
+            var result = DatabaseManager.Manager.FetchSingleData("SETTING", "MUTETHEMESSAGENOTIFICATION", "");
+            return (bool)result.Value;
+        }
+     
         public static Color getChatPageBackGroundColor()
         {
             var result = DatabaseManager.Manager.FetchSingleData("SETTING", "CHATPAGEBACKGROUNDCOLOR", "" );
@@ -48,7 +62,7 @@ namespace ChatApplication.Manager
         }
         public static bool InsertSettingValues(Color color,int themeNumber)
         {
-            var result = DatabaseManager.Manager.InsertData("SETTING", new ParameterData("CHATPAGEBACKGROUNDCOLOR", ColorTranslator.ToHtml(color)), new ParameterData("THEMENUMBER", themeNumber));
+            var result = DatabaseManager.Manager.InsertData("SETTING", new ParameterData("CHATPAGEBACKGROUNDCOLOR", ColorTranslator.ToHtml(color)), new ParameterData("THEMENUMBER", themeNumber), new ParameterData("MUTETHEMESSAGENOTIFICATION", false));
             return result.Result;
         }
         public static bool ChangeTheme(int themeNumber)
