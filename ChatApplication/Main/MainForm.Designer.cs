@@ -134,6 +134,7 @@
             this.chatPageSearchBox.BackColor = System.Drawing.Color.White;
             this.chatPageSearchBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(69)))), ((int)(((byte)(96)))));
             this.chatPageSearchBox.BorderSize = 4;
+            this.chatPageSearchBox.IsPlaceholder = true;
             this.chatPageSearchBox.IsSearchIconVisible = false;
             this.chatPageSearchBox.IsUnderLine = true;
             this.chatPageSearchBox.Location = new System.Drawing.Point(34, 12);

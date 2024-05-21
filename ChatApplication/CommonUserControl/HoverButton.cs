@@ -22,7 +22,7 @@ namespace ChatApplication
         private bool isSelected;
         private int startPoint = -3;
         private int endPoint = -3;
-        private int newMessageContactCount=0;
+        private int unreadMessageContactCount=0;
         System.Windows.Forms.Timer timer;
 
         public bool IsSelected
@@ -44,16 +44,16 @@ namespace ChatApplication
                 Invalidate();
             }
         }
-        public int NewMessageContactCount
+        public int UnreadMessageContactCount
         {
             get
             {
-                return newMessageContactCount;
+                return unreadMessageContactCount;
 
             }
             set
             {
-                newMessageContactCount = value;
+                unreadMessageContactCount = value;
                 Invalidate();
             }
         }
@@ -230,51 +230,39 @@ namespace ChatApplication
             base.OnPaint(args);
             var e = args.Graphics;
             GraphicsPath path1 = GetFigurePath();
-            //GraphicsPath path2 = GetNewMessagedContactCountFigurePath();
-          
-            //    if (NewMessageCount != 0)
-            //    {
+            RectangleF rectangleF;
 
-            //        e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-            //        using (SolidBrush p = new SolidBrush(newMessageColor))
 
-            //        {
-            //            SizeF newMessageCountSize;
-            //            if (newMessageCount > 999)
-            //                newMessageCountSize = e.Graphics.MeasureString(100000 + "", new Font("Segoe UI", 10, FontStyle.Bold));
-            //            else
-            //                newMessageCountSize = e.Graphics.MeasureString(newMessageCount + "100", new Font("Segoe UI", 10, FontStyle.Bold));
+            if (unreadMessageContactCount != 0)
+            {
+                SizeF newMessageCountSize = e.MeasureString(unreadMessageContactCount + "100", new Font("Segoe UI", 8, FontStyle.Bold));
+                e.SmoothingMode = SmoothingMode.AntiAlias;
+                using (SolidBrush p = new SolidBrush(SettingManager.PrimaryThemeColor))
+                {
 
-            //            RectangleF rectangleF;
-            //            if (newMessageCount > 999)
-            //            {
-            //                rectangleF = new RectangleF(timeP.Width - newMessageCountSize.Width - 10, timeP.Height - newMessageCountSize.Height - 10, newMessageCountSize.Width - 5, newMessageCountSize.Height - 2);
-            //                e.FillPath(p, GetFigurePath(rectangleF, newMessageCountSize.Height - 1));
-            //                e.DrawString("999+", new Font("Segoe UI", 9, FontStyle.Bold), new SolidBrush(Color.White), new PointF(rectangleF.X + 11, rectangleF.Y + 1));
-            //            }
+                    if (unreadMessageContactCount > 99)
+                    {
+                        newMessageCountSize= e.MeasureString( "99+", new Font("Segoe UI", 8, FontStyle.Bold));
+                        rectangleF = new RectangleF(Width - newMessageCountSize.Width - 9,  4, newMessageCountSize.Width - 5, newMessageCountSize.Height - 2);
+                        e.FillPath(p, GetFigurePath(rectangleF, newMessageCountSize.Height - 1));
+                        e.DrawString(99+"+", new Font("Segoe UI", 9, FontStyle.Bold), new SolidBrush(Color.White), new PointF(rectangleF.X + 12, rectangleF.Y + 1));
+                    }
+                    else if (unreadMessageContactCount > 9)
+                    {
+                        rectangleF = new RectangleF(Width - newMessageCountSize.Width - 9, 4, newMessageCountSize.Width - 5, newMessageCountSize.Height - 2);
+                        e.FillPath(p, GetNewMessagedContactCountFigurePath(rectangleF, newMessageCountSize.Height - 1));
+                        e.DrawString(unreadMessageContactCount + "", new Font("Segoe UI", 9, FontStyle.Bold), new SolidBrush(Color.White), new PointF(rectangleF.X + 8, rectangleF.Y + 1));
+                    }
+                    else
+                    {
+                        rectangleF = new RectangleF(Width - newMessageCountSize.Width - 9, 4, newMessageCountSize.Width - 5, newMessageCountSize.Height - 2);
+                        e.FillPath(p, GetFigurePath(rectangleF, newMessageCountSize.Height - 1));
+                        e.DrawString(unreadMessageContactCount + "", new Font("Segoe UI", 9, FontStyle.Bold), new SolidBrush(Color.White), new PointF(rectangleF.X + 9, rectangleF.Y + 1));
+                    }
 
-            //            else if (newMessageCount > 99)
-            //            {
-            //                rectangleF = new RectangleF(timeP.Width - newMessageCountSize.Width - 9, timeP.Height - newMessageCountSize.Height - 10, newMessageCountSize.Width - 5, newMessageCountSize.Height - 2);
-            //                e.FillPath(p, GetFigurePath(rectangleF, newMessageCountSize.Height - 1));
-            //                e.DrawString(newMessageCount + "", new Font("Segoe UI", 9, FontStyle.Bold), new SolidBrush(Color.White), new PointF(rectangleF.X + 12, rectangleF.Y + 1));
-            //            }
-            //            else if (newMessageCount > 9)
-            //            {
-            //                rectangleF = new RectangleF(timeP.Width - newMessageCountSize.Width - 10, timeP.Height - newMessageCountSize.Height - 10, newMessageCountSize.Width - 4, newMessageCountSize.Height - 2);
-            //                e.Graphics.FillPath(p, GetFigurePath(rectangleF, newMessageCountSize.Height - 1));
-            //                e.DrawString(newMessageCount + "", new Font("Segoe UI", 9, FontStyle.Bold), new SolidBrush(Color.White), new PointF(rectangleF.X + 8, rectangleF.Y + 1));
-            //            }
-            //            else
-            //            {
-            //                rectangleF = new RectangleF(timeP.Width - newMessageCountSize.Width - 14, timeP.Height - newMessageCountSize.Height - 10, newMessageCountSize.Width + 3, newMessageCountSize.Height);
-            //                e.FillPath(p, GetFigurePath(rectangleF, newMessageCountSize.Height - 1));
-            //                e.DrawString(newMessageCount + "", new Font("Segoe UI", 9, FontStyle.Bold), new SolidBrush(Color.White), new PointF(rectangleF.X + 9, rectangleF.Y + 1));
-            //            }
-                      
-            //        }
-       
-            using (SolidBrush brush = new SolidBrush(ButtonSideHoverlineColor))
+                }
+            }
+                using (SolidBrush brush = new SolidBrush(ButtonSideHoverlineColor))
             {
                 e.FillPath(brush, path1);
             }

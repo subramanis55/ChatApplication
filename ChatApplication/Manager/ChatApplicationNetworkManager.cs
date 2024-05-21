@@ -174,6 +174,7 @@ namespace ChatApplication
                     if (client != null)
                     {
                         Contact contact = ContactsManager.getContactByIpAddress(((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString());
+                        
                         contact.IsOnline = false;
                         OnlineStatusInvoke?.Invoke(new object(), contact);
                         NetworkStreamClientDictionary.Remove(((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString());

@@ -21,6 +21,8 @@ namespace ChatApplication
         public static bool IsConnectedToServer;
         public static string LocalDataBaseName = "ChatApplication";
         public static string ServerDataBaseName = "ChatApplication";
+        public static string LocalDataBasePassword = "";
+        public static string ServerDataBasePassword = "";
         public static bool DataBaseSetUp()
         {
             DefaultDatabaseCreateConnection();
@@ -124,7 +126,7 @@ namespace ChatApplication
         public static bool ChatApplicationServerConnection()
         {
 
-            var result = Manager.ChangeConnection($"{NetworkManager.PcIpAddress}", "root", "", ServerDataBaseName);
+            var result = Manager.ChangeConnection($"{NetworkManager.ServerIpAddress}", "root", ServerDataBasePassword, ServerDataBaseName);
             Manager.Connect();
             if (result.Result)
                 IsConnectedToServer = true;
@@ -132,7 +134,7 @@ namespace ChatApplication
         }
         public static bool ChatApplicationLocalConnection()
         {
-            var result = Manager.ChangeConnection($"{NetworkManager.PcIpAddress}", "root", "", LocalDataBaseName);
+            var result = Manager.ChangeConnection($"localhost", "root", LocalDataBasePassword, LocalDataBaseName);
             Manager.Connect();
             if (result.Result)
                 IsConnectedToServer = false;
@@ -148,7 +150,7 @@ namespace ChatApplication
         }
         public static bool DatabaseChangeConnection(string dataBaseName)
         {
-            var result = Manager.ChangeConnection($"{NetworkManager.PcIpAddress}", "root", "", dataBaseName);
+            var result = Manager.ChangeConnection($"localhost", "root", "", dataBaseName);
             if (result.Result)
                 IsConnectedToServer = false;
             return result.Result;

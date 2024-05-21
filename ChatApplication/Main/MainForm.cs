@@ -1330,6 +1330,7 @@ namespace ChatApplication
                 ((ContactU)contactU.Value).Dispose();
             }
             ContactUDictionary.Clear();
+            DatabaseManager.DataBaseTablesUpdateFromServer();
             ContactsManager.ContactManagerSetup();
             GroupsManager.GroupsManagerSetUp();
             AlreadyExitsMessagedContactsCreate();
