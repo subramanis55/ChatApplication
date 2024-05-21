@@ -89,6 +89,7 @@ namespace ChatApplication.UForms
             InitializeComponent();
             KeyPreview = true;
             groupMainTabControl.SelectedTab = overviewPage;
+            groupMainTabControl.ItemSize = new Size(0, 1);
             KeyDown += FormKeyDown;
             // theme SetUp
             addGroupMemberNextBtn.BackColor = SettingManager.PrimaryThemeColor;
@@ -175,7 +176,7 @@ namespace ChatApplication.UForms
         }
         private void groupNameTBKeyDown(object sender, KeyEventArgs e)
         {
-            if (groupNameTB.Enabled == true && e.KeyCode == Keys.Enter)
+            if (groupNameTB.Enabled == true && e.KeyCode == Keys.Enter&& groupNameTB.Text!="")
             {
                 groupNameTBEditBtn.Visible = true;
                 groupNameTB.Enabled = false;

@@ -124,11 +124,6 @@ namespace ChatApplication.Manager
             var result = DatabaseManager.Manager.UpdateData("CONTACTS", $"HOSTNAME='{hostName}'", new ParameterData[] { new ParameterData("FIRSTNAME", firstName) });
             return result.Result;
         }
-        //public static bool ChangeContactDpPicture(string hostName, string dpPicture)
-        //{
-        //    var result = DatabaseManager.Manager.UpdateData("CONTACTS", $"HOSTNAME='{hostName}'", new ParameterData[] { new ParameterData("DPPICTURE", dpPicture) });
-        //    return result.Result;
-        //}
         public static bool ChangeContactLastName(string hostName, string lastName)
         {
             var result = DatabaseManager.Manager.UpdateData("CONTACTS", $"HOSTNAME='{hostName}'", new ParameterData[] { new ParameterData("LASTNAME", lastName) });
@@ -198,6 +193,8 @@ namespace ChatApplication.Manager
             }
             return temp_Conatctlist;
         }
+
+        //DataGetFromListMethods
         public static bool IsContactExistsinContactsList(string hostName)
         {
             for (int i = 0; i < Contacts_list.Count; i++)
@@ -248,7 +245,6 @@ namespace ChatApplication.Manager
 
                     return true;
                 }
-
             }
             ContactsManager.MessagedContacts_list.Add(contact);
             return false;

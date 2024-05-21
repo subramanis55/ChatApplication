@@ -20,7 +20,6 @@ namespace ChatApplication
         public LoginForm()
         {
             InitializeComponent();
-
             //Theme Setup
             loginTopP.BackColor = SettingManager.PrimaryThemeColor;
             nextBtn.BackColor = SettingManager.PrimaryThemeColor;
@@ -35,7 +34,8 @@ namespace ChatApplication
 
         private void LastNameTBTextChanged(object sender, EventArgs e)
         {
-            if(lastNameTB.TextBoxtext.Length>16){
+            if (lastNameTB.TextBoxtext.Length > 16)
+            {
                 lastnameErrorLB.Visible = true;
                 lastnameErrorLB.Text = "Lastname should be\n less  than 16 character";
             }
@@ -57,7 +57,7 @@ namespace ChatApplication
                 firstnameErrorLB.Visible = true;
                 firstnameErrorLB.Text = "Firstname should be\n less than  16 character";
             }
-            else if(firstNameTB.TextBoxtext.Length==0)
+            else if (firstNameTB.TextBoxtext.Length == 0)
             {
                 firstnameErrorLB.Visible = true;
                 firstnameErrorLB.Text = "Enter the firstname";
@@ -70,24 +70,22 @@ namespace ChatApplication
 
         private void LoginFormLoad(object sender, EventArgs e)
         {
-            ipAddressLB.Text += NetworkManager.PcHostName+" : "+ NetworkManager.PcIpAddress;
+            ipAddressLB.Text += NetworkManager.PcHostName + " : " + NetworkManager.PcIpAddress;
             LoginFormResize(this, EventArgs.Empty);
         }
         private void ImagePathGet(object sender, string imagePath)
         {
             dpPicturePath = imagePath;
         }
-        private void ErrorLabelEmpty(object sender, EventArgs e){
-
-        }
+      
         private void NextBtnClick(object sender, EventArgs e)
         {
             // contact create
-          if(lastnameErrorLB.Visible==false&& firstnameErrorLB.Visible == false&& firstNameTB.TextBoxtext.Length>0&& lastNameTB.TextBoxtext.Length>0) {
+            if (lastnameErrorLB.Visible == false && firstnameErrorLB.Visible == false && firstNameTB.TextBoxtext.Length > 0 && lastNameTB.TextBoxtext.Length > 0)
+            {
                 if (DatabaseManager.ChatApplicationServerConnection())
                 {
-                   // string serverDatabaseDpPicturePath = FilesManager.SaveFileInFolder(FilesManager.ContactsFilesPath_D["DPPICTURE"], dpPicturePath, firstNameTB.TextBoxtext + "-" + lastNameTB.TextBoxtext + "-" + NetworkManager.PcIpAddress);
-                    ContactsManager.ContactCreate(new Contact(NetworkManager.PcMacAddress, NetworkManager.PcHostName, NetworkManager.PcIpAddress, firstNameTB.TextBoxtext, lastNameTB.TextBoxtext,  FilesManager.ConvertImageToBase64(dpPicturePath), DateTime.Now,0,false));
+                    ContactsManager.ContactCreate(new Contact(NetworkManager.PcMacAddress, NetworkManager.PcHostName, NetworkManager.PcIpAddress, firstNameTB.TextBoxtext, lastNameTB.TextBoxtext, FilesManager.ConvertImageToBase64(dpPicturePath), DateTime.Now, 0, false));
                     DatabaseManager.DataBaseTablesUpdateFromServer();
                     DatabaseManager.ChatApplicationLocalConnection();
                     ContactsManager.ContactManagerSetup();
@@ -107,10 +105,10 @@ namespace ChatApplication
                     {
                         Application.Exit();
                     }
-
                 }
             }
-            if(firstNameTB.TextBoxtext.Length == 0){
+            if (firstNameTB.TextBoxtext.Length == 0)
+            {
                 firstnameErrorLB.Visible = true;
                 firstnameErrorLB.Text = "Enter the firstname";
             }
@@ -119,9 +117,7 @@ namespace ChatApplication
                 lastnameErrorLB.Visible = true;
                 lastnameErrorLB.Text = "Enter the lastname";
             }
-
         }
-
         private void LoginFormResize(object sender, EventArgs e)
         {
             centerP.Location = new Point(Width / 2 - centerP.Width / 2, Height / 2 - centerP.Height / 2);
@@ -132,7 +128,5 @@ namespace ChatApplication
             nextBtn.Location = new Point(centerP.Width / 2 - nextBtn.Width / 2, nextBtn.Location.Y);
             centerP.BringToFront();
         }
-
-
     }
 }

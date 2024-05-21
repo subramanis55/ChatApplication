@@ -18,7 +18,7 @@ namespace ChatApplication.UControl
         public event EventHandler PageBackGroundColorMouseEntered;
         public event EventHandler PageBackGroundColorMouseLeaved;
         private bool IsSelected;
-        private Color pageBackGroundColor= Color.LightSeaGreen;
+        private Color pageBackGroundColor = Color.LightSeaGreen;
         public Color PageBackGroundColor
         {
             get
@@ -26,11 +26,12 @@ namespace ChatApplication.UControl
                 return pageBackGroundColor;
             }
 
-            set {
+            set
+            {
                 pageBackGroundColor = value;
                 Invalidate();
             }
-        } 
+        }
 
 
         public bool IsSelected1
@@ -63,7 +64,7 @@ namespace ChatApplication.UControl
         {
             if (IsSelected1) IsSelected1 = false;
             else IsSelected1 = true;
-            PageBackGroundColorClicked?.Invoke(sender,EventArgs.Empty);
+            PageBackGroundColorClicked?.Invoke(sender, EventArgs.Empty);
         }
 
         private void MouseLeaved(object sender, EventArgs e)

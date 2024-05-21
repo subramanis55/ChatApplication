@@ -14,24 +14,28 @@ namespace ChatApplication
     public partial class ContactListU : UserControl
     {
 
-        
+
         public event EventHandler<List<Contact>> OnClickNextGroupContactsGet;
         public event EventHandler<Contact> OnclickContactGet;
-       
+
         private List<Contact> contacts_List;
-        public List<Contact> Contacts_List{
-        get{
+        public List<Contact> Contacts_List
+        {
+            get
+            {
                 return contacts_List;
-        }
-        set{
-        if(value!=null){
+            }
+            set
+            {
+                if (value != null)
+                {
                     contacts_List = value;
                     AddContacts();
-                }             
-        }      
+                }
+            }
         }
 
-      
+
         public ContactListU()
         {
             InitializeComponent();
@@ -63,7 +67,7 @@ namespace ChatApplication
 
             groupCreateNextBtn.Click += GroupCreateNextBtnClick;
             searchBox.Textchanged += SearchBoxTextchanged;
-           
+
             cancelBtn.Click += CancelBtnClick;
             addGroupSimpleU.OnClickAddGroupSimpleU += AddGroupSimpleUOnClick;
             //add contacts details;
@@ -73,7 +77,8 @@ namespace ChatApplication
         private void AddGroupSimpleUOnClick(object sender, EventArgs e)
         {
             groupCreateNextP.Visible = !groupCreateNextP.Visible;
-            for(int i=0;i< contactLoadP.Controls.Count;i++){
+            for (int i = 0; i < contactLoadP.Controls.Count; i++)
+            {
                 ((ContactSimpleU)contactLoadP.Controls[i]).IsCheckBoxVisible = !((ContactSimpleU)contactLoadP.Controls[i]).IsCheckBoxVisible;
                 if (((ContactSimpleU)contactLoadP.Controls[i]).Contact.HostName == NetworkManager.PcHostName)
                 {
@@ -89,15 +94,17 @@ namespace ChatApplication
                         ((ContactSimpleU)contactLoadP.Controls[i]).Visible = true;
                         ((ContactSimpleU)contactLoadP.Controls[i]).IsCheckBoxVisible = false;
                     }
-                   
-                   
+
+
                 }
-            }     
-            if (groupCreateNextP.Visible){
+            }
+            if (groupCreateNextP.Visible)
+            {
                 headingLB.Text = "Create Group";
                 addGroupSimpleU.Visible = false;
             }
-            else{
+            else
+            {
                 headingLB.Text = "New Chat";
                 addGroupSimpleU.Visible = true;
             }
@@ -113,26 +120,20 @@ namespace ChatApplication
             List<Contact> temp_Contacts_List = new List<Contact>();
             for (int i = 0; i < contactLoadP.Controls.Count; i++)
             {
-                if(((ContactSimpleU)contactLoadP.Controls[i]).IsSelected ){
+                if (((ContactSimpleU)contactLoadP.Controls[i]).IsSelected)
+                {
                     temp_Contacts_List.Add(((ContactSimpleU)contactLoadP.Controls[i]).Contact);
                 }
             }
-            if(temp_Contacts_List.Count>0)
-            OnClickNextGroupContactsGet(this,temp_Contacts_List);
+            if (temp_Contacts_List.Count > 0)
+                OnClickNextGroupContactsGet(this, temp_Contacts_List);
         }
 
 
         private void SearchBoxTextchanged(object sender, EventArgs e)
         {
             contactLoadP.SuspendLayout();
-            //foreach (Control control in contactLoadP.Controls)
-            //{
-            //    ContactSimpleU contactSimpleU = control as ContactSimpleU;
-            //    if (contactSimpleU != null)
-            //    {
-            //        contactSimpleU.Visible = true;
-            //    }
-            //}
+
             if (!searchBox.IsPlaceholder && searchBox.Text != searchBox.PlaceholderText)
             {
                 if (!string.IsNullOrWhiteSpace(searchBox.Text))
@@ -145,18 +146,14 @@ namespace ChatApplication
                         {
                             contactU.SendToBack();
                         }
-                        //else
-                        //{
-                        //    contactU.Visible = false;
-                        //}
                     }
                 }
             }
-
             contactLoadP.ResumeLayout();
         }
 
-        private void AddContacts(){
+        private void AddContacts()
+        {
             try
             {
                 for (int i = 0; i < contacts_List.Count; i++)
@@ -170,18 +167,17 @@ namespace ChatApplication
             {
 
             }
-           
+
         }
 
-        private void ContactGet(object sender,Contact contact){
+        private void ContactGet(object sender, Contact contact)
+        {
 
-        if(addGroupSimpleU.Visible)
+            if (addGroupSimpleU.Visible)
             {
                 OnclickContactGet.Invoke(this, contact);
             }
-           
-      
         }
-        
+
     }
 }

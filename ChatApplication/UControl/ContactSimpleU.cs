@@ -39,38 +39,45 @@ namespace ChatApplication
             }
             set
             {
-            if(value!=null){
+                if (value != null)
+                {
                     contact = value;
                     IsOnline = contact.IsOnline;
                     nameLB.Text = value.FirstName;
                     DpImage = value.DpPicture;
-                }                                   
-           }
+                }
+            }
         }
-      
+
         public string DpImage
         {
             set
             {
-              try{
+                try
+                {
                     if (value != "File Not Found" && value != "")
                         dpPictureBox.Image = Image.FromFile(value);
                 }
-                 catch{
+                catch
+                {
 
-                 }       
+                }
             }
         }
-        public bool IsCheckBoxVisible{
-        get{
+        public bool IsCheckBoxVisible
+        {
+            get
+            {
                 return checkBox.Visible;
-        }
-        set{
+            }
+            set
+            {
                 checkBox.Visible = value;
-                if(value==false){
+                if (value == false)
+                {
                     IsSelected = false;
                 }
-           }
+            }
         }
         public bool IsGroupAdmin
         {
@@ -89,27 +96,26 @@ namespace ChatApplication
             {
                 return checkBox.Checked;
             }
-            set{
+            set
+            {
                 checkBox.Checked = value;
             }
-            
+
         }
         public ContactSimpleU()
         {
             InitializeComponent();
             Resize += ContactSimpleUResize;
-            
+
         }
-
-
         public ContactSimpleU(Contact _contact)
         {
             InitializeComponent();
             Disposed += ContactSimpleUDisposed;
             //Initialize Data
             this.Contact = _contact;
-          
-           Resize += ContactSimpleUResize;
+
+            Resize += ContactSimpleUResize;
             labelP.MouseEnter += ContactSimpleUMouseEnter;
             labelP.MouseLeave += ContactSimpleUMouseLeave;
             nameLB.MouseEnter += ContactSimpleUMouseEnter;
@@ -129,45 +135,35 @@ namespace ChatApplication
 
         private void ContactSimpleUDisposed(object sender, EventArgs e)
         {
-            if(dpPictureBox.Image!=null)
-            dpPictureBox.Image.Dispose();
+            if (dpPictureBox.Image != null)
+                dpPictureBox.Image.Dispose();
         }
 
         private void ContactSimpleUMouseEnter(object sender, EventArgs e)
         {
-        
+
             BackColor = HoverColor;
         }
 
         private void ContactSimpleUMouseLeave(object sender, EventArgs e)
         {
-        
+
             BackColor = Color.Transparent;
         }
 
-        //protected override void OnMouseEnter(EventArgs e)
-        //{
-        //    base.OnMouseEnter(e);
-        //    BackColor = HoverColor;
-        //}
-        //protected override void OnMouseLeave(EventArgs e)
-        //{
-        //    base.OnMouseLeave(e);
-        //    BackColor = Color.Transparent;
-        //}
         private void ContactSimpleUResize(object sender, EventArgs e)
         {
-            nameLB.Location = new Point(mainP.Width/2 - nameLB.Width/2, mainP.Height/ 2 - nameLB.Height / 2);
+            nameLB.Location = new Point(mainP.Width / 2 - nameLB.Width / 2, mainP.Height / 2 - nameLB.Height / 2);
             groupAdminLB.Location = new Point(mainP.Width - groupAdminLB.Width - 2, mainP.Height - groupAdminLB.Height - 2);
-             
+
         }
 
         private void ContactSimpleUClick(object sender, EventArgs e)
         {
-         
-            if(IsCheckBoxVisible)
-            checkBox.Checked = !checkBox.Checked;
-            if(!IsCheckBoxVisible)
+
+            if (IsCheckBoxVisible)
+                checkBox.Checked = !checkBox.Checked;
+            if (!IsCheckBoxVisible)
                 OnClickContactSimpleU?.Invoke(this, this.Contact);
         }
     }

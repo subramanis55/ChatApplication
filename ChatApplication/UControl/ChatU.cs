@@ -289,12 +289,12 @@ namespace ChatApplication
             float normalStringLineHeight = (float)((g.MeasureString(s[0], font).Height));
             foreach (string Iter in s)
             {
-                float stringLineWidth = g.MeasureString(Iter + "", font).Width;
-                if (maximumWidthinString < stringLineWidth)
+                float stringSingleLineWidth = g.MeasureString(Iter + "", font).Width;
+                if (maximumWidthinString < stringSingleLineWidth)
                 {
-                    maximumWidthinString = stringLineWidth;
+                    maximumWidthinString = stringSingleLineWidth;
                 }
-                if (g.MeasureString(Iter + "", font).Width  <= width)
+                if (g.MeasureString(Iter + "", font).Width <= width)
                 {
                     totalHeight += (int)normalStringLineHeight;
                 }
@@ -319,12 +319,10 @@ namespace ChatApplication
             if (Width > maximumWidthinString)
             {
                 if (maximumWidthinString < chatUMaximumWidth)
-                    Width = (int)maximumWidthinString + 10;
+                    Width = (int)maximumWidthinString + 14;
                 else
-                    Width = chatUMaximumWidth + 10;
+                    Width = chatUMaximumWidth + 14;
             }
-            //       messageLBPanel.Height = (int)totalHeight;
-            //    Height = messageLBPanel.Height + 35;
             if (ScaleOfIncreaseHeight >= totalHeight)
             {
                 messageLBPanel.Height = (int)totalHeight;
@@ -355,11 +353,11 @@ namespace ChatApplication
 
         private void ChatU_MouseClick(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right && !MainForm.IsMessageSelectedOn)
+            if (e.Button == MouseButtons.Right && !MainForm.IsMessageSelectionOn)
             {
                 OnClickMessageGet?.Invoke(this, Message);
             }
-            if (MainForm.IsMessageSelectedOn)
+            if (MainForm.IsMessageSelectionOn)
                 ChatUMouseClick?.Invoke(this, e);
         }
         private void ThemeSetUp(object sender, EventArgs e)
@@ -422,10 +420,10 @@ namespace ChatApplication
             int chatHeight;
             if (isReceivedMessage)
             {
-                chatHeight = messageLBPanel.Height + (nameLBP.Visible ? nameLBP.Height : 0) + bottomDetailsPanel.Height+3;
+                chatHeight = messageLBPanel.Height + (nameLBP.Visible ? nameLBP.Height : 0) + bottomDetailsPanel.Height + 3;
             }
             else
-                chatHeight = messageLBPanel.Height + (nameLBP.Visible ? nameLBP.Height : 0) + bottomDetailsPanel.Height+2;
+                chatHeight = messageLBPanel.Height + (nameLBP.Visible ? nameLBP.Height : 0) + bottomDetailsPanel.Height + 2;
             ChatUResizedInvoke?.Invoke(this, chatHeight);
             Height = chatHeight;
             Invalidate();

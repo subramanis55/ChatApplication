@@ -71,7 +71,7 @@ namespace ChatApplication.UControl
 
         private void ChatUPanelMouseLeave(object sender, EventArgs e)
         {
-            if (MainForm.IsMessageSelectedOn && !IsSelected)
+            if (MainForm.IsMessageSelectionOn && !IsSelected)
             {
                 BackColor = Color.Transparent;
             }
@@ -79,7 +79,7 @@ namespace ChatApplication.UControl
         }
         private void ChatUPanelMouseEnter(object sender, EventArgs e)
         {
-            if (MainForm.IsMessageSelectedOn && !IsSelected)
+            if (MainForm.IsMessageSelectionOn && !IsSelected)
             {
                 BackColor = Color.FromArgb(240, 240, 240);
             }
@@ -93,7 +93,7 @@ namespace ChatApplication.UControl
 
         private void ChatUPanelClick(object sender, MouseEventArgs e)
         {
-            if (MainForm.IsMessageSelectedOn && e.Button == MouseButtons.Left)
+            if (MainForm.IsMessageSelectionOn && e.Button == MouseButtons.Left)
             {
                 if (IsSelected)
                     UnSelectedChatUPanelInvoke?.Invoke(this, EventArgs.Empty);
@@ -101,7 +101,7 @@ namespace ChatApplication.UControl
                 if (IsSelected)
                     SelectedChatUPanelInvoke?.Invoke(this, EventArgs.Empty);
             }
-            if (MainForm.IsMessageSelectedOn)
+            if (MainForm.IsMessageSelectionOn)
                 OnclickChatUPanel.Invoke(this, e);
         }
     }

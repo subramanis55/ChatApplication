@@ -33,11 +33,11 @@ namespace ChatApplication.UForms
                 return heightLimit;
             }
         }
-      
+
         public ContactListF(List<Contact> contacts_List)
         {
             InitializeComponent();
-          
+
             KeyPreview = true;
             KeyDown += FormKeyDown;
             this.contacts_List = contacts_List;
@@ -45,10 +45,11 @@ namespace ChatApplication.UForms
             timer.Tick += VisibleChangeAnimation;
             AddContactListU();
             FeaturesMethods.AltTabFormShowStop(this.Handle);
-         
+
         }
 
-        private void AddContactListU(){
+        private void AddContactListU()
+        {
             for (int i = 0; i < Controls.Count; i++)
             {
                 Controls[i].Dispose();
@@ -58,11 +59,11 @@ namespace ChatApplication.UForms
             contactListU.Contacts_List = contacts_List;
             contactListU.OnclickContactGet += ContactListOnclickContactGet;
             contactListU.OnClickNextGroupContactsGet += ContactListUOnClickNextGroupContactsGet;
- 
+
         }
         private void ContactListUOnClickNextGroupContactsGet(object sender, List<Contact> groupContacts)
         {
-            for(int i = 0; i < Controls.Count; i++)
+            for (int i = 0; i < Controls.Count; i++)
             {
                 Controls[i].Dispose();
             }
@@ -71,12 +72,12 @@ namespace ChatApplication.UForms
             createGroupPageU.OnClickGroupCancel += CreateGroupPageUOnClickGroupCancel;
             Controls.Add(createGroupPageU);
             this.groupContacts = groupContacts;
-    
+
         }
 
         private void CreateGroupPageUOnClickGroupCancel(object sender, EventArgs e)
-        {   
-           
+        {
+
             AddContactListU();
         }
 
@@ -88,33 +89,31 @@ namespace ChatApplication.UForms
                 groupMembers.Add(new GroupMember(DateTime.Now, groupContacts[i]));
             }
             group.GroupMembers = groupMembers;
-
-         //   string serverDatabaseDpPicturePath = FilesManager.SaveFileInFolder(FilesManager.ContactsFilesPath_D["DPPICTURE"], group.DpPicture, "GroupName_" + group.GroupName + "Admin_" + NetworkManager.PcHostName);
-           
-             if(DatabaseManager.ChatApplicationServerConnection()){
+            if (DatabaseManager.ChatApplicationServerConnection())
+            {
                 GroupsManager.CreateGroupInServerDatabase(group);
                 GroupsManager.GroupsManagerSetUp();
                 OnGroupCreatedInvoke?.Invoke(this, EventArgs.Empty);
             }
             else
             {
-                MainForm.notificationThrowManager.CreateNotification("Server not Respond for create\n group",NotificationType.Information);
+                MainForm.notificationThrowManager.CreateNotification("Server not Respond for create\n group", NotificationType.Information);
             }
             CreateGroupPageUOnClickGroupCancel(this, EventArgs.Empty);
-   
+
         }
 
         private void ContactListOnclickContactGet(object sender, Contact contact)
         {
-            onClickContactGet?.Invoke(this,contact);
+            onClickContactGet?.Invoke(this, contact);
             OnclickClose?.Invoke(this, EventArgs.Empty);
         }
 
         private void ContactListF_Shown(object sender, EventArgs e)
-        {         
+        {
             timer.Start();
         }
-           
+
 
         private void VisibleChangeAnimation(object sender, EventArgs e)
         {
@@ -131,17 +130,17 @@ namespace ChatApplication.UForms
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-        
         }
 
         protected override void OnLostFocus(EventArgs e)
-        {  
-        
+        {
+
         }
         private void FormKeyDown(object sender, KeyEventArgs e)
         {
             if ((e.Modifiers & Keys.Alt) == Keys.Alt)
             {
+               
                 if (transparentFormObj != null)
                     transparentFormObj.Dispose();
             }

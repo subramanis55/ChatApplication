@@ -35,8 +35,6 @@ namespace ChatApplication.Manager
             char FirstLetter = Name[0];
 
             Color NamePColor;
-
-            // if(FirstLetter == 'a' || FirstLetter=='A')NamePColor= Color.FromArgb(0x53BDEB);
             switch (Char.ToUpper(FirstLetter))
             {
                 case 'A': return Color.FromArgb(0x53BDEB); // Blue

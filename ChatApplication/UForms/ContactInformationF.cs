@@ -16,7 +16,7 @@ namespace ChatApplication.UForms
         public TransparentForm transparentFormObj;
         public ContactInformationF(Contact contact)
         {
-           
+
             InitializeComponent();
             KeyDown += FormKeyDown;
             KeyPreview = true;
@@ -44,12 +44,11 @@ namespace ChatApplication.UForms
         private void FormKeyDown(object sender, KeyEventArgs e)
         {
             if ((e.Modifiers & Keys.Alt) == Keys.Alt)
-            {       if(transparentFormObj!=null){
-                    
+            {
+                if (transparentFormObj != null)
+                {
                     transparentFormObj.Dispose();
                 }
-               
-               
             }
         }
     }

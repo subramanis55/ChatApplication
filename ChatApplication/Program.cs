@@ -25,7 +25,7 @@ namespace ChatApplication
             DatabaseManager.DataBaseTablesUpdateFromServer();
             SettingManager.SettingSetUP();
             FilesManager.SetUp();
-            DatabaseManager.ChatApplicationServerConnection();           
+           // DatabaseManager.ChatApplicationServerConnection();           
             if (ContactsManager.IsContactExists(NetworkManager.PcHostName))
             {
                 DatabaseManager.ChatApplicationLocalConnection();
@@ -43,8 +43,7 @@ namespace ChatApplication
             else
             {
                 Application.Run(new LoginForm());          
-            }
-           
+            }        
         }
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();

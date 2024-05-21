@@ -57,7 +57,7 @@ namespace ChatApplication
             this.messageLB.Location = new System.Drawing.Point(0, 0);
             this.messageLB.Margin = new System.Windows.Forms.Padding(0);
             this.messageLB.Name = "messageLB";
-            this.messageLB.Size = new System.Drawing.Size(113, 30);
+            this.messageLB.Size = new System.Drawing.Size(118, 30);
             this.messageLB.TabIndex = 0;
             this.messageLB.Text = "Hi";
             this.messageLB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChatU_MouseClick);
@@ -68,10 +68,10 @@ namespace ChatApplication
             // 
             this.nameLBP.Controls.Add(this.nameLB);
             this.nameLBP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.nameLBP.Location = new System.Drawing.Point(10, 3);
+            this.nameLBP.Location = new System.Drawing.Point(5, 3);
             this.nameLBP.Name = "nameLBP";
             this.nameLBP.Padding = new System.Windows.Forms.Padding(1);
-            this.nameLBP.Size = new System.Drawing.Size(113, 15);
+            this.nameLBP.Size = new System.Drawing.Size(118, 15);
             this.nameLBP.TabIndex = 2;
             this.nameLBP.Visible = false;
             this.nameLBP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChatU_MouseClick);
@@ -97,10 +97,10 @@ namespace ChatApplication
             this.bottomDetailsPanel.Controls.Add(this.showMorePanel);
             this.bottomDetailsPanel.Controls.Add(this.timeAndStatusPanel);
             this.bottomDetailsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomDetailsPanel.Location = new System.Drawing.Point(10, 48);
+            this.bottomDetailsPanel.Location = new System.Drawing.Point(5, 48);
             this.bottomDetailsPanel.MinimumSize = new System.Drawing.Size(0, 30);
             this.bottomDetailsPanel.Name = "bottomDetailsPanel";
-            this.bottomDetailsPanel.Size = new System.Drawing.Size(113, 30);
+            this.bottomDetailsPanel.Size = new System.Drawing.Size(118, 30);
             this.bottomDetailsPanel.TabIndex = 4;
             this.bottomDetailsPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChatU_MouseClick);
             this.bottomDetailsPanel.MouseEnter += new System.EventHandler(this.ChatUMouseEnter);
@@ -114,7 +114,7 @@ namespace ChatApplication
             this.showMorePanel.Location = new System.Drawing.Point(0, 0);
             this.showMorePanel.Name = "showMorePanel";
             this.showMorePanel.Padding = new System.Windows.Forms.Padding(1, 3, 1, 1);
-            this.showMorePanel.Size = new System.Drawing.Size(113, 15);
+            this.showMorePanel.Size = new System.Drawing.Size(118, 15);
             this.showMorePanel.TabIndex = 4;
             this.showMorePanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChatU_MouseClick);
             this.showMorePanel.MouseEnter += new System.EventHandler(this.ChatUMouseEnter);
@@ -145,7 +145,7 @@ namespace ChatApplication
             this.timeAndStatusPanel.MinimumSize = new System.Drawing.Size(0, 12);
             this.timeAndStatusPanel.Name = "timeAndStatusPanel";
             this.timeAndStatusPanel.Padding = new System.Windows.Forms.Padding(0, 1, 7, 2);
-            this.timeAndStatusPanel.Size = new System.Drawing.Size(113, 15);
+            this.timeAndStatusPanel.Size = new System.Drawing.Size(118, 15);
             this.timeAndStatusPanel.TabIndex = 5;
             this.timeAndStatusPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChatU_MouseClick);
             this.timeAndStatusPanel.MouseEnter += new System.EventHandler(this.ChatUMouseEnter);
@@ -157,7 +157,7 @@ namespace ChatApplication
             this.timingLB.Dock = System.Windows.Forms.DockStyle.Right;
             this.timingLB.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timingLB.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.timingLB.Location = new System.Drawing.Point(62, 1);
+            this.timingLB.Location = new System.Drawing.Point(67, 1);
             this.timingLB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.timingLB.Name = "timingLB";
             this.timingLB.Padding = new System.Windows.Forms.Padding(0, 0, 2, 3);
@@ -173,7 +173,7 @@ namespace ChatApplication
             // 
             this.MessageSendIconPB.Dock = System.Windows.Forms.DockStyle.Right;
             this.MessageSendIconPB.Image = global::ChatApplication.Properties.Resources.icons8_done_14__1_;
-            this.MessageSendIconPB.Location = new System.Drawing.Point(91, 1);
+            this.MessageSendIconPB.Location = new System.Drawing.Point(96, 1);
             this.MessageSendIconPB.Margin = new System.Windows.Forms.Padding(2);
             this.MessageSendIconPB.Name = "MessageSendIconPB";
             this.MessageSendIconPB.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
@@ -189,9 +189,9 @@ namespace ChatApplication
             // 
             this.messageLBPanel.Controls.Add(this.messageLB);
             this.messageLBPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.messageLBPanel.Location = new System.Drawing.Point(10, 18);
+            this.messageLBPanel.Location = new System.Drawing.Point(5, 18);
             this.messageLBPanel.Name = "messageLBPanel";
-            this.messageLBPanel.Size = new System.Drawing.Size(113, 30);
+            this.messageLBPanel.Size = new System.Drawing.Size(118, 30);
             this.messageLBPanel.TabIndex = 5;
             this.messageLBPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChatU_MouseClick);
             this.messageLBPanel.MouseEnter += new System.EventHandler(this.ChatUMouseEnter);
@@ -209,7 +209,7 @@ namespace ChatApplication
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(90, 50);
             this.Name = "ChatU";
-            this.Padding = new System.Windows.Forms.Padding(10, 3, 0, 2);
+            this.Padding = new System.Windows.Forms.Padding(5, 3, 0, 2);
             this.Size = new System.Drawing.Size(123, 80);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChatU_MouseClick);
             this.nameLBP.ResumeLayout(false);

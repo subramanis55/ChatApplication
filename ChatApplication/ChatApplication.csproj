@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icons8-chat-100.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\icons8-chat-100.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DatabaseLibrary">
@@ -76,23 +76,26 @@
       <DependentUpon>NotificationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CommonUserControl\NotificationThrowManager.cs" />
+    <Compile Include="CommonUserControl\ToggleButtonClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Manager\SettingManager.cs" />
-    <Compile Include="MessageConfirmForm.cs">
+    <Compile Include="UForms\MessageConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MessageConfirmForm.designer.cs">
+    <Compile Include="UForms\MessageConfirmForm.designer.cs">
       <DependentUpon>MessageConfirmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransparentForm.cs">
+    <Compile Include="UForms\TransparentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransparentForm.Designer.cs">
+    <Compile Include="UForms\TransparentForm.Designer.cs">
       <DependentUpon>TransparentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransparentForm2.cs">
+    <Compile Include="UForms\TransparentForm2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TransparentForm2.Designer.cs">
+    <Compile Include="UForms\TransparentForm2.Designer.cs">
       <DependentUpon>TransparentForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="UControl\AddGroupSimpleU.cs">
@@ -106,12 +109,6 @@
     </Compile>
     <Compile Include="UControl\ChatPageColor.designer.cs">
       <DependentUpon>ChatPageColor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UControl\ChatSenter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UControl\ChatSenter.designer.cs">
-      <DependentUpon>ChatSenter.cs</DependentUpon>
     </Compile>
     <Compile Include="UControl\ChatUPanel.cs">
       <SubType>Component</SubType>
@@ -323,13 +320,13 @@
     <EmbeddedResource Include="CommonUserControl\NotificationForm.resx">
       <DependentUpon>NotificationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MessageConfirmForm.resx">
+    <EmbeddedResource Include="UForms\MessageConfirmForm.resx">
       <DependentUpon>MessageConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransparentForm.resx">
+    <EmbeddedResource Include="UForms\TransparentForm.resx">
       <DependentUpon>TransparentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransparentForm2.resx">
+    <EmbeddedResource Include="UForms\TransparentForm2.resx">
       <DependentUpon>TransparentForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UControl\AddGroupSimpleU.resx">
@@ -337,9 +334,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UControl\ChatPageColor.resx">
       <DependentUpon>ChatPageColor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UControl\ChatSenter.resx">
-      <DependentUpon>ChatSenter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UControl\ChatWallPaper.resx">
       <DependentUpon>ChatWallPaper.cs</DependentUpon>
@@ -669,7 +663,7 @@
     <None Include="Resources\icons8-chat-100.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icons8-chat-100.ico" />
+    <Content Include="Resources\icons8-chat-100.ico" />
     <None Include="Resources\SelectIcon.png" />
     <None Include="Resources\ArchivedIcon.png" />
     <None Include="Resources\AddArchiveIcon.png" />

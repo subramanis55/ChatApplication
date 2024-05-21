@@ -21,7 +21,7 @@ namespace ChatApplication
 
     public delegate ChatU MessageAlignInvoke();
     public delegate void NewMessageArrivedInvoke(Message message);
-   
+
     public static class NetworkManager
     {
 
@@ -31,11 +31,9 @@ namespace ChatApplication
         public static string ServerIpAddress = "122.178.54.205";
         public static MessageAlignInvoke MessageAlignInvoke;
         public static NewMessageArrivedInvoke NewMessageArrivedInvoke;
-        public static event EventHandler<Contact>  OnlineStatusInvoke;
- 
+        public static event EventHandler<Contact> OnlineStatusInvoke;
         private static TcpListener tcpListener;
         public static TcpClient server;
-        //   private static TcpClient client;
         public static string PcIpAddress;
         public static int PortNumber = 12345;
         public static Dictionary<string, TcpClient> NetworkStreamClientDictionary = new Dictionary<string, TcpClient>();
@@ -79,7 +77,7 @@ namespace ChatApplication
                 }
                 catch (Exception ex)
                 {
-                 
+
                     return null;
                 }
             }
@@ -88,13 +86,11 @@ namespace ChatApplication
         {
             PcHostName = Dns.GetHostName();
             string publicIpAddress = GetPublicIpAddressAsync().Result;
-
             PcIpAddress = GetPcIPAddress(PcHostName);
-
             ServerIpAddress = GetPcIPAddress(ServerHostName);
             PcMacAddress = GetPcMacAddress();
             Thread tread = new Thread(new ThreadStart(StartServerConnection));
-            tread.Priority = ThreadPriority.Highest; // Set the priority to AboveNormal
+            tread.Priority = ThreadPriority.Highest;
             tread.Start();
         }
         //Server Connection for recieve Request
@@ -111,11 +107,12 @@ namespace ChatApplication
             {
                 NetworkStreamClientDictionary.Add(((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString(), client);
                 Contact contact = ContactsManager.getContactByIpAddress(((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString());
-                if(contact!=null){
+                if (contact != null)
+                {
                     contact.IsOnline = true;
                     OnlineStatusInvoke?.Invoke(new object(), contact);
                 }
-                
+
                 HandleClient(client);
             }
             else
@@ -126,8 +123,6 @@ namespace ChatApplication
         }
         private async static void HandleClient(TcpClient client)
         {
-
-            //     AcceptClient();
             NetworkStream stream = client.GetStream();
             byte[] numberOfBytes = new byte[5];
             int bytesRead = 100;
@@ -153,17 +148,16 @@ namespace ChatApplication
                         }
                         else
                         {
-                          
-                                byte[] fileData = new byte[msg.FileSize];
-                                string filePath = Path.Combine(FilesManager.FileSaveDirectoryPath, Path.GetFileName(msg.FileName));
-                                using (FileStream fileStream = File.Create(filePath))
+                            byte[] fileData = new byte[msg.FileSize];
+                            string filePath = Path.Combine(FilesManager.FileSaveDirectoryPath, Path.GetFileName(msg.FileName));
+                            using (FileStream fileStream = File.Create(filePath))
+                            {
+                                while ((bytesRead = stream.Read(fileData, 0, fileData.Length)) > 0)
                                 {
-                                    while ((bytesRead = stream.Read(fileData, 0, fileData.Length)) > 0)
-                                    {
-                                        fileStream.Write(fileData, 0, bytesRead);
-                                        if (fileStream.Length >= msg.FileSize) break;
-                                    }
+                                    fileStream.Write(fileData, 0, bytesRead);
+                                    if (fileStream.Length >= msg.FileSize) break;
                                 }
+                            }
                             if (msg.FromHostName != PcHostName)
                             {
                                 msg.IsSent = true;
@@ -174,7 +168,6 @@ namespace ChatApplication
                             }
                         }
                     }
-
                 }
                 catch (Exception ex)
                 {
@@ -190,106 +183,47 @@ namespace ChatApplication
             }
 
         }
-        //private async static void AcceptClient()
-        //{
-        //    client = await tcpListener.AcceptTcpClientAsync();
-        //    HandleClient();
-        //}
-        //private static string getClientIpAddress()
-        //{
-        //    return ((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString();
-        //}
-        //private async static void HandleClient()
-        //{
-        //    AcceptClient();
-        //    NetworkStream stream = client.GetStream();
-        //    byte[] numberOfBytes = new byte[5];
-        //    int bytesRead = 100;
-        //    try
-        //    {
-        //        Message msg = null;
-        //        await stream.ReadAsync(numberOfBytes, 0, 5);
-        //        int lengthOfData = Convert.ToInt32(Encoding.UTF8.GetString(numberOfBytes));
-        //        byte[] data = new byte[lengthOfData];
-        //        if ((bytesRead = await stream.ReadAsync(data, 0, lengthOfData)) > 0)
-        //        {
-        //            msg = JsonConvert.DeserializeObject<Message>(Encoding.UTF8.GetString(data));
-        //            if (!msg.IsFile)
-        //            {
-        //                if (msg.FromHostName != PcHostName && msg.MessageText != "")
-        //                {
-        //                    msg.IsSent = true;
-        //                    Message messageObj = MessagesManager.CreateMessage(msg);
-        //                    NewMessageArrivedInvoke?.Invoke(messageObj);
-        //                }
-        //            }
-        //            else
-        //            {
-        //                byte[] fileData = new byte[msg.FileSize];
-        //                // Combine the directory and filename to get the full path
-        //                string filePath = Path.Combine(FilesManager.FileSaveDirectoryPath, Path.GetFileName(msg.FileName));
-        //                using (FileStream fileStream = File.Create(filePath))
-        //                {
-        //                    while ((bytesRead = stream.Read(fileData, 0, fileData.Length)) > 0)
-        //                    {
-        //                        fileStream.Write(fileData, 0, bytesRead);
-        //                        if (fileStream.Length >= msg.FileSize) break;
-        //                    }
-        //                }
-        //                msg.IsSent = true;
-        //                filePath = filePath.Replace("\\", "/");
-        //                msg.FileName = filePath;
-        //                Message messageObj = MessagesManager.CreateMessage(msg);
-        //                NewMessageArrivedInvoke?.Invoke(messageObj);
-        //            }
-        //        }
-        //      
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        client.Close();
-        //        AcceptClient();
-        //    }
-        //}
 
-        //private async static void HandleClient()
-        //{
-        //    NetworkStream stream = client.GetStream();
-        //    byte[] buffer = new byte[1024];
-        //    int bytesRead = 100;
-        //    string data = "";
-        //    try
-        //    {
-        //        Message msg = null;
-        //        if ((bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length)) > 0)
-        //        {
-        //            msg = JsonConvert.DeserializeObject<Message>(Encoding.UTF8.GetString(buffer));
-        //            msg.IsSent = true;
-        //        }
-        //        client.Close();
-        //        AcceptClient();
-        //        // Receive Message store in DataBase
-        //        if (msg.FromIpAddress != PCIpAddress && msg.MessageText != "")
-        //        {
-        //            Message messageObj = MessagesManager.CreateMessage(msg);
-        //            NewMessageArrivedInvoke?.Invoke(messageObj);
-        //        }
-        //    }
-        //    catch
-        //    {
-        //        client.Close();
-        //        AcceptClient();
-        //    }
-
-        //}
-        //Requset to Server for Connection
-
-        private static bool ConnectToServer(string ipAddress, int port)
-        {
-
-            return false;
-        }
         public static async Task MessageSent(Message message, Contact contact)
+        {
+            TcpClient server=null;
+            if (!NetworkStreamClientDictionary.ContainsKey(contact.IpAddress))
+            {   
+            if(contact.IpAddress != "127.0.0.1"){
+                    server = new TcpClient();
+                    server.Connect(contact.IpAddress, PortNumber);
+                    HandleClient(server);
+                    NetworkStreamClientDictionary.Add(contact.IpAddress, server);
+                    contact.IsOnline = true;
+                    OnlineStatusInvoke?.Invoke(new object(), contact);
+                }           
+            }
+            else
+            {
+                server = NetworkStreamClientDictionary[contact.IpAddress];
+                if (!NetworkStreamClientDictionary[contact.IpAddress].GetStream().CanWrite)
+                {
+                    server.Connect(contact.IpAddress, PortNumber);
+                    HandleClient(server);
+                }
+            }
+            string msg = JsonConvert.SerializeObject(message);
+            //if (!(server == null || !server.Connected))
+            //{
+                NetworkStream stream = server.GetStream();
+                byte[] data = Encoding.ASCII.GetBytes(msg);
+                byte[] numberOfBytes = new byte[5];
+                byte[] Bytes = Encoding.UTF8.GetBytes("" + data.Length);
+                Array.Copy(Bytes, numberOfBytes, Bytes.Length);
+                stream.WriteAsync(numberOfBytes, 0, numberOfBytes.Length);
+                stream.WriteAsync(data, 0, data.Length);
+            //}
+            //else{
+              
+            //}
+            //return Task.FromException(new Exception());
+        }
+        public static async Task FileSent(Message fileMessage, string filePath, Contact contact)
         {
             TcpClient server;
             if (!NetworkStreamClientDictionary.ContainsKey(contact.IpAddress))
@@ -304,43 +238,11 @@ namespace ChatApplication
             else
             {
                 server = NetworkStreamClientDictionary[contact.IpAddress];
-                if (!NetworkStreamClientDictionary[contact.IpAddress].GetStream().CanWrite) {
-                    server.Connect(contact.IpAddress, PortNumber);
-                    HandleClient(server);
-                }     
-            }
-            string msg = JsonConvert.SerializeObject(message);
-            if (!(server == null || !server.Connected))
-            {
-                NetworkStream stream = server.GetStream();
-                byte[] data = Encoding.ASCII.GetBytes(msg);
-                byte[] numberOfBytes = new byte[5];
-                byte[] Bytes = Encoding.UTF8.GetBytes("" + data.Length);
-                Array.Copy(Bytes, numberOfBytes, Bytes.Length);
-                 stream.WriteAsync(numberOfBytes, 0, numberOfBytes.Length);
-                 stream.WriteAsync(data, 0, data.Length);
-            }
-        }
-        public static async Task FileSent(Message fileMessage, string filePath, Contact contact)
-        {
-            TcpClient server;
-            if (!NetworkStreamClientDictionary.ContainsKey(contact.IpAddress))
-            {
-                server = new TcpClient();
-                 server.Connect(contact.IpAddress, PortNumber);
-                HandleClient(server);
-                NetworkStreamClientDictionary.Add(contact.IpAddress, server);
-                contact.IsOnline = true;
-                OnlineStatusInvoke?.Invoke(new object(), contact);
-            }
-            else
-            {
-                server = NetworkStreamClientDictionary[contact.IpAddress];
                 if (!NetworkStreamClientDictionary[contact.IpAddress].GetStream().CanWrite)
                     server.Connect(contact.IpAddress, PortNumber);
                 HandleClient(server);
             }
-                NetworkStream stream = server.GetStream();
+            NetworkStream stream = server.GetStream();
             string metadataJson = JsonConvert.SerializeObject(fileMessage);
             byte[] metadataBytes = Encoding.UTF8.GetBytes(metadataJson);
             byte[] numberOfBytes = new byte[5];
@@ -356,31 +258,35 @@ namespace ChatApplication
 
         public static async Task ConnectToPC(Contact contact)
         {
-        if(!NetworkStreamClientDictionary.ContainsKey(contact.IpAddress))
+            if (!NetworkStreamClientDictionary.ContainsKey(contact.IpAddress))
             {
                 try
                 {
-                    TcpClient server = new TcpClient();
-                    server.Connect(contact.IpAddress, PortNumber);
-                    HandleClient(server);
-                    if(!NetworkStreamClientDictionary.ContainsKey(contact.IpAddress)){
-                        NetworkStreamClientDictionary.Add(contact.IpAddress, server);
-                        contact.IsOnline = true;
-                        OnlineStatusInvoke?.Invoke(new object(), contact);
-                    }
-                 
+                if( contact.IpAddress != "127.0.0.1" ){
+                        TcpClient server = new TcpClient();
+                        server.Connect(contact.IpAddress, PortNumber);
+                        HandleClient(server);
+                        if (!NetworkStreamClientDictionary.ContainsKey(contact.IpAddress))
+                        {
+                            NetworkStreamClientDictionary.Add(contact.IpAddress, server);
+                            contact.IsOnline = true;
+                            OnlineStatusInvoke?.Invoke(new object(), contact);
+                        }
+                    } 
                 }
                 catch
                 {
-                    contact.IsOnline = false;
-                    OnlineStatusInvoke?.Invoke(new object(), contact);
+                   
                 }
+                contact.IsOnline = false;
+                OnlineStatusInvoke?.Invoke(new object(), contact);
             }
-            else{
+            else
+            {
                 contact.IsOnline = true;
                 OnlineStatusInvoke?.Invoke(new object(), contact);
             }
-     
+
         }
         public static bool IsPcOnline(string ipAddress, int port)
         {
@@ -395,9 +301,6 @@ namespace ChatApplication
                 return false;
             }
         }
-
-
-
     }
 }
 

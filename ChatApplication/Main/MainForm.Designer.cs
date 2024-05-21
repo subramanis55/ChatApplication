@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.menuTabeControl = new System.Windows.Forms.TabControl();
-            this.ChatPage = new System.Windows.Forms.TabPage();
-            this.chatContactsPanel = new System.Windows.Forms.Panel();
-            this.mainSearchBoxPanel = new System.Windows.Forms.Panel();
-            this.contactUSearchBox = new ChatApplication.CustomSearchBox();
-            this.chatPageTopP = new System.Windows.Forms.Panel();
+            this.menuTabControl = new System.Windows.Forms.TabControl();
+            this.chatPage = new System.Windows.Forms.TabPage();
+            this.alreadyMessagedContactsPanel = new System.Windows.Forms.Panel();
+            this.chatPageSearchBoxPanel = new System.Windows.Forms.Panel();
+            this.chatPageSearchBox = new ChatApplication.CustomSearchBox();
+            this.chatPageTopPanel = new System.Windows.Forms.Panel();
             this.refreshBtn = new ChatApplication.EllipseButton();
             this.contactListBtn = new ChatApplication.EllipseButton();
             this.filterContactsBtn = new ChatApplication.EllipseButton();
@@ -46,12 +46,12 @@
             this.ArchivedContactsPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.MainTabControl = new System.Windows.Forms.TabControl();
-            this.chattabpage = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.mainTabControl = new System.Windows.Forms.TabControl();
+            this.chatTabpage = new System.Windows.Forms.TabPage();
+            this.chatTabPageMainPanel = new System.Windows.Forms.Panel();
             this.messageShowP = new System.Windows.Forms.Panel();
             this.chatPageTitleU = new ChatApplication.ChatPageTitleU();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.messageTextBoxPanel = new System.Windows.Forms.Panel();
             this.messageTB = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.attachmentBtn = new ChatApplication.EllipseButton();
@@ -64,101 +64,101 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.menuControl = new ChatApplication.MenuControl();
             this.customTooltip1 = new ChatApplication.CustomTooltip();
-            this.menuTabeControl.SuspendLayout();
-            this.ChatPage.SuspendLayout();
-            this.mainSearchBoxPanel.SuspendLayout();
-            this.chatPageTopP.SuspendLayout();
+            this.menuTabControl.SuspendLayout();
+            this.chatPage.SuspendLayout();
+            this.chatPageSearchBoxPanel.SuspendLayout();
+            this.chatPageTopPanel.SuspendLayout();
             this.archivedPage.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.MainTabControl.SuspendLayout();
-            this.chattabpage.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.mainTabControl.SuspendLayout();
+            this.chatTabpage.SuspendLayout();
+            this.chatTabPageMainPanel.SuspendLayout();
+            this.messageTextBoxPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.sentBtnP.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuTabeControl
+            // menuTabControl
             // 
-            this.menuTabeControl.Controls.Add(this.ChatPage);
-            this.menuTabeControl.Controls.Add(this.callsPage);
-            this.menuTabeControl.Controls.Add(this.StatusPage);
-            this.menuTabeControl.Controls.Add(this.starredMessagePage);
-            this.menuTabeControl.Controls.Add(this.archivedPage);
-            this.menuTabeControl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuTabeControl.ItemSize = new System.Drawing.Size(10, 10);
-            this.menuTabeControl.Location = new System.Drawing.Point(83, 0);
-            this.menuTabeControl.MinimumSize = new System.Drawing.Size(400, 0);
-            this.menuTabeControl.Name = "menuTabeControl";
-            this.menuTabeControl.Padding = new System.Drawing.Point(0, 0);
-            this.menuTabeControl.SelectedIndex = 0;
-            this.menuTabeControl.Size = new System.Drawing.Size(400, 600);
-            this.menuTabeControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.menuTabeControl.TabIndex = 0;
+            this.menuTabControl.Controls.Add(this.chatPage);
+            this.menuTabControl.Controls.Add(this.callsPage);
+            this.menuTabControl.Controls.Add(this.StatusPage);
+            this.menuTabControl.Controls.Add(this.starredMessagePage);
+            this.menuTabControl.Controls.Add(this.archivedPage);
+            this.menuTabControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuTabControl.ItemSize = new System.Drawing.Size(10, 10);
+            this.menuTabControl.Location = new System.Drawing.Point(83, 0);
+            this.menuTabControl.MinimumSize = new System.Drawing.Size(400, 0);
+            this.menuTabControl.Name = "menuTabControl";
+            this.menuTabControl.Padding = new System.Drawing.Point(0, 0);
+            this.menuTabControl.SelectedIndex = 0;
+            this.menuTabControl.Size = new System.Drawing.Size(400, 600);
+            this.menuTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.menuTabControl.TabIndex = 0;
             // 
-            // ChatPage
+            // chatPage
             // 
-            this.ChatPage.Controls.Add(this.chatContactsPanel);
-            this.ChatPage.Controls.Add(this.mainSearchBoxPanel);
-            this.ChatPage.Controls.Add(this.chatPageTopP);
-            this.ChatPage.Location = new System.Drawing.Point(4, 14);
-            this.ChatPage.Name = "ChatPage";
-            this.ChatPage.Size = new System.Drawing.Size(392, 582);
-            this.ChatPage.TabIndex = 0;
-            this.ChatPage.UseVisualStyleBackColor = true;
+            this.chatPage.Controls.Add(this.alreadyMessagedContactsPanel);
+            this.chatPage.Controls.Add(this.chatPageSearchBoxPanel);
+            this.chatPage.Controls.Add(this.chatPageTopPanel);
+            this.chatPage.Location = new System.Drawing.Point(4, 14);
+            this.chatPage.Name = "chatPage";
+            this.chatPage.Size = new System.Drawing.Size(392, 582);
+            this.chatPage.TabIndex = 0;
+            this.chatPage.UseVisualStyleBackColor = true;
             // 
-            // chatContactsPanel
+            // alreadyMessagedContactsPanel
             // 
-            this.chatContactsPanel.AutoScroll = true;
-            this.chatContactsPanel.BackColor = System.Drawing.Color.Transparent;
-            this.chatContactsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chatContactsPanel.Location = new System.Drawing.Point(0, 141);
-            this.chatContactsPanel.Name = "chatContactsPanel";
-            this.chatContactsPanel.Size = new System.Drawing.Size(392, 441);
-            this.chatContactsPanel.TabIndex = 0;
+            this.alreadyMessagedContactsPanel.AutoScroll = true;
+            this.alreadyMessagedContactsPanel.BackColor = System.Drawing.Color.Transparent;
+            this.alreadyMessagedContactsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.alreadyMessagedContactsPanel.Location = new System.Drawing.Point(0, 141);
+            this.alreadyMessagedContactsPanel.Name = "alreadyMessagedContactsPanel";
+            this.alreadyMessagedContactsPanel.Size = new System.Drawing.Size(392, 441);
+            this.alreadyMessagedContactsPanel.TabIndex = 0;
             // 
-            // mainSearchBoxPanel
+            // chatPageSearchBoxPanel
             // 
-            this.mainSearchBoxPanel.Controls.Add(this.contactUSearchBox);
-            this.mainSearchBoxPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mainSearchBoxPanel.Location = new System.Drawing.Point(0, 75);
-            this.mainSearchBoxPanel.Name = "mainSearchBoxPanel";
-            this.mainSearchBoxPanel.Padding = new System.Windows.Forms.Padding(20, 4, 20, 8);
-            this.mainSearchBoxPanel.Size = new System.Drawing.Size(392, 66);
-            this.mainSearchBoxPanel.TabIndex = 1;
-            this.mainSearchBoxPanel.Resize += new System.EventHandler(this.mainSearchBoxPanelResize);
+            this.chatPageSearchBoxPanel.Controls.Add(this.chatPageSearchBox);
+            this.chatPageSearchBoxPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.chatPageSearchBoxPanel.Location = new System.Drawing.Point(0, 75);
+            this.chatPageSearchBoxPanel.Name = "chatPageSearchBoxPanel";
+            this.chatPageSearchBoxPanel.Padding = new System.Windows.Forms.Padding(20, 4, 20, 8);
+            this.chatPageSearchBoxPanel.Size = new System.Drawing.Size(392, 66);
+            this.chatPageSearchBoxPanel.TabIndex = 1;
+            this.chatPageSearchBoxPanel.Resize += new System.EventHandler(this.mainSearchBoxPanelResize);
             // 
-            // contactUSearchBox
+            // chatPageSearchBox
             // 
-            this.contactUSearchBox.BackColor = System.Drawing.Color.White;
-            this.contactUSearchBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(69)))), ((int)(((byte)(96)))));
-            this.contactUSearchBox.BorderSize = 4;
-            this.contactUSearchBox.IsSearchIconVisible = false;
-            this.contactUSearchBox.IsUnderLine = true;
-            this.contactUSearchBox.Location = new System.Drawing.Point(34, 12);
-            this.contactUSearchBox.MinimumSize = new System.Drawing.Size(0, 40);
-            this.contactUSearchBox.Multiline = true;
-            this.contactUSearchBox.Name = "contactUSearchBox";
-            this.contactUSearchBox.Padding = new System.Windows.Forms.Padding(7);
-            this.contactUSearchBox.PlaceholderText = "Search or start new chat";
-            this.contactUSearchBox.ReadOnly = false;
-            this.contactUSearchBox.Size = new System.Drawing.Size(310, 43);
-            this.contactUSearchBox.TabIndex = 0;
+            this.chatPageSearchBox.BackColor = System.Drawing.Color.White;
+            this.chatPageSearchBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(69)))), ((int)(((byte)(96)))));
+            this.chatPageSearchBox.BorderSize = 4;
+            this.chatPageSearchBox.IsSearchIconVisible = false;
+            this.chatPageSearchBox.IsUnderLine = true;
+            this.chatPageSearchBox.Location = new System.Drawing.Point(34, 12);
+            this.chatPageSearchBox.MinimumSize = new System.Drawing.Size(0, 40);
+            this.chatPageSearchBox.Multiline = true;
+            this.chatPageSearchBox.Name = "chatPageSearchBox";
+            this.chatPageSearchBox.Padding = new System.Windows.Forms.Padding(7);
+            this.chatPageSearchBox.PlaceholderText = "Search or start new chat";
+            this.chatPageSearchBox.ReadOnly = false;
+            this.chatPageSearchBox.Size = new System.Drawing.Size(310, 43);
+            this.chatPageSearchBox.TabIndex = 0;
             // 
-            // chatPageTopP
+            // chatPageTopPanel
             // 
-            this.chatPageTopP.Controls.Add(this.refreshBtn);
-            this.chatPageTopP.Controls.Add(this.contactListBtn);
-            this.chatPageTopP.Controls.Add(this.filterContactsBtn);
-            this.chatPageTopP.Controls.Add(this.chatLB);
-            this.chatPageTopP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chatPageTopP.Location = new System.Drawing.Point(0, 0);
-            this.chatPageTopP.MinimumSize = new System.Drawing.Size(0, 75);
-            this.chatPageTopP.Name = "chatPageTopP";
-            this.chatPageTopP.Padding = new System.Windows.Forms.Padding(15);
-            this.chatPageTopP.Size = new System.Drawing.Size(392, 75);
-            this.chatPageTopP.TabIndex = 0;
+            this.chatPageTopPanel.Controls.Add(this.refreshBtn);
+            this.chatPageTopPanel.Controls.Add(this.contactListBtn);
+            this.chatPageTopPanel.Controls.Add(this.filterContactsBtn);
+            this.chatPageTopPanel.Controls.Add(this.chatLB);
+            this.chatPageTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.chatPageTopPanel.Location = new System.Drawing.Point(0, 0);
+            this.chatPageTopPanel.MinimumSize = new System.Drawing.Size(0, 75);
+            this.chatPageTopPanel.Name = "chatPageTopPanel";
+            this.chatPageTopPanel.Padding = new System.Windows.Forms.Padding(15);
+            this.chatPageTopPanel.Size = new System.Drawing.Size(392, 75);
+            this.chatPageTopPanel.TabIndex = 0;
             // 
             // refreshBtn
             // 
@@ -302,44 +302,44 @@
             this.label1.Text = "Archived";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // MainTabControl
+            // mainTabControl
             // 
-            this.MainTabControl.Controls.Add(this.chattabpage);
-            this.MainTabControl.Controls.Add(this.tabPage2);
-            this.MainTabControl.Controls.Add(this.tabPage3);
-            this.MainTabControl.Controls.Add(this.tabPage4);
-            this.MainTabControl.Controls.Add(this.defaultPage);
-            this.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainTabControl.ItemSize = new System.Drawing.Size(10, 10);
-            this.MainTabControl.Location = new System.Drawing.Point(483, 0);
-            this.MainTabControl.Name = "MainTabControl";
-            this.MainTabControl.Padding = new System.Drawing.Point(0, 0);
-            this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(501, 600);
-            this.MainTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.MainTabControl.TabIndex = 2;
+            this.mainTabControl.Controls.Add(this.chatTabpage);
+            this.mainTabControl.Controls.Add(this.tabPage2);
+            this.mainTabControl.Controls.Add(this.tabPage3);
+            this.mainTabControl.Controls.Add(this.tabPage4);
+            this.mainTabControl.Controls.Add(this.defaultPage);
+            this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTabControl.ItemSize = new System.Drawing.Size(10, 10);
+            this.mainTabControl.Location = new System.Drawing.Point(483, 0);
+            this.mainTabControl.Name = "mainTabControl";
+            this.mainTabControl.Padding = new System.Drawing.Point(0, 0);
+            this.mainTabControl.SelectedIndex = 0;
+            this.mainTabControl.Size = new System.Drawing.Size(501, 600);
+            this.mainTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.mainTabControl.TabIndex = 2;
             // 
-            // chattabpage
+            // chatTabpage
             // 
-            this.chattabpage.Controls.Add(this.panel4);
-            this.chattabpage.Location = new System.Drawing.Point(4, 14);
-            this.chattabpage.Name = "chattabpage";
-            this.chattabpage.Size = new System.Drawing.Size(493, 582);
-            this.chattabpage.TabIndex = 0;
-            this.chattabpage.UseVisualStyleBackColor = true;
+            this.chatTabpage.Controls.Add(this.chatTabPageMainPanel);
+            this.chatTabpage.Location = new System.Drawing.Point(4, 14);
+            this.chatTabpage.Name = "chatTabpage";
+            this.chatTabpage.Size = new System.Drawing.Size(493, 582);
+            this.chatTabpage.TabIndex = 0;
+            this.chatTabpage.UseVisualStyleBackColor = true;
             // 
-            // panel4
+            // chatTabPageMainPanel
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.messageShowP);
-            this.panel4.Controls.Add(this.chatPageTitleU);
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(493, 582);
-            this.panel4.TabIndex = 2;
+            this.chatTabPageMainPanel.BackColor = System.Drawing.Color.White;
+            this.chatTabPageMainPanel.Controls.Add(this.messageShowP);
+            this.chatTabPageMainPanel.Controls.Add(this.chatPageTitleU);
+            this.chatTabPageMainPanel.Controls.Add(this.messageTextBoxPanel);
+            this.chatTabPageMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chatTabPageMainPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.chatTabPageMainPanel.Location = new System.Drawing.Point(0, 0);
+            this.chatTabPageMainPanel.Name = "chatTabPageMainPanel";
+            this.chatTabPageMainPanel.Size = new System.Drawing.Size(493, 582);
+            this.chatTabPageMainPanel.TabIndex = 2;
             // 
             // messageShowP
             // 
@@ -370,22 +370,22 @@
             this.chatPageTitleU.Margin = new System.Windows.Forms.Padding(4);
             this.chatPageTitleU.MinimumSize = new System.Drawing.Size(0, 70);
             this.chatPageTitleU.Name = "chatPageTitleU";
-            this.chatPageTitleU.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chatPageTitleU.Padding = new System.Windows.Forms.Padding(6);
             this.chatPageTitleU.Size = new System.Drawing.Size(493, 75);
             this.chatPageTitleU.TabIndex = 6;
             // 
-            // panel3
+            // messageTextBoxPanel
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel3.Controls.Add(this.messageTB);
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.sentBtnP);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 508);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(5);
-            this.panel3.Size = new System.Drawing.Size(493, 74);
-            this.panel3.TabIndex = 2;
+            this.messageTextBoxPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.messageTextBoxPanel.Controls.Add(this.messageTB);
+            this.messageTextBoxPanel.Controls.Add(this.panel1);
+            this.messageTextBoxPanel.Controls.Add(this.sentBtnP);
+            this.messageTextBoxPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.messageTextBoxPanel.Location = new System.Drawing.Point(0, 508);
+            this.messageTextBoxPanel.Name = "messageTextBoxPanel";
+            this.messageTextBoxPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.messageTextBoxPanel.Size = new System.Drawing.Size(493, 74);
+            this.messageTextBoxPanel.TabIndex = 2;
             // 
             // messageTB
             // 
@@ -493,6 +493,7 @@
             // defaultPage
             // 
             this.defaultPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.defaultPage.BackgroundImage = global::ChatApplication.Properties.Resources.Icon_LightGreen;
             this.defaultPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.defaultPage.Location = new System.Drawing.Point(4, 14);
             this.defaultPage.Name = "defaultPage";
@@ -501,8 +502,8 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.MainTabControl);
-            this.panel5.Controls.Add(this.menuTabeControl);
+            this.panel5.Controls.Add(this.mainTabControl);
+            this.panel5.Controls.Add(this.menuTabControl);
             this.panel5.Controls.Add(this.menuControl);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
@@ -537,19 +538,19 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(900, 591);
             this.Name = "MainForm";
-            this.Text = "MainForm";
-            this.menuTabeControl.ResumeLayout(false);
-            this.ChatPage.ResumeLayout(false);
-            this.mainSearchBoxPanel.ResumeLayout(false);
-            this.chatPageTopP.ResumeLayout(false);
-            this.chatPageTopP.PerformLayout();
+            this.Text = "Messager";
+            this.menuTabControl.ResumeLayout(false);
+            this.chatPage.ResumeLayout(false);
+            this.chatPageSearchBoxPanel.ResumeLayout(false);
+            this.chatPageTopPanel.ResumeLayout(false);
+            this.chatPageTopPanel.PerformLayout();
             this.archivedPage.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.MainTabControl.ResumeLayout(false);
-            this.chattabpage.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.mainTabControl.ResumeLayout(false);
+            this.chatTabpage.ResumeLayout(false);
+            this.chatTabPageMainPanel.ResumeLayout(false);
+            this.messageTextBoxPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.sentBtnP.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -559,20 +560,20 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl menuTabeControl;
-        private System.Windows.Forms.TabPage ChatPage;
+        private System.Windows.Forms.TabControl menuTabControl;
+        private System.Windows.Forms.TabPage chatPage;
         private System.Windows.Forms.TabPage callsPage;
         private System.Windows.Forms.TabPage StatusPage;
         private System.Windows.Forms.TabPage starredMessagePage;
         private System.Windows.Forms.TabPage archivedPage;
-        private System.Windows.Forms.Panel mainSearchBoxPanel;
-        private System.Windows.Forms.Panel chatPageTopP;
+        private System.Windows.Forms.Panel chatPageSearchBoxPanel;
+        private System.Windows.Forms.Panel chatPageTopPanel;
         private EllipseButton filterContactsBtn;
         private System.Windows.Forms.Label chatLB;
         private EllipseButton contactListBtn;
-        private System.Windows.Forms.TabControl MainTabControl;
-        private System.Windows.Forms.TabPage chattabpage;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TabControl mainTabControl;
+        private System.Windows.Forms.TabPage chatTabpage;
+        private System.Windows.Forms.Panel chatTabPageMainPanel;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
@@ -580,9 +581,9 @@
         private System.Windows.Forms.Panel panel5;
 
         private CustomTooltip customTooltip1;
-        private CustomSearchBox contactUSearchBox;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel chatContactsPanel;
+        private CustomSearchBox chatPageSearchBox;
+        private System.Windows.Forms.Panel messageTextBoxPanel;
+        private System.Windows.Forms.Panel alreadyMessagedContactsPanel;
         private System.Windows.Forms.Panel messageShowP;
         private System.Windows.Forms.RichTextBox messageTB;
         private System.Windows.Forms.Panel sentBtnP;

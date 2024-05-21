@@ -50,10 +50,9 @@
             this.panel1.Controls.Add(this.headingLB);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(20, 18, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(394, 59);
+            this.panel1.Padding = new System.Windows.Forms.Padding(15, 15, 0, 0);
+            this.panel1.Size = new System.Drawing.Size(296, 48);
             this.panel1.TabIndex = 0;
             // 
             // headingLB
@@ -61,10 +60,9 @@
             this.headingLB.AutoSize = true;
             this.headingLB.Dock = System.Windows.Forms.DockStyle.Left;
             this.headingLB.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headingLB.Location = new System.Drawing.Point(20, 18);
-            this.headingLB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.headingLB.Location = new System.Drawing.Point(15, 15);
             this.headingLB.Name = "headingLB";
-            this.headingLB.Size = new System.Drawing.Size(127, 31);
+            this.headingLB.Size = new System.Drawing.Size(102, 25);
             this.headingLB.TabIndex = 0;
             this.headingLB.Text = "New Chat";
             // 
@@ -72,11 +70,10 @@
             // 
             this.panel2.Controls.Add(this.searchBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 59);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 48);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.panel2.Size = new System.Drawing.Size(394, 69);
+            this.panel2.Padding = new System.Windows.Forms.Padding(6);
+            this.panel2.Size = new System.Drawing.Size(296, 56);
             this.panel2.TabIndex = 1;
             // 
             // searchBox
@@ -87,25 +84,23 @@
             this.searchBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.searchBox.IsSearchIconVisible = false;
             this.searchBox.IsUnderLine = true;
-            this.searchBox.Location = new System.Drawing.Point(8, 7);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchBox.Location = new System.Drawing.Point(6, 5);
             this.searchBox.Multiline = true;
             this.searchBox.Name = "searchBox";
-            this.searchBox.Padding = new System.Windows.Forms.Padding(20, 9, 9, 9);
+            this.searchBox.Padding = new System.Windows.Forms.Padding(15, 7, 7, 7);
             this.searchBox.PlaceholderText = "Search Name";
             this.searchBox.ReadOnly = false;
-            this.searchBox.Size = new System.Drawing.Size(378, 55);
+            this.searchBox.Size = new System.Drawing.Size(284, 45);
             this.searchBox.TabIndex = 1;
             // 
             // contactLoadP
             // 
             this.contactLoadP.AutoScroll = true;
             this.contactLoadP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contactLoadP.Location = new System.Drawing.Point(0, 175);
-            this.contactLoadP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contactLoadP.Location = new System.Drawing.Point(0, 142);
             this.contactLoadP.Name = "contactLoadP";
-            this.contactLoadP.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.contactLoadP.Size = new System.Drawing.Size(394, 282);
+            this.contactLoadP.Padding = new System.Windows.Forms.Padding(4);
+            this.contactLoadP.Size = new System.Drawing.Size(296, 229);
             this.contactLoadP.TabIndex = 2;
             // 
             // ellipseControl1
@@ -126,10 +121,9 @@
             this.groupCreateNextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupCreateNextBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupCreateNextBtn.ForeColor = System.Drawing.Color.White;
-            this.groupCreateNextBtn.Location = new System.Drawing.Point(213, 5);
-            this.groupCreateNextBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupCreateNextBtn.Location = new System.Drawing.Point(160, 4);
             this.groupCreateNextBtn.Name = "groupCreateNextBtn";
-            this.groupCreateNextBtn.Size = new System.Drawing.Size(176, 37);
+            this.groupCreateNextBtn.Size = new System.Drawing.Size(132, 30);
             this.groupCreateNextBtn.SlowMotionInterval = 5;
             this.groupCreateNextBtn.TabIndex = 4;
             this.groupCreateNextBtn.Text = "Next";
@@ -141,11 +135,10 @@
             this.groupCreateNextP.Controls.Add(this.cancelBtn);
             this.groupCreateNextP.Controls.Add(this.groupCreateNextBtn);
             this.groupCreateNextP.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupCreateNextP.Location = new System.Drawing.Point(0, 457);
-            this.groupCreateNextP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupCreateNextP.Location = new System.Drawing.Point(0, 371);
             this.groupCreateNextP.Name = "groupCreateNextP";
-            this.groupCreateNextP.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.groupCreateNextP.Size = new System.Drawing.Size(394, 47);
+            this.groupCreateNextP.Padding = new System.Windows.Forms.Padding(4);
+            this.groupCreateNextP.Size = new System.Drawing.Size(296, 38);
             this.groupCreateNextP.TabIndex = 4;
             this.groupCreateNextP.Visible = false;
             // 
@@ -162,10 +155,9 @@
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelBtn.ForeColor = System.Drawing.Color.Black;
-            this.cancelBtn.Location = new System.Drawing.Point(5, 5);
-            this.cancelBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelBtn.Location = new System.Drawing.Point(4, 4);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(180, 37);
+            this.cancelBtn.Size = new System.Drawing.Size(135, 30);
             this.cancelBtn.SlowMotionInterval = 5;
             this.cancelBtn.TabIndex = 5;
             this.cancelBtn.Text = "Cancel";
@@ -177,11 +169,11 @@
             this.addGroupSimpleU.BackColor = System.Drawing.Color.Transparent;
             this.addGroupSimpleU.Dock = System.Windows.Forms.DockStyle.Top;
             this.addGroupSimpleU.LabelText = "New Group";
-            this.addGroupSimpleU.Location = new System.Drawing.Point(0, 128);
-            this.addGroupSimpleU.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.addGroupSimpleU.Location = new System.Drawing.Point(0, 104);
+            this.addGroupSimpleU.Margin = new System.Windows.Forms.Padding(4);
             this.addGroupSimpleU.Name = "addGroupSimpleU";
-            this.addGroupSimpleU.Padding = new System.Windows.Forms.Padding(27, 0, 20, 0);
-            this.addGroupSimpleU.Size = new System.Drawing.Size(394, 47);
+            this.addGroupSimpleU.Padding = new System.Windows.Forms.Padding(20, 0, 15, 0);
+            this.addGroupSimpleU.Size = new System.Drawing.Size(296, 38);
             this.addGroupSimpleU.TabIndex = 0;
             // 
             // panel4
@@ -193,22 +185,21 @@
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(394, 504);
+            this.panel4.Size = new System.Drawing.Size(296, 409);
             this.panel4.TabIndex = 5;
             // 
             // ContactListU
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(244)))), ((int)(((byte)(242)))));
             this.Controls.Add(this.panel4);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ContactListU";
-            this.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Size = new System.Drawing.Size(400, 508);
+            this.Padding = new System.Windows.Forms.Padding(2);
+            this.Size = new System.Drawing.Size(300, 413);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

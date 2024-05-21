@@ -620,7 +620,6 @@ C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\Ch
 C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.MessageConfirmForm.resources
 C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.AddGroupSimpleU.resources
 C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.ChatPageColor.resources
-C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.ChatSenter.resources
 C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.ChatWallPaper.resources
 C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.CreateGroupPageU.resources
 C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.TransparentForm.resources
@@ -655,7 +654,6 @@ C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\Ch
 C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.pdb
 C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.SelectedMessageOperationForm.resources
 C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.StaredMessageContactU.resources
-C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache
 C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\ChatApplication.exe.config
 C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\ChatApplication.exe
 C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\bin\Debug\ChatApplication.pdb
@@ -705,3 +703,4 @@ C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplica
 C:\Users\ayyan\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.GroupMenuControl.resources
 C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.UControl.GroupMenuControl.resources
 C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.TransparentForm2.resources
+C:\Users\Lucid\OneDrive\Desktop\ChatApplication-subramani-imageStorageupdated\ChatApplication\obj\Debug\ChatApplication.csprojAssemblyReference.cache

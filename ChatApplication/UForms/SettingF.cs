@@ -19,13 +19,15 @@ namespace ChatApplication.UForms
         public event EventHandler OnLeaveChatPageColorChange;
         public event EventHandler OnClickChatPageColorSelect;
         public event EventHandler OnClickDeleteAllTheMessage;
-      public Contact  Contact{
-      set{
+        public Contact Contact
+        {
+            set
+            {
                 firstNameTB.Text = value.FirstName;
                 lastNameTB.Text = value.LastName;
                 ProfileImagePath = value.DpPicture;
             }
-      }
+        }
         public string ProfileImagePath
         {
             set
@@ -47,19 +49,19 @@ namespace ChatApplication.UForms
                     dpPictureU.Image = Properties.Resources.profile_user;
                 }
             }
-            
+
         }
         public bool IsProfilePageSelected
         {
             set
             {
                 settingMenuControl.IsProfileBtnSelected = value;
-             
             }
         }
         public SettingF()
         {
             InitializeComponent();
+            dpPictureU.EditBtnVisible = true;
             KeyPreview = true;
             KeyDown += FormKeyDown;
             Disposed += SettingFDisposed;
@@ -72,7 +74,7 @@ namespace ChatApplication.UForms
             themeCB.SelectedIndexChanged += themeCBSelectedIndexChanged;
             settingMainTabControl.ItemSize = new Size(0, 1);
             this.Contact = ContactsManager.PCContact;
-             Load += SettingFLoad;
+            Load += SettingFLoad;
             settingMenuControl.OnClickAboutBtn += SettingMenuControlOnClickAboutBtn;
             settingMenuControl.OnClickAccountBtn += SettingMenuControlOnClickAccountBtn;
             settingMenuControl.OnClickPersonalizationBtn += SettingMenuControlOnClickPersonalizationBtn;
@@ -98,23 +100,29 @@ namespace ChatApplication.UForms
             firstNameTB.BorderColor = SettingManager.PrimaryThemeColor;
             lastNameTB.BorderColor = SettingManager.PrimaryThemeColor;
         }
+        private void OnClickMuteMessageNotificationBtn(object sender, EventArgs e)
+        {
+            SettingManager.ChangeMuteMessageNotification(true);
+        }
 
         private void dpPictureUOnClickDpPicturePathGet(object sender, string dpPicturePath)
         {
-        try{
-               // string DpPicturePath = FilesManager.SaveFileInFolder(FilesManager.ContactsFilesPath_D["DPPICTURE"], dpPicturePath, ContactsManager.PCContact.FirstName + "-" + ContactsManager.PCContact.LastName + "-" + NetworkManager.PcHostName);
+            try
+            {
+                // string DpPicturePath = FilesManager.SaveFileInFolder(FilesManager.ContactsFilesPath_D["DPPICTURE"], dpPicturePath, ContactsManager.PCContact.FirstName + "-" + ContactsManager.PCContact.LastName + "-" + NetworkManager.PcHostName);
                 if (DatabaseManager.ChatApplicationServerConnection())
                 {
                     string imageStringFormat = FilesManager.ConvertImageToBase64(dpPicturePath);
                     ContactsManager.ChangeContactDppicture(ContactsManager.PCContact.HostName, imageStringFormat);
                     DatabaseManager.ChatApplicationLocalConnection();
                     ContactsManager.ChangeContactDppicture(ContactsManager.PCContact.HostName, imageStringFormat);
-                  //  ContactsManager.ContactManagerSetup();
+                    //  ContactsManager.ContactManagerSetup();
                 }
                 else
                     MainForm.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
             }
-           catch{
+            catch
+            {
                 MainForm.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
             }
         }
@@ -222,7 +230,7 @@ namespace ChatApplication.UForms
                 {
                     MainForm.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
                 }
-           }
+            }
         }
 
         private void personalizationPage_Click(object sender, EventArgs e)
@@ -238,7 +246,7 @@ namespace ChatApplication.UForms
                 SettingManager.ThemeSetUP();
             }
             label8.Focus();
-            
+
         }
         private void themeCBDropDownStyleChanged(object sender, EventArgs e)
         {

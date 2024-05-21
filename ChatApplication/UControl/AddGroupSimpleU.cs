@@ -13,13 +13,16 @@ namespace ChatApplication
     public partial class AddGroupSimpleU : UserControl
     {
         public event EventHandler OnClickAddGroupSimpleU;
-        public string LabelText{
-        get{
+        public string LabelText
+        {
+            get
+            {
                 return newGroupLB.Text;
-        }
-        set{
-                newGroupLB.Text=value;
-           }
+            }
+            set
+            {
+                newGroupLB.Text = value;
+            }
         }
         public AddGroupSimpleU()
         {

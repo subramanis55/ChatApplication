@@ -19,13 +19,11 @@ namespace ChatApplication.UForms
             //Theme Setup
             messageBoxTopP.BackColor = SettingManager.PrimaryThemeColor;
             messageLB.Text = message;
-            closeBtn.Click +=BtnClick;
+            closeBtn.Click += BtnClick;
             okBtn.Click += BtnClick;
             messageBoxTopP.MouseUp += MessageBoxTopPMouseUp;
             messageBoxTopP.MouseDown += MessageBoxTopPMouseDown;
             messageBoxTopP.MouseMove += MessageBoxTopPMouseMove;
-            
-
         }
         private bool isUp = false;
         private Point prevPoint;
@@ -43,15 +41,13 @@ namespace ChatApplication.UForms
             isUp = true;
             prevPoint = Cursor.Position;
         }
-
         private void MessageBoxTopPMouseUp(object sender, MouseEventArgs e)
         {
             isUp = false;
         }
-
         private void BtnClick(object sender, EventArgs e)
-        {          
-                this.DialogResult = DialogResult.OK;         
+        {
+            this.DialogResult = DialogResult.OK;
             this.Dispose();
         }
     }

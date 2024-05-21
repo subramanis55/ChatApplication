@@ -21,7 +21,6 @@ namespace ChatApplication.Manager
             var result = DatabaseManager.Manager.InsertData("MESSAGES", new ParameterData[] { new ParameterData("FROMHOSTNAME", message.FromHostName), new ParameterData("TOHOSTNAME", message.ToHostName), new ParameterData("GROUPID", message.GroupId), new ParameterData("DATEANDTIME", message.DateAndTime), new ParameterData("MESSAGE", message.MessageText), new ParameterData("ISSENT", message.IsSent == false ? 0 : 1), new ParameterData("ISFILE", message.IsFile == false ? 0 : 1), new ParameterData("FILENAME", message.FileName) });
             return GetMessage(message.FromHostName, message.ToHostName, message.DateAndTime);
         }
-
         public static bool DeleteMessage(int messageID)
         {
             var result = DatabaseManager.Manager.DeleteData("MESSAGES", $"MESSAGEID={messageID}");
@@ -113,7 +112,6 @@ namespace ChatApplication.Manager
                 return null;
             }
         }
-
         public static Message GetMessage(string hostName, int groupId, DateTime dateTime)
         {
             try
@@ -126,8 +124,6 @@ namespace ChatApplication.Manager
                 return null;
             }
         }
-
-
         public static List<Message> GetMessages(string hostName, int groupId)
         {
             var result = DatabaseManager.Manager.FetchData("MESSAGES", $"FROMHOSTNAME='{hostName}' AND GROUPIID={groupId}) ", fields: new string[] { "FROMHOSTNAME", "MESSAGE", "DATEANDTIME" }, orderBy: "DATEANDTIME");
@@ -198,7 +194,6 @@ namespace ChatApplication.Manager
             }
             return temp_MessageList;
         }
-
         //UNSENTGROUPMESSAGES 
         public static bool CreateUnSentGroupMessage(Message message)
         {

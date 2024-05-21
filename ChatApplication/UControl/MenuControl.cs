@@ -87,7 +87,7 @@ namespace ChatApplication
                 }
             }
         }
-        public string ProFileImagePath
+        public string ProfilePicturePath
         {
             set
             {

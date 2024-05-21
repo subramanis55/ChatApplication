@@ -51,7 +51,7 @@ namespace ChatApplication.Manager
         }
         public static async void QueueGroupMessageSent(Message message)
         {
-            var data = NetworkManager.MessageSent(message, ContactsManager.ContactDictionary[message.ToHostName]);    //// *** need  to change
+            var data = NetworkManager.MessageSent(message, ContactsManager.ContactDictionary[message.ToHostName]);    
             if (data.Status != TaskStatus.Faulted)
             {
                 MessagesManager.DeleteUnSentGroupMessage(message);

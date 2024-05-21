@@ -30,12 +30,13 @@ namespace ChatApplication
             set
             {
                 isOnline = value;
-                if(isOnline)
+                if (isOnline)
                 {
                     contactStatusLabel.Text = "Online";
                     contactStatusLabel.ForeColor = OnlineColor;
                 }
-                else{
+                else
+                {
                     contactStatusLabel.Text = "Offline";
                     contactStatusLabel.ForeColor = Color.Gray;
                 }

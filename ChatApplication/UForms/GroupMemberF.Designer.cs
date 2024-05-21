@@ -55,6 +55,8 @@
             this.titleLB = new System.Windows.Forms.Label();
             this.groupMainTabControl = new System.Windows.Forms.TabControl();
             this.groupMenuControl = new ChatApplication.UControl.GroupMenuControl();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.overviewPage.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -67,6 +69,8 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupMainTabControl.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // ellipseControl1
@@ -76,13 +80,13 @@
             // 
             // overviewPage
             // 
-            this.overviewPage.Controls.Add(this.groupLeaveBtn);
+            this.overviewPage.Controls.Add(this.panel5);
             this.overviewPage.Controls.Add(this.panel11);
             this.overviewPage.Controls.Add(this.panel12);
             this.overviewPage.Controls.Add(this.panel13);
-            this.overviewPage.Location = new System.Drawing.Point(4, 5);
+            this.overviewPage.Location = new System.Drawing.Point(4, 14);
             this.overviewPage.Name = "overviewPage";
-            this.overviewPage.Size = new System.Drawing.Size(328, 489);
+            this.overviewPage.Size = new System.Drawing.Size(306, 431);
             this.overviewPage.TabIndex = 3;
             this.overviewPage.UseVisualStyleBackColor = true;
             // 
@@ -98,7 +102,7 @@
             this.groupLeaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupLeaveBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupLeaveBtn.ForeColor = System.Drawing.Color.Red;
-            this.groupLeaveBtn.Location = new System.Drawing.Point(75, 416);
+            this.groupLeaveBtn.Location = new System.Drawing.Point(61, 14);
             this.groupLeaveBtn.Name = "groupLeaveBtn";
             this.groupLeaveBtn.Size = new System.Drawing.Size(152, 35);
             this.groupLeaveBtn.SlowMotionInterval = 5;
@@ -109,12 +113,13 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.panel6);
             this.panel11.Controls.Add(this.groupNameTBEditBtn);
-            this.panel11.Controls.Add(this.groupNameTB);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 199);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(328, 68);
+            this.panel11.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel11.Size = new System.Drawing.Size(306, 68);
             this.panel11.TabIndex = 2;
             // 
             // groupNameTBEditBtn
@@ -129,7 +134,7 @@
             this.groupNameTBEditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupNameTBEditBtn.ForeColor = System.Drawing.Color.Transparent;
             this.groupNameTBEditBtn.Image = global::ChatApplication.Properties.Resources.edit_24_Black1;
-            this.groupNameTBEditBtn.Location = new System.Drawing.Point(283, 24);
+            this.groupNameTBEditBtn.Location = new System.Drawing.Point(263, 17);
             this.groupNameTBEditBtn.Name = "groupNameTBEditBtn";
             this.groupNameTBEditBtn.Size = new System.Drawing.Size(32, 30);
             this.groupNameTBEditBtn.SlowMotionInterval = 5;
@@ -142,16 +147,17 @@
             this.groupNameTB.BackColor = System.Drawing.Color.White;
             this.groupNameTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.groupNameTB.BorderSize = 4;
+            this.groupNameTB.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupNameTB.Enabled = false;
             this.groupNameTB.IsSearchIconVisible = false;
             this.groupNameTB.IsUnderLine = true;
-            this.groupNameTB.Location = new System.Drawing.Point(3, 17);
+            this.groupNameTB.Location = new System.Drawing.Point(10, 0);
             this.groupNameTB.Multiline = false;
             this.groupNameTB.Name = "groupNameTB";
             this.groupNameTB.Padding = new System.Windows.Forms.Padding(15, 7, 7, 7);
             this.groupNameTB.PlaceholderText = "";
             this.groupNameTB.ReadOnly = false;
-            this.groupNameTB.Size = new System.Drawing.Size(274, 45);
+            this.groupNameTB.Size = new System.Drawing.Size(251, 47);
             this.groupNameTB.TabIndex = 2;
             this.groupNameTB.TabStop = false;
             // 
@@ -161,7 +167,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 59);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(328, 140);
+            this.panel12.Size = new System.Drawing.Size(306, 140);
             this.panel12.TabIndex = 0;
             // 
             // dpPictureU
@@ -183,7 +189,7 @@
             this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(20, 0, 0, 15);
-            this.panel13.Size = new System.Drawing.Size(328, 59);
+            this.panel13.Size = new System.Drawing.Size(306, 59);
             this.panel13.TabIndex = 1;
             // 
             // label7
@@ -201,9 +207,9 @@
             // 
             this.groupMemberPage.BackColor = System.Drawing.Color.White;
             this.groupMemberPage.Controls.Add(this.panel4);
-            this.groupMemberPage.Location = new System.Drawing.Point(4, 5);
+            this.groupMemberPage.Location = new System.Drawing.Point(4, 14);
             this.groupMemberPage.Name = "groupMemberPage";
-            this.groupMemberPage.Size = new System.Drawing.Size(328, 489);
+            this.groupMemberPage.Size = new System.Drawing.Size(282, 424);
             this.groupMemberPage.TabIndex = 0;
             // 
             // panel4
@@ -216,7 +222,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(328, 489);
+            this.panel4.Size = new System.Drawing.Size(282, 424);
             this.panel4.TabIndex = 8;
             // 
             // groupMembersShowP
@@ -226,7 +232,7 @@
             this.groupMembersShowP.Location = new System.Drawing.Point(0, 180);
             this.groupMembersShowP.Name = "groupMembersShowP";
             this.groupMembersShowP.Padding = new System.Windows.Forms.Padding(4);
-            this.groupMembersShowP.Size = new System.Drawing.Size(328, 271);
+            this.groupMembersShowP.Size = new System.Drawing.Size(282, 206);
             this.groupMembersShowP.TabIndex = 1;
             // 
             // addGroupMemberNextP
@@ -234,10 +240,10 @@
             this.addGroupMemberNextP.Controls.Add(this.cancelBtn);
             this.addGroupMemberNextP.Controls.Add(this.addGroupMemberNextBtn);
             this.addGroupMemberNextP.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.addGroupMemberNextP.Location = new System.Drawing.Point(0, 451);
+            this.addGroupMemberNextP.Location = new System.Drawing.Point(0, 386);
             this.addGroupMemberNextP.Name = "addGroupMemberNextP";
             this.addGroupMemberNextP.Padding = new System.Windows.Forms.Padding(4);
-            this.addGroupMemberNextP.Size = new System.Drawing.Size(328, 38);
+            this.addGroupMemberNextP.Size = new System.Drawing.Size(282, 38);
             this.addGroupMemberNextP.TabIndex = 5;
             this.addGroupMemberNextP.Visible = false;
             // 
@@ -276,7 +282,7 @@
             this.addGroupMemberNextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addGroupMemberNextBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addGroupMemberNextBtn.ForeColor = System.Drawing.Color.White;
-            this.addGroupMemberNextBtn.Location = new System.Drawing.Point(197, 4);
+            this.addGroupMemberNextBtn.Location = new System.Drawing.Point(151, 4);
             this.addGroupMemberNextBtn.Name = "addGroupMemberNextBtn";
             this.addGroupMemberNextBtn.Size = new System.Drawing.Size(127, 30);
             this.addGroupMemberNextBtn.SlowMotionInterval = 5;
@@ -293,7 +299,7 @@
             this.addOrRemoveChoiceP.Location = new System.Drawing.Point(0, 106);
             this.addOrRemoveChoiceP.Name = "addOrRemoveChoiceP";
             this.addOrRemoveChoiceP.Padding = new System.Windows.Forms.Padding(15, 0, 15, 3);
-            this.addOrRemoveChoiceP.Size = new System.Drawing.Size(328, 74);
+            this.addOrRemoveChoiceP.Size = new System.Drawing.Size(282, 74);
             this.addOrRemoveChoiceP.TabIndex = 7;
             // 
             // RemoveGroupMemberBtn
@@ -313,7 +319,7 @@
             this.RemoveGroupMemberBtn.Image = global::ChatApplication.Properties.Resources.contact__4_;
             this.RemoveGroupMemberBtn.Location = new System.Drawing.Point(15, 38);
             this.RemoveGroupMemberBtn.Name = "RemoveGroupMemberBtn";
-            this.RemoveGroupMemberBtn.Size = new System.Drawing.Size(298, 33);
+            this.RemoveGroupMemberBtn.Size = new System.Drawing.Size(252, 33);
             this.RemoveGroupMemberBtn.SlowMotionInterval = 5;
             this.RemoveGroupMemberBtn.TabIndex = 7;
             this.RemoveGroupMemberBtn.Text = "     Remove Member";
@@ -339,7 +345,7 @@
             this.addGroupMemberBtn.Image = global::ChatApplication.Properties.Resources.user_avatar__2_;
             this.addGroupMemberBtn.Location = new System.Drawing.Point(15, 0);
             this.addGroupMemberBtn.Name = "addGroupMemberBtn";
-            this.addGroupMemberBtn.Size = new System.Drawing.Size(298, 33);
+            this.addGroupMemberBtn.Size = new System.Drawing.Size(252, 33);
             this.addGroupMemberBtn.SlowMotionInterval = 5;
             this.addGroupMemberBtn.TabIndex = 6;
             this.addGroupMemberBtn.Text = "      Add Member";
@@ -356,7 +362,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 106);
+            this.panel1.Size = new System.Drawing.Size(282, 106);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -366,7 +372,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 47);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(6);
-            this.panel3.Size = new System.Drawing.Size(328, 63);
+            this.panel3.Size = new System.Drawing.Size(282, 63);
             this.panel3.TabIndex = 1;
             // 
             // searchBox
@@ -383,7 +389,7 @@
             this.searchBox.Padding = new System.Windows.Forms.Padding(15, 7, 7, 7);
             this.searchBox.PlaceholderText = "Search Name";
             this.searchBox.ReadOnly = false;
-            this.searchBox.Size = new System.Drawing.Size(316, 48);
+            this.searchBox.Size = new System.Drawing.Size(270, 48);
             this.searchBox.TabIndex = 2;
             this.searchBox.TabStop = false;
             // 
@@ -394,7 +400,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(328, 47);
+            this.panel2.Size = new System.Drawing.Size(282, 47);
             this.panel2.TabIndex = 0;
             // 
             // titleLB
@@ -413,12 +419,12 @@
             this.groupMainTabControl.Controls.Add(this.groupMemberPage);
             this.groupMainTabControl.Controls.Add(this.overviewPage);
             this.groupMainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupMainTabControl.ItemSize = new System.Drawing.Size(0, 1);
-            this.groupMainTabControl.Location = new System.Drawing.Point(106, 0);
+            this.groupMainTabControl.ItemSize = new System.Drawing.Size(10, 10);
+            this.groupMainTabControl.Location = new System.Drawing.Point(108, 0);
             this.groupMainTabControl.Name = "groupMainTabControl";
             this.groupMainTabControl.Padding = new System.Drawing.Point(0, 0);
             this.groupMainTabControl.SelectedIndex = 0;
-            this.groupMainTabControl.Size = new System.Drawing.Size(336, 498);
+            this.groupMainTabControl.Size = new System.Drawing.Size(314, 449);
             this.groupMainTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.groupMainTabControl.TabIndex = 9;
             // 
@@ -428,14 +434,32 @@
             this.groupMenuControl.Location = new System.Drawing.Point(0, 0);
             this.groupMenuControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupMenuControl.Name = "groupMenuControl";
-            this.groupMenuControl.Size = new System.Drawing.Size(106, 498);
+            this.groupMenuControl.Size = new System.Drawing.Size(108, 449);
             this.groupMenuControl.TabIndex = 4;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.groupLeaveBtn);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 365);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(306, 66);
+            this.panel5.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.groupNameTB);
+            this.panel6.Location = new System.Drawing.Point(3, 17);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel6.Size = new System.Drawing.Size(254, 47);
+            this.panel6.TabIndex = 4;
             // 
             // GroupMemberF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 498);
+            this.ClientSize = new System.Drawing.Size(422, 449);
             this.Controls.Add(this.groupMainTabControl);
             this.Controls.Add(this.groupMenuControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -457,6 +481,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupMainTabControl.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -489,5 +515,7 @@
         private System.Windows.Forms.Label label7;
         private EllipseButton groupLeaveBtn;
         private UControl.GroupMenuControl groupMenuControl;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }

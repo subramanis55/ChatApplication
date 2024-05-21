@@ -24,14 +24,13 @@ namespace ChatApplication
     public partial class MainForm : Form
     {
        
-        public static bool IsMessageSelectedOn;
-        private object contactUObject;
+        public static bool IsMessageSelectionOn;
+        private object ContactOrGroupObject;
         // public static TransparentForm transparentForm = new TransparentForm();
         private ContactU prevContactU;
-        private string attachMentFilePath;
+        private string selectedAttachMentFilePath;
         private string sendingText = "";
-        System.Windows.Forms.ToolTip toolTip;
-        private int chatU_Y = 5;
+        public static System.Windows.Forms.ToolTip toolTip;      
         private DateTime prevDateAndTime = DateTime.MinValue;
         public bool isGroup = false;
         public Contact Contact = null;
@@ -48,18 +47,18 @@ namespace ChatApplication
             {
                 if (value != null)
                 {
-                    contactUObject = value;
+                    ContactOrGroupObject = value;
                     SelectedMessagesChatU.Clear();
                     messageShowP.Controls.Clear();
                     MessagesManager.Message_List.Clear();
                     MessageReadCount = 0;
                     prevMessageReadCount = 0;
                     IsAllMessagesReaded = false;
-                    IsMessageSelectedOn = false;
-                    if (contactUObject is Group)
+                    IsMessageSelectionOn = false;
+                    if (ContactOrGroupObject is Group)
                     {
                         isGroup = true;
-                        this.Group = (Group)contactUObject;
+                        this.Group = (Group)ContactOrGroupObject;
                         DateTime JoinDateTime = DateTime.MinValue;
                         for (int i = 0; i < this.Group.GroupMembers.Count; i++)
                         {
@@ -75,28 +74,28 @@ namespace ChatApplication
                     else
                     {
                         isGroup = false;
-                        this.Contact = (Contact)contactUObject;
+                        this.Contact = (Contact)ContactOrGroupObject;
                         chatPageTitleU.Contact = Contact;
                         MessagesManager.Message_List.AddRange(MessagesManager.GetMessages(NetworkManager.PcHostName, Contact.HostName, ref MessageReadCount, ref IsAllMessagesReaded, messageShowP.MaximumSize.Height / 50 + 1)); ;
                         if(Contact.IsArchived) {
                             menuControl.ISSelectedArchivedBtn = true;
-                            MainTabControl.SelectedTab = chattabpage;
+                            mainTabControl.SelectedTab = chatTabpage;
                         }  
                     }
                     prevDateAndTime = DateTime.MaxValue;
                     MessagesAlign();
-                    MainTabControl.SelectedTab = chattabpage;
+                    mainTabControl.SelectedTab = chatTabpage;
                    
                 }
                 else
                 {
-                    contactUObject = value;
-                    MainTabControl.SelectedTab = defaultPage;
+                    ContactOrGroupObject = value;
+                    mainTabControl.SelectedTab = defaultPage;
                 }
             }
             get
             {
-                return contactUObject;
+                return ContactOrGroupObject;
             }
         }
         public Color ChatPageColor
@@ -118,37 +117,34 @@ namespace ChatApplication
             // ThemeSetUp
             ThemeSetUp(this, EventArgs.Empty);
          
-            GotFocus += MainFormGotFocus;
+            GotFocus += MainFormGotFocus;         
 
-            //  panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 20, 20));
-
-            //menuControl
-            menuControl.OnClickArchivedBtn += ChangeTabarchivedPage;
-            menuControl.OnClickCallsBtn += ChangeTabCallsPage;
-            menuControl.OnClickChatsBtn += ChangeTabChatsPage;
-            menuControl.OnClickStatusBtn += ChangeTabStatusPage;
-            menuControl.OnClickStarBtn += ChangeTabStartedMessagePage;
-            menuControl.OnClickSettingBtn += menuControlOnClickSettingBtn;
-            menuControl.OnClickProfilePicture += menuControlOnClickProfilePicture;
+            //menuControlSetUp
+            menuControl.OnClickArchivedBtn += ArchivedPageBtnClicked;
+            menuControl.OnClickCallsBtn += CallsPageBtnClicked;
+            menuControl.OnClickChatsBtn += ChatsPageBtnClicked;
+            menuControl.OnClickStatusBtn += StatusPageBtnClicked;
+            menuControl.OnClickStarBtn += StartedMessagePageBtnClicked;
+            menuControl.OnClickSettingBtn += SettingPageBtnClicked;
+            menuControl.OnClickProfilePicture += ProfilePicturePictureBoxClicked;
             SettingManager.ThemeSetUpInvoke += ThemeSetUp;
-            messageShowP.MouseWheel += MessageShowP_MouseWheel;
+            messageShowP.MouseWheel += MessageShowPMouseWheel;
 
-            //contactList Btn
+            //contactListBtn
             contactListBtn.Click += ContactListBtnClick;
-
-            chatPageTitleU.OnclickLeaveFromGroupInvoke += ChatPageTitleUOnclickLeaveFromGroupInvoke;
-            chatPageTitleU.OnclickGroupMemberContactGet += ChatPageTitleUOnclickGroupMemberContactGet;
-            chatPageTitleU.OnclickProfilePicture += ChatPageTitleUOnclickProfilePicture;
-            chatPageTitleU.OnclickAddArchivedBtn += ChatPageTitleUOnclickAddArchivedBtn;
+            //ContactTitleU
+            chatPageTitleU.OnclickLeaveFromGroupInvoke += ChatPageTitleULeaveFromGroupBtnClicked;
+            chatPageTitleU.OnclickGroupMemberContactGet += ChatPageTitleUGroupMemberContactNameGet;
+            chatPageTitleU.OnclickProfilePicture += ChatPageTitleUProfilePictureClicked;
+            chatPageTitleU.OnclickAddArchivedBtn += ChatPageTitleUAddArchivedBtnClicked;
             //MainForm 
             Load += MainFormLoad;
             FormClosed += MainFormFormClosed;
             Resize += MainFormResize;
 
-
             //Subcribe to MessageAlign()
             NetworkManager.MessageAlignInvoke = SingleMessageAlign;
-            NetworkManager.NewMessageArrivedInvoke = NewMessageArrivedInvokemethod;
+            NetworkManager.NewMessageArrivedInvoke = NewMessageArrivedUpdate;
             NetworkManager.OnlineStatusInvoke += OnlineStatusUpdateToContact;
             //Notification Manager
             notificationThrowManager.OnClickNotification += NotificationOnClick;
@@ -158,9 +154,9 @@ namespace ChatApplication
             typeof(Panel).InvokeMember("DoubleBuffered", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.SetProperty | System.Reflection.BindingFlags.Instance, null, messageShowP, new object[] { true });
 
             //FilterContactBtn
-            filterContactsBtn.Click += FilterContactsBtnClick;
+            filterContactsBtn.Click += FilterContactsBtnClicked;
             editSheet.MessageSelected += FilterSelected;
-            contactUSearchBox.Textchanged += ContactUSearchBoxTextchanged;
+            chatPageSearchBox.Textchanged += ChatPageSearchBoxTextchanged;
             editSheet.Show();
             editSheet.Visible = false;
         }
@@ -175,11 +171,8 @@ namespace ChatApplication
                         chatPageTitleU.IsOnline = contact.IsOnline;
                 }
                 
-                }));
-
-                  
-            }
-               
+                }));      
+            }    
         }
 
         private void MainFormGotFocus(object sender, EventArgs e)
@@ -187,27 +180,27 @@ namespace ChatApplication
             
         }
 
-        private void ChatPageTitleUOnclickAddArchivedBtn(object sender, bool isArchived)
+        private void ChatPageTitleUAddArchivedBtnClicked(object sender, bool isArchived)
         {
             if (isArchived)
             {
                 menuControl.ISSelectedArchivedBtn = true;
-                MainTabControl.SelectedTab = chattabpage;
-                for (int i = 0; i < chatContactsPanel.Controls.Count; i++)
+                mainTabControl.SelectedTab = chatTabpage;
+                for (int i = 0; i < alreadyMessagedContactsPanel.Controls.Count; i++)
                 {
                     if (chatPageTitleU.IsGroup)
                     {
-                        if (((ContactU)chatContactsPanel.Controls[i]).IsGroup && ((ContactU)chatContactsPanel.Controls[i]).Group.GroupID == chatPageTitleU.Group.GroupID)
+                        if (((ContactU)alreadyMessagedContactsPanel.Controls[i]).IsGroup && ((ContactU)alreadyMessagedContactsPanel.Controls[i]).Group.GroupID == chatPageTitleU.Group.GroupID)
                         {
-                            ArchivedContactsPanel.Controls.Add(chatContactsPanel.Controls[i]);
+                            ArchivedContactsPanel.Controls.Add(alreadyMessagedContactsPanel.Controls[i]);
                             break;
                         }
                     }
                     else
                     {
-                        if (!((ContactU)chatContactsPanel.Controls[i]).IsGroup && ((ContactU)chatContactsPanel.Controls[i]).Contact.HostName == chatPageTitleU.Contact.HostName)
+                        if (!((ContactU)alreadyMessagedContactsPanel.Controls[i]).IsGroup && ((ContactU)alreadyMessagedContactsPanel.Controls[i]).Contact.HostName == chatPageTitleU.Contact.HostName)
                         {
-                            ArchivedContactsPanel.Controls.Add(chatContactsPanel.Controls[i]);
+                            ArchivedContactsPanel.Controls.Add(alreadyMessagedContactsPanel.Controls[i]);
                             break;
                         }
                     }
@@ -216,14 +209,14 @@ namespace ChatApplication
             else
             {
                 menuControl.ISSelectedChatsBtn = true;
-                MainTabControl.SelectedTab = chattabpage;
+                mainTabControl.SelectedTab = chatTabpage;
                 for (int i = 0; i < ArchivedContactsPanel.Controls.Count; i++)
                 {
                     if (chatPageTitleU.IsGroup)
                     {
                         if (((ContactU)ArchivedContactsPanel.Controls[i]).IsGroup && ((ContactU)ArchivedContactsPanel.Controls[i]).Group.GroupID == chatPageTitleU.Group.GroupID)
                         {
-                            chatContactsPanel.Controls.Add(ArchivedContactsPanel.Controls[i]);
+                            alreadyMessagedContactsPanel.Controls.Add(ArchivedContactsPanel.Controls[i]);
                             break;
                         }
                     }
@@ -231,7 +224,7 @@ namespace ChatApplication
                     {
                         if (!((ContactU)ArchivedContactsPanel.Controls[i]).IsGroup && ((ContactU)ArchivedContactsPanel.Controls[i]).Contact.HostName == chatPageTitleU.Contact.HostName)
                         {
-                            chatContactsPanel.Controls.Add(ArchivedContactsPanel.Controls[i]);
+                            alreadyMessagedContactsPanel.Controls.Add(ArchivedContactsPanel.Controls[i]);
                             break;
                         }
                     }
@@ -254,7 +247,7 @@ namespace ChatApplication
                 ((NotificationForm)sender).Dispose();
             }
         }
-        private void ChatPageTitleUOnclickProfilePicture(object sender, EventArgs e)
+        private void ChatPageTitleUProfilePictureClicked(object sender, EventArgs e)
         {
             profileImageViewF profileImageViewForm = new profileImageViewF();
             if (isGroup)
@@ -275,10 +268,10 @@ namespace ChatApplication
             profileImageViewForm.Show();
         }
 
-        private void ContactUSearchBoxTextchanged(object sender, EventArgs e)
+        private void ChatPageSearchBoxTextchanged(object sender, EventArgs e)
         {
-            chatContactsPanel.SuspendLayout();
-            foreach (Control control in chatContactsPanel.Controls)
+            alreadyMessagedContactsPanel.SuspendLayout();
+            foreach (Control control in alreadyMessagedContactsPanel.Controls)
             {
                 ContactU contactU = control as ContactU;
                 if (contactU != null)
@@ -286,14 +279,14 @@ namespace ChatApplication
                     contactU.Visible = true;
                 }
             }
-            if (!contactUSearchBox.IsPlaceholder && contactUSearchBox.Text != contactUSearchBox.PlaceholderText)
+            if (!chatPageSearchBox.IsPlaceholder && chatPageSearchBox.Text != chatPageSearchBox.PlaceholderText)
             {
-                if (!string.IsNullOrWhiteSpace(contactUSearchBox.Text))
+                if (!string.IsNullOrWhiteSpace(chatPageSearchBox.Text))
                 {
-                    string searchText = contactUSearchBox.Text.Trim();
-                    for (int i = 0; i < chatContactsPanel.Controls.Count; i++)
+                    string searchText = chatPageSearchBox.Text.Trim();
+                    for (int i = 0; i < alreadyMessagedContactsPanel.Controls.Count; i++)
                     {
-                        ContactU contactU = chatContactsPanel.Controls[i] as ContactU;
+                        ContactU contactU = alreadyMessagedContactsPanel.Controls[i] as ContactU;
                         if (contactU != null && contactU.ContactName.IndexOf(searchText, StringComparison.InvariantCultureIgnoreCase) == 0)
                         {
                             contactU.SendToBack();
@@ -305,10 +298,10 @@ namespace ChatApplication
                     }
                 }
             }
-            chatContactsPanel.ResumeLayout();
+            alreadyMessagedContactsPanel.ResumeLayout();
         }
 
-        private void ChatPageTitleUOnclickGroupMemberContactGet(object sender, Contact contact)
+        private void ChatPageTitleUGroupMemberContactNameGet(object sender, Contact contact)
         {
             string temp = messageTB.Text;
             string contactName = ContactsManager.getName(contact.HostName);
@@ -321,15 +314,15 @@ namespace ChatApplication
             }
         }
 
-        private void ChatPageTitleUOnclickLeaveFromGroupInvoke(object sender, Group group)
+        private void ChatPageTitleULeaveFromGroupBtnClicked(object sender, Group group)
         {
             if(group.IsArchived){
                 ArchivedContactsPanel.Controls.Remove(ContactUDictionary[group.GroupID+""]);
             }
             else
-                chatContactsPanel.Controls.Remove(ContactUDictionary[group.GroupID + ""]);
+                alreadyMessagedContactsPanel.Controls.Remove(ContactUDictionary[group.GroupID + ""]);
         }
-        private void FilterContactsBtnClick(object sender, EventArgs e)
+        private void FilterContactsBtnClicked(object sender, EventArgs e)
         {
             Point point = filterContactsBtn.PointToScreen(new Point(0, 0));
             FilterChatByF filterChatByF = new FilterChatByF();
@@ -348,58 +341,58 @@ namespace ChatApplication
         private void FilterChatByFOnClickAllBtn(object sender, EventArgs e)
         {
             chatLB.Text = "Chats";
-            chatContactsPanel.SuspendLayout();
-            for (int i = 0; i < chatContactsPanel.Controls.Count; i++)
+            alreadyMessagedContactsPanel.SuspendLayout();
+            for (int i = 0; i < alreadyMessagedContactsPanel.Controls.Count; i++)
             {
-                ContactU contactU = (ContactU)chatContactsPanel.Controls[i];
+                ContactU contactU = (ContactU)alreadyMessagedContactsPanel.Controls[i];
                 contactU.Visible = true;
             }
-            chatContactsPanel.ResumeLayout();
+            alreadyMessagedContactsPanel.ResumeLayout();
         }
         private void FilterChatByFOnClickUnreadBtn(object sender, EventArgs e)
         {
             chatLB.Text = "UnRead";
-            chatContactsPanel.SuspendLayout();
-            for (int i = 0; i < chatContactsPanel.Controls.Count; i++)
+            alreadyMessagedContactsPanel.SuspendLayout();
+            for (int i = 0; i < alreadyMessagedContactsPanel.Controls.Count; i++)
             {
-                ContactU contactU = (ContactU)chatContactsPanel.Controls[i];
+                ContactU contactU = (ContactU)alreadyMessagedContactsPanel.Controls[i];
                 if (contactU.NewMessageCount > 0)
                     contactU.Visible = true;
                 else
                     contactU.Visible = false;
             }
-            chatContactsPanel.ResumeLayout();
+            alreadyMessagedContactsPanel.ResumeLayout();
         }
         private void FilterChatByFOnClickGroupBtn(object sender, EventArgs e)
         {
             chatLB.Text = "Groups";
-            chatContactsPanel.SuspendLayout();
-            for (int i = 0; i < chatContactsPanel.Controls.Count; i++)
+            alreadyMessagedContactsPanel.SuspendLayout();
+            for (int i = 0; i < alreadyMessagedContactsPanel.Controls.Count; i++)
             {
-                ContactU contactU = (ContactU)chatContactsPanel.Controls[i];
+                ContactU contactU = (ContactU)alreadyMessagedContactsPanel.Controls[i];
                 if (contactU.IsGroup)
                     contactU.Visible = true;
                 else
                     contactU.Visible = false;
             }
-            chatContactsPanel.ResumeLayout();
+            alreadyMessagedContactsPanel.ResumeLayout();
         }
         private void FilterChatByFOnClickContactBtn(object sender, EventArgs e)
         {
             chatLB.Text = "Contacts";
-            chatContactsPanel.SuspendLayout();
-            for (int i = 0; i < chatContactsPanel.Controls.Count; i++)
+            alreadyMessagedContactsPanel.SuspendLayout();
+            for (int i = 0; i < alreadyMessagedContactsPanel.Controls.Count; i++)
             {
-                ContactU contactU = (ContactU)chatContactsPanel.Controls[i];
+                ContactU contactU = (ContactU)alreadyMessagedContactsPanel.Controls[i];
                 if (!contactU.IsGroup)
                     contactU.Visible = true;
                 else
                     contactU.Visible = false;
             }
-            chatContactsPanel.ResumeLayout();
+            alreadyMessagedContactsPanel.ResumeLayout();
         }
 
-        private void NewMessageArrivedInvokemethod(Message message)
+        private void NewMessageArrivedUpdate(Message message)
         {
             //Check Contact or Group exits or not
             if (message.GroupId == 0)
@@ -439,7 +432,7 @@ namespace ChatApplication
                 }
             }
             //Notification  Create
-            if (this.WindowState == FormWindowState.Minimized && !message.IsFile)
+            if (this.WindowState == FormWindowState.Minimized && !message.IsFile&&SettingManager.IsMuteTheMessageNotification==false)
                 BeginInvoke((Action)(() => notificationThrowManager.CreateMessageNotification(message, message.GroupId > 0 ? GroupsManager.GetGroupName(message.GroupId) + ":" + ContactsManager.getName(message.FromHostName) : ContactsManager.getName(message.FromHostName))));
             if (message.IsFile)
                 BeginInvoke((Action)(() => notificationThrowManager.CreateFileNotification(message, message.GroupId > 0 ? GroupsManager.GetGroupName(message.GroupId) + ":" + ContactsManager.getName(message.FromHostName) : ContactsManager.getName(message.FromHostName))));
@@ -460,8 +453,7 @@ namespace ChatApplication
                 {
                     if (!ContactsManager.IsContactExitsInMessagedContactsList(ContactsManager.Contacts_list[i])){
                         ContactUCreateContact(ContactsManager.Contacts_list[i]);
-                    }
-                      
+                    }                    
                 }
             }
         }
@@ -554,7 +546,7 @@ namespace ChatApplication
 
         private void SentBtnClick(object sender, EventArgs e)
         {
-            if ((this.Contact != null || this.Group != null) && messageTB.Text != "" && messageTB.Text != "\n")
+            if ((this.Contact != null || this.Group != null) && messageTB.Text != "" && messageTB.Text != "\n"&& messageTB.Text.Length<=8000)
             {
                 sendingText = messageTB.Text;
                 MessageSent();
@@ -653,9 +645,9 @@ namespace ChatApplication
 
         private void MainFormResize(object sender, EventArgs e)
         {
-            menuTabeControl.Size = new Size((int)((Width / 7)*2), menuTabeControl.Size.Height);
+            menuTabControl.Size = new Size((int)((Width / 7)*2), menuTabControl.Size.Height);
             chatPageTitleU.Height = Height / 13;
-            chatPageTopP.Height = Height / 13;
+            chatPageTopPanel.Height = Height / 13;
             //  contactUSearchBox.Height = Height / 18;
             // menuControl.Width = Width / 25;
         }
@@ -724,7 +716,7 @@ namespace ChatApplication
             if (contactU.IsArchived)
                 ArchivedContactsPanel.Controls.Add(contactU);
             else
-                chatContactsPanel.Controls.Add(contactU);
+                alreadyMessagedContactsPanel.Controls.Add(contactU);
 
             contactU.OnclickGetContact += ContactUOnClickContactOrGroupGet;
             return contactU;
@@ -743,7 +735,7 @@ namespace ChatApplication
             if (contact.IsArchived)
                 ArchivedContactsPanel.Controls.Add(contactU);
             else
-                chatContactsPanel.Controls.Add(contactU);
+                alreadyMessagedContactsPanel.Controls.Add(contactU);
             contactU.OnclickGetContact += ContactUOnClickContactOrGroupGet;
             Thread thread = new Thread(()=>ConntectAndCheckToContact(contact));
             thread.Start();
@@ -777,20 +769,20 @@ namespace ChatApplication
   
         private void MainFormLoad(object sender, EventArgs e)
         {
-            menuTabeControl.ItemSize = new Size(0, 1);
-            MainTabControl.ItemSize = new Size(0, 1);
+            menuTabControl.ItemSize = new Size(0, 1);
+            mainTabControl.ItemSize = new Size(0, 1);
 
             //Load the Datas
             refreshBtnClicked(this, EventArgs.Empty);
             try
             {
-                menuControl.ProFileImagePath = ContactsManager.PCContact.DpPicture;
+                menuControl.ProfilePicturePath = ContactsManager.PCContact.DpPicture;
             }
             catch
             {
 
             }
-            MainTabControl.SelectedTab = defaultPage;
+            mainTabControl.SelectedTab = defaultPage;
 
             // Queue start
             QueueMessageStartInvoke();
@@ -800,57 +792,57 @@ namespace ChatApplication
         }
 
         //menu 
-        private void ChangeTabStartedMessagePage(object sender, EventArgs e)
+        private void StartedMessagePageBtnClicked(object sender, EventArgs e)
         {
 
-            menuTabeControl.SelectedTab = starredMessagePage;
-            MainTabControl.SelectedTab = defaultPage;
+            menuTabControl.SelectedTab = starredMessagePage;
+            mainTabControl.SelectedTab = defaultPage;
         }
 
-        private void ChangeTabStatusPage(object sender, EventArgs e)
+        private void StatusPageBtnClicked(object sender, EventArgs e)
         {
-            menuTabeControl.SelectedTab = StatusPage;
-            MainTabControl.SelectedTab = defaultPage;
+            menuTabControl.SelectedTab = StatusPage;
+            mainTabControl.SelectedTab = defaultPage;
         }
 
-        private void ChangeTabChatsPage(object sender, EventArgs e)
+        private void ChatsPageBtnClicked(object sender, EventArgs e)
         {
-            menuTabeControl.SelectedTab = ChatPage;
-            if (contactUObject!=null)
+            menuTabControl.SelectedTab = chatPage;
+            if (ContactOrGroupObject!=null)
             {
               
                 if (chatPageTitleU.IsArchived)
-                    MainTabControl.SelectedTab = defaultPage;
+                    mainTabControl.SelectedTab = defaultPage;
                 else
-                    MainTabControl.SelectedTab = chattabpage;
+                    mainTabControl.SelectedTab = chatTabpage;
             }
         }
 
-        private void ChangeTabCallsPage(object sender, EventArgs e)
+        private void CallsPageBtnClicked(object sender, EventArgs e)
         {
-            menuTabeControl.SelectedTab = callsPage;
-            MainTabControl.SelectedTab = defaultPage;
+            menuTabControl.SelectedTab = callsPage;
+            mainTabControl.SelectedTab = defaultPage;
         }
 
-        private void ChangeTabarchivedPage(object sender, EventArgs e)
+        private void ArchivedPageBtnClicked(object sender, EventArgs e)
         {
-            menuTabeControl.SelectedTab = archivedPage;
-            if (contactUObject != null)
+            menuTabControl.SelectedTab = archivedPage;
+            if (ContactOrGroupObject != null)
             {
                 if (!chatPageTitleU.IsArchived)
-                    MainTabControl.SelectedTab = defaultPage;
+                    mainTabControl.SelectedTab = defaultPage;
                 else
-                    MainTabControl.SelectedTab = chattabpage;
+                    mainTabControl.SelectedTab = chatTabpage;
             }
         }
-        private void menuControlOnClickProfilePicture(object sender, EventArgs e)
+        private void ProfilePicturePictureBoxClicked(object sender, EventArgs e)
         {
             SettingF settingF = new SettingF();
             settingF.IsProfilePageSelected = true;
             SettingFormShow(settingF);
         }
 
-        private void menuControlOnClickSettingBtn(object sender, EventArgs e)
+        private void SettingPageBtnClicked(object sender, EventArgs e)
         {
             SettingF settingF = new SettingF();
             SettingFormShow(settingF);
@@ -937,8 +929,8 @@ namespace ChatApplication
         private void mainSearchBoxPanelResize(object sender, EventArgs e)
         {
 
-            contactUSearchBox.Width = (mainSearchBoxPanel.Width / 4) * 3;
-            contactUSearchBox.Location = new Point(mainSearchBoxPanel.Width / 2 - contactUSearchBox.Width / 2, mainSearchBoxPanel.Height / 2 - contactUSearchBox.Height / 2);
+            chatPageSearchBox.Width = (chatPageSearchBoxPanel.Width / 4) * 3;
+            chatPageSearchBox.Location = new Point(chatPageSearchBoxPanel.Width / 2 - chatPageSearchBox.Width / 2, chatPageSearchBoxPanel.Height / 2 - chatPageSearchBox.Height / 2);
         }
 
         private void messageShowPScroll(object sender, ScrollEventArgs e)
@@ -970,8 +962,9 @@ namespace ChatApplication
 
             }
         }
-        private void MessageShowP_MouseWheel(object sender, MouseEventArgs e)
+        private void MessageShowPMouseWheel(object sender, MouseEventArgs e)
         {
+            editSheet.Visible = false;
             messageShowPScroll(this, new ScrollEventArgs(ScrollEventType.LargeDecrement, 1));
 
         }
@@ -1036,7 +1029,7 @@ namespace ChatApplication
         {
             ((Form)sender).Close();
            
-            IsMessageSelectedOn = false;
+            IsMessageSelectionOn = false;
             foreach (var keyValue in SelectedMessagesChatU)
             {
                 MessagesManager.DeleteMessage(keyValue.Value.Message.MessageId);
@@ -1052,8 +1045,8 @@ namespace ChatApplication
             ContactUObject = null;
               selectedContactU = null;
             ((Form)sender).Close();
-            MainTabControl.SelectedTab = defaultPage;
-            IsMessageSelectedOn = false;
+            mainTabControl.SelectedTab = defaultPage;
+            IsMessageSelectionOn = false;
              Contact = null;
             Group = null;
         }
@@ -1063,7 +1056,7 @@ namespace ChatApplication
             SelectedMessagesChatU.Remove((ChatUPanel)(sender));
             if (SelectedMessagesChatU.Count == 0)
             {
-                IsMessageSelectedOn = false;
+                IsMessageSelectionOn = false;
             }
            
         }
@@ -1175,7 +1168,7 @@ namespace ChatApplication
             {
                 SelectedMessagesChatU.Add((ChatUPanel)selectedChatU.Parent, selectedChatU);
                 ((ChatUPanel)selectedChatU.Parent).IsSelected=true;
-                IsMessageSelectedOn = true;
+                IsMessageSelectionOn = true;
             }
             else if (e.Equals("DeleteAll"))
             {
@@ -1213,24 +1206,24 @@ namespace ChatApplication
         }
         private void FileSendInvoke()
         {
-            string filename = Path.GetFileName(attachMentFilePath);
-            attachMentFilePath = attachMentFilePath.Replace("\\", "\\\\\\\\");
+            string filename = Path.GetFileName(selectedAttachMentFilePath);
+            selectedAttachMentFilePath = selectedAttachMentFilePath.Replace("\\", "\\\\\\\\");
             MessageConfirmForm confirmForm = new MessageConfirmForm("Do you want to sent the \n" + filename);
             confirmForm.StartPosition = FormStartPosition.Manual;
             confirmForm.Location = new Point(Location.X + (Width / 2) - confirmForm.Width / 2, Location.Y + (Height / 2) - confirmForm.Height / 2);
             if (confirmForm.ShowDialog() == DialogResult.Yes)
             {
-                string fileName = Path.GetFileName(attachMentFilePath);
-                long fileSize = new FileInfo(attachMentFilePath).Length;
+                string fileName = Path.GetFileName(selectedAttachMentFilePath);
+                long fileSize = new FileInfo(selectedAttachMentFilePath).Length;
 
                 Message fileMessage;
                 if (!isGroup)
                 {
-                    fileMessage = new Message(0, NetworkManager.PcHostName, Contact.HostName, 0, DateTime.Now, fileName, false, true, @"" + attachMentFilePath);
+                    fileMessage = new Message(0, NetworkManager.PcHostName, Contact.HostName, 0, DateTime.Now, fileName, false, true, @"" + selectedAttachMentFilePath);
                 }
                 else
                 {
-                    fileMessage = new Message(0, NetworkManager.PcHostName, "", Group.GroupID, DateTime.Now, fileName, false, true, @"" + attachMentFilePath);
+                    fileMessage = new Message(0, NetworkManager.PcHostName, "", Group.GroupID, DateTime.Now, fileName, false, true, @"" + selectedAttachMentFilePath);
                 }
               
                 fileMessage = MessagesManager.CreateMessage(fileMessage);
@@ -1244,12 +1237,12 @@ namespace ChatApplication
                 try
                 {
                 if(!isGroup)
-                    NetworkManager.FileSent(fileMessage, attachMentFilePath, ContactsManager.ContactDictionary[fileMessage.ToHostName]);
+                    NetworkManager.FileSent(fileMessage, selectedAttachMentFilePath, ContactsManager.ContactDictionary[fileMessage.ToHostName]);
                 else
                    {
                    for(int i=0;i<Group.GroupMembers.Count;i++){
                             
-                            NetworkManager.FileSent(fileMessage, attachMentFilePath, ContactsManager.ContactDictionary[Group.GroupMembers[i].Contact.HostName]);
+                            NetworkManager.FileSent(fileMessage, selectedAttachMentFilePath, ContactsManager.ContactDictionary[Group.GroupMembers[i].Contact.HostName]);
                         }
                    }
                     fileMessage.IsSent = true;
@@ -1280,7 +1273,7 @@ namespace ChatApplication
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    attachMentFilePath = saveFileDialog.FileName;
+                    selectedAttachMentFilePath = saveFileDialog.FileName;
                     Thread tread = new Thread(new ThreadStart(FileSendInvoke));
                     tread.Start();
                 }
@@ -1289,7 +1282,7 @@ namespace ChatApplication
         }
         private void ThemeSetUp(object sender, EventArgs e)
         {
-            contactUSearchBox.BorderColor = SettingManager.PrimaryThemeColor;
+            chatPageSearchBox.BorderColor = SettingManager.PrimaryThemeColor;
             if (SettingManager.ThemeNumber == 0)
             {
                 defaultPage.BackgroundImage = Properties.Resources.Icon_LightGreen;
@@ -1316,18 +1309,11 @@ namespace ChatApplication
             }
         }
 
-        private void ellipseButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void refreshBtnClicked(object sender, EventArgs e)
-        {
-           
+        {         
             menuControl.ImageDispose();
             chatPageTitleU.ImageDispose();
-         //  NetworkManager.NetworkStreamClientDictionary.Clear();
-         //foreach()
+           
             foreach (var contactU in ContactUDictionary){
                 ((ContactU)contactU.Value).Dispose();
             }
@@ -1336,9 +1322,8 @@ namespace ChatApplication
             GroupsManager.GroupsManagerSetUp();
             AlreadyExitsMessagedContactsCreate();
             AlreadyExitsGroupsCreate();
-            MainTabControl.SelectedTab = defaultPage;
-        }
-
-       
+            menuControl.ProfilePicturePath = ContactsManager.PCContact.DpPicture;
+            mainTabControl.SelectedTab = defaultPage;
+        }      
     }
 }

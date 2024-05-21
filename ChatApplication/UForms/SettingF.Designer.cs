@@ -69,6 +69,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.settingMenuControl = new ChatApplication.UControl.SettingMenuControl();
             this.ellipseControl1 = new ChatApplication.EllipseControl();
+            this.togglebButtonClass1 = new DragAndDrop.TogglebButtonClass();
             this.settingMainTabControl.SuspendLayout();
             this.personalizationPage.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -173,6 +174,7 @@
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.togglebButtonClass1);
             this.panel12.Controls.Add(this.label9);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(5, 117);
@@ -560,6 +562,21 @@
             this.ellipseControl1.CornerRadius = 15;
             this.ellipseControl1.TargetControl = this;
             // 
+            // togglebButtonClass1
+            // 
+            this.togglebButtonClass1.BackColor = System.Drawing.Color.Transparent;
+            this.togglebButtonClass1.BorderRadius1 = 40;
+            this.togglebButtonClass1.Condition1 = true;
+            this.togglebButtonClass1.FlatAppearance.BorderSize = 0;
+            this.togglebButtonClass1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.togglebButtonClass1.ForeColor = System.Drawing.Color.White;
+            this.togglebButtonClass1.Location = new System.Drawing.Point(184, 20);
+            this.togglebButtonClass1.Name = "togglebButtonClass1";
+            this.togglebButtonClass1.Size = new System.Drawing.Size(55, 18);
+            this.togglebButtonClass1.TabIndex = 1;
+            this.togglebButtonClass1.Text = "togglebButtonClass1";
+            this.togglebButtonClass1.UseVisualStyleBackColor = false;
+            // 
             // SettingF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -645,5 +662,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel11;
+        private DragAndDrop.TogglebButtonClass togglebButtonClass1;
     }
 }

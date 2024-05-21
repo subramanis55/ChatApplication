@@ -15,7 +15,7 @@ namespace ChatApplication.UForms
 
     public partial class profileImageViewF : Form
     {
-        public  TransparentForm2 TransparentFormObj;
+        public TransparentForm2 TransparentFormObj;
         private bool isGroup = false;
         private Group group;
         private string dpPicturePath;
@@ -27,7 +27,7 @@ namespace ChatApplication.UForms
                 {
                     group = value;
                     DpPicturePath = value.DpPicture;
-                
+
                 }
             }
             get
@@ -35,7 +35,7 @@ namespace ChatApplication.UForms
                 return group;
             }
         }
- 
+
         private Contact contact;
         public Contact Contact
         {
@@ -58,7 +58,7 @@ namespace ChatApplication.UForms
             {
                 if (profilePB.Image != null)
                     profilePB.Image.Dispose();
-                     dpPicturePath = value;
+                dpPicturePath = value;
                 try
                 {
                     if (dpPicturePath != "File Not Found")
@@ -73,7 +73,8 @@ namespace ChatApplication.UForms
                     profilePB.Image = Properties.Resources.profile_user;
                 }
             }
-            get{
+            get
+            {
                 return dpPicturePath;
             }
         }

@@ -78,7 +78,6 @@ namespace ChatApplication.Manager
             var result = DatabaseManager.Manager.FetchSingleData("GROUPS", "GROUPNAME", $"GROUPID={groupID}");
             return result.Value.ToString();
         }
-
         public static bool ChangeIsArchived(int groupId, bool isArchived)
         {
             var result = DatabaseManager.Manager.UpdateData("GROUPS", $"GROUPID='{groupId}'", new ParameterData("ISARCHIVED", isArchived));
@@ -115,20 +114,6 @@ namespace ChatApplication.Manager
             var result = DatabaseManager.Manager.FetchData("GROUPS", $"GROUPID={groupId}");
             return new Group((int)result.Value["GROUPID"][0], result.Value["GROUPNAME"][0].ToString(), result.Value["DPPICTURE"][0].ToString(), result.Value["ADMINHOSTNAME"][0].ToString(), (int)result.Value["NEWMESSAGECOUNT"][0], Convert.ToBoolean(result.Value["ISARCHIVED"][0]), (DateTime)result.Value["CREATEDDATEANDTIME"][0], GetGroupMembersFromServer((int)result.Value["GROUPID"][0]));
         }
-        public static List<GroupMember> GetGroupMembersFromServer(int groupID)
-        {
-            var result = DatabaseManager.Manager.FetchData("GROUPMEMBERS", $"GROUPID={groupID}");
-            List<GroupMember> temp_MemberList = new List<GroupMember>();
-            if (result.Value.Count > 0)
-            {
-                for (int i = 0; i < result.Value["GROUPID"].Count; i++)
-                {
-                    temp_MemberList.Add(new GroupMember((DateTime)result.Value["JOINDATE"][i], ContactsManager.getContactFromDatabase(result.Value["HOSTNAME"][i].ToString())));
-                }
-            }
-
-            return temp_MemberList;
-        }
         public static Group GetGroup(int groupId)
         {
             var result = DatabaseManager.Manager.FetchData("GROUPS", $"GROUPID={groupId}");
@@ -149,6 +134,20 @@ namespace ChatApplication.Manager
         }
 
         //GroupMember Method  
+        public static List<GroupMember> GetGroupMembersFromServer(int groupID)
+        {
+            var result = DatabaseManager.Manager.FetchData("GROUPMEMBERS", $"GROUPID={groupID}");
+            List<GroupMember> temp_MemberList = new List<GroupMember>();
+            if (result.Value.Count > 0)
+            {
+                for (int i = 0; i < result.Value["GROUPID"].Count; i++)
+                {
+                    temp_MemberList.Add(new GroupMember((DateTime)result.Value["JOINDATE"][i], ContactsManager.getContactFromDatabase(result.Value["HOSTNAME"][i].ToString())));
+                }
+            }
+
+            return temp_MemberList;
+        }
         public static bool CreateGroupMember(int groupID, string hostName, DateTime joinDate)
         {
             var result = DatabaseManager.Manager.InsertData("GROUPMEMBERS", new ParameterData[] { new ParameterData("HOSTNAME", hostName), new ParameterData("GROUPID", groupID), new ParameterData("JOINDATE", joinDate) });
