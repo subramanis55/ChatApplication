@@ -83,11 +83,20 @@ namespace ChatApplication.UForms
         {
             InitializeComponent();
             KeyPreview = true;
+            FormClosed += ProfileImageViewFFormClosed;
             KeyDown += FormKeyDown;
             Disposed += ProfileImageViewFDisposed;
             bottomP.BackColor = SettingManager.PrimaryThemeColor;
             informationBtn.Click += InformationBtnClick;
             FeaturesMethods.AltTabFormShowStop(this.Handle);
+        }
+
+        private void ProfileImageViewFFormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (TransparentFormObj != null)
+                TransparentFormObj.Dispose();
+            if (profilePB.Image != null)
+                profilePB.Image.Dispose();
         }
 
         private void ProfileImageViewFDisposed(object sender, EventArgs e)
@@ -128,5 +137,10 @@ namespace ChatApplication.UForms
             }
         }
 
+        private void closeBtnClick(object sender, EventArgs e)
+        {
+           
+            Close();
+        }
     }
 }

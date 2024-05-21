@@ -265,7 +265,7 @@ namespace ChatApplication
             transparentForm.Opacity = 0.1;
             profileImageViewForm.Location = new Point(Location.X + (Width / 2) - profileImageViewForm.Width / 2, Location.Y + (Height / 2) - profileImageViewForm.Height / 2);
             transparentForm.Show();
-            profileImageViewForm.Show();
+            profileImageViewForm.ShowDialog();
         }
 
         private void ChatPageSearchBoxTextchanged(object sender, EventArgs e)

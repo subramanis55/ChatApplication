@@ -232,9 +232,11 @@ namespace ChatApplication
             else
             {
                 server = NetworkStreamClientDictionary[contact.IpAddress];
-                if (!NetworkStreamClientDictionary[contact.IpAddress].GetStream().CanWrite)
+                if (!NetworkStreamClientDictionary[contact.IpAddress].GetStream().CanWrite) {
                     server.Connect(contact.IpAddress, PortNumber);
-                HandleClient(server);
+                    HandleClient(server);
+                }
+                   
             }
             NetworkStream stream = server.GetStream();
             string metadataJson = JsonConvert.SerializeObject(fileMessage);
@@ -272,14 +274,12 @@ namespace ChatApplication
                     contact.IsOnline = false;
                     OnlineStatusInvoke?.Invoke(new object(), contact);
                 }
-
             }
             else
             {
                 contact.IsOnline = true;
                 OnlineStatusInvoke?.Invoke(new object(), contact);
             }
-
         }
         public static bool IsPcOnline(string ipAddress, int port)
         {
