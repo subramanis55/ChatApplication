@@ -62,7 +62,7 @@ namespace ChatApplication
                 }
             }
             catch { }
-            return ServerIpAddress;
+            return "";
         }
         public static async Task<string> GetPublicIpAddressAsync()
         {
@@ -186,17 +186,15 @@ namespace ChatApplication
 
         public static async Task MessageSent(Message message, Contact contact)
         {
-            TcpClient server=null;
+            TcpClient server = null;
             if (!NetworkStreamClientDictionary.ContainsKey(contact.IpAddress))
-            {   
-            if(contact.IpAddress != "127.0.0.1"){
-                    server = new TcpClient();
-                    server.Connect(contact.IpAddress, PortNumber);
-                    HandleClient(server);
-                    NetworkStreamClientDictionary.Add(contact.IpAddress, server);
-                    contact.IsOnline = true;
-                    OnlineStatusInvoke?.Invoke(new object(), contact);
-                }           
+            {
+                server = new TcpClient();
+                server.Connect(contact.IpAddress, PortNumber);
+                HandleClient(server);
+                NetworkStreamClientDictionary.Add(contact.IpAddress, server);
+                contact.IsOnline = true;
+                OnlineStatusInvoke?.Invoke(new object(), contact);
             }
             else
             {
@@ -210,18 +208,14 @@ namespace ChatApplication
             string msg = JsonConvert.SerializeObject(message);
             //if (!(server == null || !server.Connected))
             //{
-                NetworkStream stream = server.GetStream();
-                byte[] data = Encoding.ASCII.GetBytes(msg);
-                byte[] numberOfBytes = new byte[5];
-                byte[] Bytes = Encoding.UTF8.GetBytes("" + data.Length);
-                Array.Copy(Bytes, numberOfBytes, Bytes.Length);
-                stream.WriteAsync(numberOfBytes, 0, numberOfBytes.Length);
-                stream.WriteAsync(data, 0, data.Length);
+            NetworkStream stream = server.GetStream();
+            byte[] data = Encoding.ASCII.GetBytes(msg);
+            byte[] numberOfBytes = new byte[5];
+            byte[] Bytes = Encoding.UTF8.GetBytes("" + data.Length);
+            Array.Copy(Bytes, numberOfBytes, Bytes.Length);
+            stream.WriteAsync(numberOfBytes, 0, numberOfBytes.Length);
+            stream.WriteAsync(data, 0, data.Length);
             //}
-            //else{
-              
-            //}
-            //return Task.FromException(new Exception());
         }
         public static async Task FileSent(Message fileMessage, string filePath, Contact contact)
         {
@@ -262,24 +256,23 @@ namespace ChatApplication
             {
                 try
                 {
-                if( contact.IpAddress != "127.0.0.1" ){
-                        TcpClient server = new TcpClient();
-                        server.Connect(contact.IpAddress, PortNumber);
-                        HandleClient(server);
-                        if (!NetworkStreamClientDictionary.ContainsKey(contact.IpAddress))
-                        {
-                            NetworkStreamClientDictionary.Add(contact.IpAddress, server);
-                            contact.IsOnline = true;
-                            OnlineStatusInvoke?.Invoke(new object(), contact);
-                        }
-                    } 
+                    TcpClient server = new TcpClient();
+                    server.Connect(contact.IpAddress, PortNumber);
+                    HandleClient(server);
+                    if (!NetworkStreamClientDictionary.ContainsKey(contact.IpAddress))
+                    {
+                        NetworkStreamClientDictionary.Add(contact.IpAddress, server);
+                        contact.IsOnline = true;
+                        OnlineStatusInvoke?.Invoke(new object(), contact);
+                    }
+
                 }
                 catch
                 {
-                   
+                    contact.IsOnline = false;
+                    OnlineStatusInvoke?.Invoke(new object(), contact);
                 }
-                contact.IsOnline = false;
-                OnlineStatusInvoke?.Invoke(new object(), contact);
+
             }
             else
             {
