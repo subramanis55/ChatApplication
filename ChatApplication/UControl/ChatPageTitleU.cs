@@ -25,6 +25,7 @@ namespace ChatApplication
         private bool isArchived;
         private bool isGroup = false;
         private bool isOnline;
+        public object ContactOrGroup;
         public bool IsOnline
         {
             set
@@ -62,9 +63,12 @@ namespace ChatApplication
         {
             set
             {
+                
+                 group = value;
+                ContactOrGroup = group;
                 if (value != null)
                 {
-                    group = value;
+                   
                     IsGroup = true;
                     ConatctName = group.GroupName;
                     ContactImagePath = group.DpPicture;
@@ -85,10 +89,12 @@ namespace ChatApplication
         {
             set
             {
+                contact = value;
+                ContactOrGroup = contact;
                 if (value != null)
                 {
                     IsGroup = false;
-                    contact = value;
+                  
                     IsOnline = contact.IsOnline;
                     ConatctName = contact.FirstName;
                     ContactImagePath = contact.DpPicture;

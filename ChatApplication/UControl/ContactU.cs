@@ -246,7 +246,7 @@ namespace ChatApplication
             timeP.Paint += TimePPaint;
             Resize += ContactUResize;
             timeLB.Resize += ContactUResize;
-            // dpPictureBox.Click += DpPictureBoxClick;
+
         }
 
         private void ContactUDisposed(object sender, EventArgs e)
@@ -272,7 +272,7 @@ namespace ChatApplication
             timeP.Paint += TimePPaint;
             Resize += ContactUResize;
             timeLB.Resize += ContactUResize;
-            // dpPictureBox.Click += DpPictureBoxClick;
+     
         }
 
         private void DpPictureBoxClick(object sender, EventArgs e)

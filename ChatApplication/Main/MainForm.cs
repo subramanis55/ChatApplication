@@ -41,6 +41,7 @@ namespace ChatApplication
         public Color chatPageColor = Color.FromArgb(250, 246, 243);
         public  Dictionary<string, ContactU> ContactUDictionary = new Dictionary<string, ContactU>();
         public Dictionary<ChatUPanel, ChatU> SelectedMessagesChatU = new Dictionary<ChatUPanel, ChatU>();
+       
         public object ContactUObject
         {
             set
@@ -147,7 +148,7 @@ namespace ChatApplication
             NetworkManager.NewMessageArrivedInvoke = NewMessageArrivedUpdate;
             NetworkManager.OnlineStatusInvoke += OnlineStatusUpdateToContact;
             //Notification Manager
-            notificationThrowManager.OnClickNotification += NotificationOnClick;
+            SettingManager.notificationThrowManager.OnClickNotification += NotificationOnClick;
             //sentBtn
             sentBtn.Click += SentBtnClick;
 
@@ -169,8 +170,7 @@ namespace ChatApplication
                 if(chatPageTitleU.IsGroup==false&& contact== chatPageTitleU.Contact)
                 {
                         chatPageTitleU.IsOnline = contact.IsOnline;
-                }
-                
+                }                
                 }));      
             }    
         }
@@ -433,9 +433,9 @@ namespace ChatApplication
             }
             //Notification  Create
             if (this.WindowState == FormWindowState.Minimized && !message.IsFile&&SettingManager.IsMuteTheMessageNotification==false)
-                BeginInvoke((Action)(() => notificationThrowManager.CreateMessageNotification(message, message.GroupId > 0 ? GroupsManager.GetGroupName(message.GroupId) + ":" + ContactsManager.getName(message.FromHostName) : ContactsManager.getName(message.FromHostName))));
+                BeginInvoke((Action)(() => SettingManager.notificationThrowManager.CreateMessageNotification(message, message.GroupId > 0 ? GroupsManager.GetGroupName(message.GroupId) + ":" + ContactsManager.getName(message.FromHostName) : ContactsManager.getName(message.FromHostName))));
             if (message.IsFile)
-                BeginInvoke((Action)(() => notificationThrowManager.CreateFileNotification(message, message.GroupId > 0 ? GroupsManager.GetGroupName(message.GroupId) + ":" + ContactsManager.getName(message.FromHostName) : ContactsManager.getName(message.FromHostName))));
+                BeginInvoke((Action)(() => SettingManager.notificationThrowManager.CreateFileNotification(message, message.GroupId > 0 ? GroupsManager.GetGroupName(message.GroupId) + ":" + ContactsManager.getName(message.FromHostName) : ContactsManager.getName(message.FromHostName))));
 
             if ((isGroup == false && message.GroupId == 0 && (this.Contact != null) && (this.Contact.HostName == message.FromHostName)) || (isGroup && (this.Group != null) && Group.GroupID == message.GroupId))
             {
@@ -457,7 +457,7 @@ namespace ChatApplication
                 }
             }
         }
-        public static NotificationThrowManager notificationThrowManager = new NotificationThrowManager();
+     
         private void NewMessageArrived(Message message)
         {
                 if (message.GroupId == 0)
@@ -834,6 +834,9 @@ namespace ChatApplication
                 else
                     mainTabControl.SelectedTab = chatTabpage;
             }
+            else{
+                mainTabControl.SelectedTab = defaultPage;
+            }
         }
         private void ProfilePicturePictureBoxClicked(object sender, EventArgs e)
         {
@@ -1156,7 +1159,7 @@ namespace ChatApplication
                     }
                     else
                     {
-                        notificationThrowManager.CreateNotification("File not Found", NotificationType.None);
+                        SettingManager.notificationThrowManager.CreateNotification("File not Found", NotificationType.None);
                     }
                 }
                 catch (Exception ex)
@@ -1251,7 +1254,7 @@ namespace ChatApplication
                 }
                 catch
                 {
-                    notificationThrowManager.CreateNotification("Receiver not respond to send File", NotificationType.Information);
+                    SettingManager.notificationThrowManager.CreateNotification("Receiver not respond to send File", NotificationType.Information);
                 }
             }
 
@@ -1308,12 +1311,21 @@ namespace ChatApplication
                 Icon = icon;
             }
         }
-
+        public void SortRecentContact(List<ContactU> contacts)
+        {
+            // Sort the contacts by lastMessageTime in descending order and return the sorted list
+           List<ContactU> l=contacts.OrderByDescending(contact => contact.LastMessageTime).ToList();
+           for(int i=0;i<l.Count;i++){
+                l[i].BringToFront();
+           }
+        }
         private void refreshBtnClicked(object sender, EventArgs e)
         {         
             menuControl.ImageDispose();
             chatPageTitleU.ImageDispose();
-           
+            ContactOrGroupObject = null;
+            chatPageTitleU.Contact = null;
+            chatPageTitleU.Group = null;
             foreach (var contactU in ContactUDictionary){
                 ((ContactU)contactU.Value).Dispose();
             }
@@ -1322,6 +1334,7 @@ namespace ChatApplication
             GroupsManager.GroupsManagerSetUp();
             AlreadyExitsMessagedContactsCreate();
             AlreadyExitsGroupsCreate();
+            SortRecentContact(ContactUDictionary.Values.ToList());
             menuControl.ProfilePicturePath = ContactsManager.PCContact.DpPicture;
             mainTabControl.SelectedTab = defaultPage;
         }      

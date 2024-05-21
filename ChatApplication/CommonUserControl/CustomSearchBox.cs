@@ -97,6 +97,7 @@ namespace ChatApplication
             set
             {
                 textBox.Text = value;
+                IsPlaceholder = false;
             }
         }
         public bool IsPlaceholder
@@ -104,6 +105,9 @@ namespace ChatApplication
             get
             {
                 return textBox.isPlaceholder;
+            }
+            set{
+                textBox.isPlaceholder = value;
             }
 
         }

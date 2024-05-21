@@ -79,12 +79,12 @@ namespace ChatApplication.Manager
                 try
                 {
                     File.Copy(sourceFilePath, destinationFilePath, true);
-                    MainForm.notificationThrowManager.CreateNotification(Path.GetFileName(sourceFilePath) + " file saved success", NotificationType.None);
+                    SettingManager.notificationThrowManager.CreateNotification(Path.GetFileName(sourceFilePath) + " file saved success", NotificationType.None);
                     return destinationFilePath;
                 }
                 catch (Exception ex)
                 {
-                    MainForm.notificationThrowManager.CreateNotification(Path.GetFileName(sourceFilePath) + " file saved fail", NotificationType.None);
+                    SettingManager.notificationThrowManager.CreateNotification(Path.GetFileName(sourceFilePath) + " file saved fail", NotificationType.None);
                 }
             }
             return "";

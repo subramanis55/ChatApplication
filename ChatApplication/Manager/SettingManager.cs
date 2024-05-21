@@ -10,6 +10,7 @@ namespace ChatApplication.Manager
 {
     public static class  SettingManager
     {
+        public static NotificationThrowManager notificationThrowManager = new NotificationThrowManager();
         public static event EventHandler ThemeSetUpInvoke;
         public static List<string> ThemesNameList = new List<string>() { "LightGreen", "Purple", "SkyBlue","LightBlue"};
         public static Dictionary<string, List<Color>> ThemeColorList = new Dictionary<string, List<Color>>() { { "PrimaryColor", new List<Color>() {ColorTranslator.FromHtml("#1FB141"), ColorTranslator.FromHtml("#4B53BC"), ColorTranslator.FromHtml("#0FB0B6"), ColorTranslator.FromHtml("#0078D4") } }, { "SecondaryColor", new List<Color>() { ColorTranslator.FromHtml("#B8FBC7"), ColorTranslator.FromHtml("#E8EBFA"), ColorTranslator.FromHtml("#0FB0B6"), ColorTranslator.FromHtml("#2196F3") } },{ "FontColor", new List<Color>() {ColorTranslator.FromHtml("#5A5A5E"), ColorTranslator.FromHtml("#5A5A5E"), Color.White,Color.White} } };

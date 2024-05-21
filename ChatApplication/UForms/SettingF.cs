@@ -119,11 +119,11 @@ namespace ChatApplication.UForms
                     //  ContactsManager.ContactManagerSetup();
                 }
                 else
-                    MainForm.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
+                    SettingManager.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
             }
             catch
             {
-                MainForm.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
+                SettingManager.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
             }
         }
 
@@ -207,7 +207,7 @@ namespace ChatApplication.UForms
                 }
                 else
                 {
-                    MainForm.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
+                    SettingManager.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
                 }
             }
         }
@@ -228,7 +228,8 @@ namespace ChatApplication.UForms
                 }
                 else
                 {
-                    MainForm.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
+                    SettingManager.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
+                  
                 }
             }
         }

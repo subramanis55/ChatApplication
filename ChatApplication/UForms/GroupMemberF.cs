@@ -110,6 +110,7 @@ namespace ChatApplication.UForms
             groupNameTBEditBtn.Click += groupNameTBEditBtnClick;
             groupLeaveBtn.Click += GroupLeaveBtnClick;
             Group = group;
+            adminNameLabel.Text = "AdminName  :  " + ContactsManager.getName(group.AdminHostName);
             GroupMembersCreate();
             FeaturesMethods.AltTabFormShowStop(this.Handle);
         }
@@ -145,9 +146,12 @@ namespace ChatApplication.UForms
                 }
                 else
                 {
-                    MainForm.notificationThrowManager.CreateNotification("Server not respond !", NotificationType.Information);
+                    SettingManager.notificationThrowManager.CreateNotification("Server not respond !", NotificationType.Information);
+                   
                 }
             }
+            else
+            Dispose();
         }
         private void dpPictureUOnClickDpPicturePathGet(object sender, string dpPicturePath)
         {
@@ -162,11 +166,11 @@ namespace ChatApplication.UForms
                     GroupsManager.ChangeGroupDppicture(group.GroupID, imageStringFormat);
                 }
                 else
-                    MainForm.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
+                    SettingManager.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
             }
             catch
             {
-                MainForm.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
+                SettingManager.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
             }
         }
         private void groupNameTBEditBtnClick(object sender, EventArgs e)
@@ -188,7 +192,7 @@ namespace ChatApplication.UForms
                 }
                 else
                 {
-                    MainForm.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
+                    SettingManager.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
                 }
             }
         }

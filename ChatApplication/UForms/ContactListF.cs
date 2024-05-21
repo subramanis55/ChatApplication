@@ -97,7 +97,7 @@ namespace ChatApplication.UForms
             }
             else
             {
-                MainForm.notificationThrowManager.CreateNotification("Server not Respond for create\n group", NotificationType.Information);
+                SettingManager.notificationThrowManager.CreateNotification("Server not Respond for create\n group", NotificationType.Information);
             }
             CreateGroupPageUOnClickGroupCancel(this, EventArgs.Empty);
 

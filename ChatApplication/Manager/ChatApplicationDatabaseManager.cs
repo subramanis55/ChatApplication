@@ -64,7 +64,7 @@ namespace ChatApplication
             }
             else
             {
-                MainForm.notificationThrowManager.CreateNotification("Data base Connection fail!", NotificationType.Information);
+                SettingManager.notificationThrowManager.CreateNotification("Data base Connection fail!", NotificationType.Information);
                 return false;
             }
         }
@@ -98,7 +98,7 @@ namespace ChatApplication
             }
             else
             {
-                MainForm.notificationThrowManager.CreateNotification("Server not respond for update\n contact!", NotificationType.Information);
+                SettingManager.notificationThrowManager.CreateNotification("Server not respond for update\n contact!", NotificationType.Information);
                 DatabaseManager.ChatApplicationLocalConnection();
             }
             return false;
