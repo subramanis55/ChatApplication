@@ -76,7 +76,7 @@
       <DependentUpon>NotificationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CommonUserControl\NotificationThrowManager.cs" />
-    <Compile Include="CommonUserControl\ToggleButtonClass.cs">
+    <Compile Include="CommonUserControl\ToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Manager\SettingManager.cs" />
@@ -290,11 +290,11 @@
     <Compile Include="UForms\GroupInformationF.Designer.cs">
       <DependentUpon>GroupInformationF.cs</DependentUpon>
     </Compile>
-    <Compile Include="UForms\GroupMemberF.cs">
+    <Compile Include="UForms\GroupDetailsF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UForms\GroupMemberF.Designer.cs">
-      <DependentUpon>GroupMemberF.cs</DependentUpon>
+    <Compile Include="UForms\GroupDetailsF.Designer.cs">
+      <DependentUpon>GroupDetailsF.cs</DependentUpon>
     </Compile>
     <Compile Include="UForms\MessageF.cs">
       <SubType>Form</SubType>
@@ -417,8 +417,8 @@
     <EmbeddedResource Include="UForms\GroupInformationF.resx">
       <DependentUpon>GroupInformationF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UForms\GroupMemberF.resx">
-      <DependentUpon>GroupMemberF.cs</DependentUpon>
+    <EmbeddedResource Include="UForms\GroupDetailsF.resx">
+      <DependentUpon>GroupDetailsF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UForms\MessageF.resx">
       <DependentUpon>MessageF.cs</DependentUpon>

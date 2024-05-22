@@ -114,7 +114,7 @@ namespace ChatApplication.Manager
             var result = DatabaseManager.Manager.FetchData("GROUPS", $"GROUPID={groupId}");
             return new Group((int)result.Value["GROUPID"][0], result.Value["GROUPNAME"][0].ToString(), result.Value["DPPICTURE"][0].ToString(), result.Value["ADMINHOSTNAME"][0].ToString(), (int)result.Value["NEWMESSAGECOUNT"][0], Convert.ToBoolean(result.Value["ISARCHIVED"][0]), (DateTime)result.Value["CREATEDDATEANDTIME"][0], GetGroupMembersFromServer((int)result.Value["GROUPID"][0]));
         }
-        public static Group GetGroup(int groupId)
+        public static Group GetGroupFromLocalDataBase(int groupId)
         {
             var result = DatabaseManager.Manager.FetchData("GROUPS", $"GROUPID={groupId}");
             return new Group((int)result.Value["GROUPID"][0], result.Value["GROUPNAME"][0].ToString(), FilesManager.SaveFilesInDirectoryFolder(FilesManager.FilesPath_D["GROUPSDPPICTURE"], result.Value["GROUPNAME"][0].ToString() + "-" + ((DateTime)result.Value["CREATEDDATEANDTIME"][0]).ToString("yyyyMMddHHmmssfff"), result.Value["DPPICTURE"][0].ToString()), result.Value["ADMINHOSTNAME"][0].ToString(), (int)result.Value["NEWMESSAGECOUNT"][0], Convert.ToBoolean(result.Value["ISARCHIVED"][0]), (DateTime)result.Value["CREATEDDATEANDTIME"][0], GetGroupMembers((int)result.Value["GROUPID"][0]));
@@ -127,7 +127,7 @@ namespace ChatApplication.Manager
             {
                 for (int i = 0; i < result.Value["GROUPID"].Count; i++)
                 {
-                    temp_Grouplist.Add(GetGroup(Convert.ToInt32(result.Value["GROUPID"][i].ToString())));
+                    temp_Grouplist.Add(GetGroupFromLocalDataBase(Convert.ToInt32(result.Value["GROUPID"][i].ToString())));
                 }
             }
             return temp_Grouplist;
@@ -142,7 +142,7 @@ namespace ChatApplication.Manager
             {
                 for (int i = 0; i < result.Value["GROUPID"].Count; i++)
                 {
-                    temp_MemberList.Add(new GroupMember((DateTime)result.Value["JOINDATE"][i], ContactsManager.getContactFromDatabase(result.Value["HOSTNAME"][i].ToString())));
+                    temp_MemberList.Add(new GroupMember((DateTime)result.Value["JOINDATE"][i], ContactsManager.getContactFromServerDatabase(result.Value["HOSTNAME"][i].ToString())));
                 }
             }
 

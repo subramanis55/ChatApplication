@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace ChatApplication.UForms
 {
-    public partial class GroupMemberF : Form
+    public partial class GroupDetailsF : Form
     {
         public TransparentForm transparentFormObj;
         private Group group;
@@ -84,7 +84,7 @@ namespace ChatApplication.UForms
                 }
             }
         }
-        public GroupMemberF(Group group)
+        public GroupDetailsF(Group group)
         {
             InitializeComponent();
             KeyPreview = true;
@@ -143,11 +143,12 @@ namespace ChatApplication.UForms
                     GroupsManager.GroupsManagerSetUp();
                     DatabaseManager.ChatApplicationLocalConnection();
                     OnclickLeaveFromGroupInvoke.Invoke(this, Group);
+                    Dispose();
                 }
                 else
                 {
                     SettingManager.notificationThrowManager.CreateNotification("Server not respond !", NotificationType.Information);
-                   
+                    Dispose();
                 }
             }
             else

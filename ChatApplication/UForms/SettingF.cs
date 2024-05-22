@@ -65,6 +65,8 @@ namespace ChatApplication.UForms
             KeyPreview = true;
             KeyDown += FormKeyDown;
             Disposed += SettingFDisposed;
+            toggleButton1.Value = SettingManager.IsMuteTheMessageNotification;
+            toggleButton1.ToggleOrNot += OnClickMuteMessageNotificationBtn;
             firstNameTB.BorderColor = SettingManager.PrimaryThemeColor;
             lastNameTB.BorderColor = SettingManager.PrimaryThemeColor;
             SettingManager.ThemeSetUpInvoke += ThemeSetUpe;
@@ -100,9 +102,9 @@ namespace ChatApplication.UForms
             firstNameTB.BorderColor = SettingManager.PrimaryThemeColor;
             lastNameTB.BorderColor = SettingManager.PrimaryThemeColor;
         }
-        private void OnClickMuteMessageNotificationBtn(object sender, EventArgs e)
+        private void OnClickMuteMessageNotificationBtn(object sender,bool e)
         {
-            SettingManager.ChangeMuteMessageNotification(true);
+            SettingManager.ChangeMuteMessageNotification(e);
         }
 
         private void dpPictureUOnClickDpPicturePathGet(object sender, string dpPicturePath)

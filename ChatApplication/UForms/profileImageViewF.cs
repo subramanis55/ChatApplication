@@ -138,9 +138,9 @@ namespace ChatApplication.UForms
         }
 
         private void closeBtnClick(object sender, EventArgs e)
-        {
-           
+        {          
             Close();
+           
         }
     }
 }

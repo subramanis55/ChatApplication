@@ -212,7 +212,7 @@ namespace ChatApplication
             TransparentForm transparentForm = new TransparentForm();
 
             Point point = addGroupMemberBtn.PointToScreen(new Point(0, 0));
-            GroupMemberF groupMemberF = new GroupMemberF(Group);
+            GroupDetailsF groupMemberF = new GroupDetailsF(Group);
             groupMemberF.transparentFormObj = transparentForm;
             groupMemberF.OnClickContactGet += GroupMemberFOnClickContactGet;
             groupMemberF.OnclickLeaveFromGroupInvoke += OnclickLeaveFromGroupInvoke;

@@ -1,6 +1,6 @@
 ﻿namespace ChatApplication.UForms
 {
-    partial class GroupMemberF
+    partial class GroupDetailsF
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupMemberF));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupDetailsF));
             this.ellipseControl1 = new ChatApplication.EllipseControl();
             this.overviewPage = new System.Windows.Forms.TabPage();
             this.adminNameLabel = new System.Windows.Forms.Label();
@@ -464,7 +464,7 @@
             this.groupMenuControl.Size = new System.Drawing.Size(97, 449);
             this.groupMenuControl.TabIndex = 4;
             // 
-            // GroupMemberF
+            // GroupDetailsF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -473,7 +473,7 @@
             this.Controls.Add(this.groupMainTabControl);
             this.Controls.Add(this.groupMenuControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GroupMemberF";
+            this.Name = "GroupDetailsF";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "GroupMemberF";

@@ -69,7 +69,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.settingMenuControl = new ChatApplication.UControl.SettingMenuControl();
             this.ellipseControl1 = new ChatApplication.EllipseControl();
-            this.togglebButtonClass1 = new DragAndDrop.TogglebButtonClass();
+            this.toggleButton1 = new ChatApplication.CommonUserControl.ToggleButton();
             this.settingMainTabControl.SuspendLayout();
             this.personalizationPage.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -174,7 +174,7 @@
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.togglebButtonClass1);
+            this.panel12.Controls.Add(this.toggleButton1);
             this.panel12.Controls.Add(this.label9);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(5, 117);
@@ -380,6 +380,7 @@
             this.lastNameTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.lastNameTB.BorderSize = 4;
             this.lastNameTB.Enabled = false;
+            this.lastNameTB.IsPlaceholder = true;
             this.lastNameTB.IsSearchIconVisible = false;
             this.lastNameTB.IsUnderLine = true;
             this.lastNameTB.Location = new System.Drawing.Point(3, 6);
@@ -448,6 +449,7 @@
             this.firstNameTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.firstNameTB.BorderSize = 4;
             this.firstNameTB.Enabled = false;
+            this.firstNameTB.IsPlaceholder = true;
             this.firstNameTB.IsSearchIconVisible = false;
             this.firstNameTB.IsUnderLine = true;
             this.firstNameTB.Location = new System.Drawing.Point(3, 17);
@@ -476,7 +478,7 @@
             this.dpPictureU.EditBtnVisible = false;
             this.dpPictureU.Image = ((System.Drawing.Image)(resources.GetObject("dpPictureU.Image")));
             this.dpPictureU.Location = new System.Drawing.Point(85, 14);
-            this.dpPictureU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dpPictureU.Margin = new System.Windows.Forms.Padding(2);
             this.dpPictureU.Name = "dpPictureU";
             this.dpPictureU.Size = new System.Drawing.Size(100, 87);
             this.dpPictureU.TabIndex = 0;
@@ -562,20 +564,19 @@
             this.ellipseControl1.CornerRadius = 15;
             this.ellipseControl1.TargetControl = this;
             // 
-            // togglebButtonClass1
+            // toggleButton1
             // 
-            this.togglebButtonClass1.BackColor = System.Drawing.Color.Transparent;
-            this.togglebButtonClass1.BorderRadius1 = 40;
-            this.togglebButtonClass1.Condition1 = true;
-            this.togglebButtonClass1.FlatAppearance.BorderSize = 0;
-            this.togglebButtonClass1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.togglebButtonClass1.ForeColor = System.Drawing.Color.White;
-            this.togglebButtonClass1.Location = new System.Drawing.Point(184, 20);
-            this.togglebButtonClass1.Name = "togglebButtonClass1";
-            this.togglebButtonClass1.Size = new System.Drawing.Size(55, 18);
-            this.togglebButtonClass1.TabIndex = 1;
-            this.togglebButtonClass1.Text = "togglebButtonClass1";
-            this.togglebButtonClass1.UseVisualStyleBackColor = false;
+            this.toggleButton1.BorderMargin = 1;
+            this.toggleButton1.Location = new System.Drawing.Point(82, 56);
+            this.toggleButton1.MinimumSize = new System.Drawing.Size(55, 22);
+            this.toggleButton1.Name = "toggleButton1";
+            this.toggleButton1.OffColor = System.Drawing.Color.Red;
+            this.toggleButton1.OnColor = System.Drawing.Color.ForestGreen;
+            this.toggleButton1.Size = new System.Drawing.Size(71, 22);
+            this.toggleButton1.TabIndex = 1;
+            this.toggleButton1.Text = "toggleButton1";
+            this.toggleButton1.ToggleColor = System.Drawing.Color.White;
+            this.toggleButton1.Value = true;
             // 
             // SettingF
             // 
@@ -662,6 +663,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel11;
-        private DragAndDrop.TogglebButtonClass togglebButtonClass1;
+        private CommonUserControl.ToggleButton toggleButton1;
     }
 }

@@ -403,7 +403,7 @@ namespace ChatApplication
                     {
                         DatabaseManager.UpdateServerContactsInPcDatabase();
                     }
-                    ContactsManager.ContactManagerSetup();
+                    ContactsManager.Contacts_list.Add(ContactsManager.getContactFromLocalDatabase(message.FromHostName));
                 }
                 BeginInvoke((Action)(() => ContactExitsAndCreate(message.FromHostName)));
 
@@ -412,10 +412,11 @@ namespace ChatApplication
             {
                 if (NetworkManager.PcHostName == NetworkManager.ServerHostName)
                 {
-                    Group group = GroupsManager.GetGroup(message.GroupId);
-                    if (!GroupExistsInChat(group))
+                  
+                    if (!GroupExistsInChat(message.GroupId))
                     {
-                        GroupsManager.GroupsManagerSetUp();
+                        Group group = GroupsManager.GetGroupFromLocalDataBase(message.GroupId);
+                        GroupsManager.Groups_List.Add(group);
                         BeginInvoke((Action)(() => ContactUCreateGroup(group)));
                     }
                 }
@@ -425,8 +426,9 @@ namespace ChatApplication
                     {
                         if (DatabaseManager.UpdateServerGroupsInPcDatabase())
                         {
-                            GroupsManager.GroupsManagerSetUp();
-                            BeginInvoke((Action)(() => ContactUCreateGroup(GroupsManager.GetGroup(message.GroupId))));
+                            Group group = GroupsManager.GetGroupFromLocalDataBase(message.GroupId);
+                            GroupsManager.Groups_List.Add(group);
+                            BeginInvoke((Action)(() => ContactUCreateGroup(group)));
                         }
                     }
                 }
@@ -625,6 +627,14 @@ namespace ChatApplication
         private void GroupMessageSent(Message message, Group group, ChatU messageChatU)
         {
             bool isMessageSentToALL = true;
+            for(int i=0;i< group.GroupMembers.Count;i++){
+            if(group.GroupMembers[i].Contact.IsOnline==false){
+                    GroupMember groupMember = group.GroupMembers[i];
+                    group.GroupMembers.RemoveAt(i);
+                    group.GroupMembers.Add(groupMember);
+                    i--;
+            }
+            }
             for (int i = 0; i < group.GroupMembers.Count; i++)
             {
                 message.ToHostName = group.GroupMembers[i].Contact.HostName;
@@ -722,9 +732,9 @@ namespace ChatApplication
             return contactU;
         }
 
-        private bool GroupExistsInChat(Group group)
+        private bool GroupExistsInChat(int groupId)
         {
-            return ContactUDictionary.ContainsKey(group.GroupID + ""); 
+            return ContactUDictionary.ContainsKey(groupId + ""); 
         }
 
         private ContactU ContactUCreateContact(Contact contact)
@@ -913,7 +923,7 @@ namespace ChatApplication
         {
             for (int i = 0; i < GroupsManager.Groups_List.Count; i++)
             {
-                if (!GroupExistsInChat(GroupsManager.Groups_List[i]))
+                if (!GroupExistsInChat(GroupsManager.Groups_List[i].GroupID))
                     ContactUCreateGroup(GroupsManager.Groups_List[i]);
             }
         }

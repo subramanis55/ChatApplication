@@ -66,13 +66,18 @@ namespace ChatApplication.Manager
             }
             return null;
         }
-        public static Contact getContactFromDatabase(string hostName)
+        public static Contact getContactFromServerDatabase(string hostName)
         {
             var value = DatabaseManager.Manager.FetchData("CONTACTS", $"HOSTNAME='{hostName}'").Value;
             return new Contact(value["MACADDRESS"][0].ToString(), value["HOSTNAME"][0].ToString(), value["IPADDRESS"][0].ToString(), value["FIRSTNAME"][0].ToString(), value["LASTNAME"][0].ToString(), value["DPPICTURE"][0].ToString(), (DateTime)value["LASTONLINETIME"][0], (int)value["NEWMESSAGECOUNT"][0], Convert.ToBoolean(value["ISARCHIVED"][0]));
 
         }
+        public static Contact getContactFromLocalDatabase(string hostName)
+        {
+            var value = DatabaseManager.Manager.FetchData("CONTACTS", $"HOSTNAME='{hostName}'").Value;
+            return new Contact(value["MACADDRESS"][0].ToString(), value["HOSTNAME"][0].ToString(), value["IPADDRESS"][0].ToString(), value["FIRSTNAME"][0].ToString(), value["LASTNAME"][0].ToString(), FilesManager.SaveFilesInDirectoryFolder(FilesManager.FilesPath_D["CONTACTSDPPICTURE"], value["FIRSTNAME"][0].ToString() + "-" + value["IPADDRESS"][0].ToString(), value["DPPICTURE"][0].ToString()), (DateTime)value["LASTONLINETIME"][0], (int)value["NEWMESSAGECOUNT"][0], Convert.ToBoolean(value["ISARCHIVED"][0]));
 
+        }
         public static List<Contact> GetContactsFromServer()
         {
             var result = DatabaseManager.Manager.FetchData("CONTACTS", "HOSTNAME IS NOT NULL");
