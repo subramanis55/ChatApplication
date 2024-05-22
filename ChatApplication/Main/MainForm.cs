@@ -627,12 +627,14 @@ namespace ChatApplication
         private void GroupMessageSent(Message message, Group group, ChatU messageChatU)
         {
             bool isMessageSentToALL = true;
-            for(int i=0;i< group.GroupMembers.Count;i++){
+            int Count = 0;
+            for(int i=0;i< group.GroupMembers.Count- Count; i++){
             if(group.GroupMembers[i].Contact.IsOnline==false){
                     GroupMember groupMember = group.GroupMembers[i];
                     group.GroupMembers.RemoveAt(i);
                     group.GroupMembers.Add(groupMember);
                     i--;
+                    Count++;
             }
             }
             for (int i = 0; i < group.GroupMembers.Count; i++)
