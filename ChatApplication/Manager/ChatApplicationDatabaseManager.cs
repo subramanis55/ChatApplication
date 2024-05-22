@@ -142,7 +142,7 @@ namespace ChatApplication
         }
         public static bool DefaultDatabaseCreateConnection()
         {
-            var result = Manager.ChangeConnection($"localhost", "root", "", "mysql");
+            var result = Manager.ChangeConnection($"localhost", "root", LocalDataBasePassword, "mysql");
             Manager.Connect();
             if (result.Result)
                 IsConnectedToServer = false;
@@ -150,7 +150,7 @@ namespace ChatApplication
         }
         public static bool DatabaseChangeConnection(string dataBaseName)
         {
-            var result = Manager.ChangeConnection($"localhost", "root", "", dataBaseName);
+            var result = Manager.ChangeConnection($"localhost", "root", LocalDataBasePassword, dataBaseName);
             if (result.Result)
                 IsConnectedToServer = false;
             return result.Result;

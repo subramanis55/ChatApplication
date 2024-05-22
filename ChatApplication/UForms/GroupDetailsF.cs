@@ -106,6 +106,7 @@ namespace ChatApplication.UForms
             LostFocus += GroupMemberFLostFocus;
             searchBox.Textchanged += SearchBoxTextchanged;
             groupNameTB.KeyPressDown += groupNameTBKeyDown;
+            groupNameTB.Textchanged += GroupNameTBTextchanged;
             dpPictureU.OnClickDpPicturePathGet += dpPictureUOnClickDpPicturePathGet;
             groupNameTBEditBtn.Click += groupNameTBEditBtnClick;
             groupLeaveBtn.Click += GroupLeaveBtnClick;
@@ -114,6 +115,27 @@ namespace ChatApplication.UForms
             GroupMembersCreate();
             FeaturesMethods.AltTabFormShowStop(this.Handle);
         }
+
+        private void GroupNameTBTextchanged(object sender, EventArgs e)
+        {
+          
+                if (groupNameTB.Text.Length > 16)
+                {
+                groupnameErrorLB.Visible = true;
+                groupnameErrorLB.Text = "Lastname should be\nless  than 16 character";
+                }
+                else if (groupNameTB.Text.Length == 0)
+                {
+                groupnameErrorLB.Visible = true;
+                groupnameErrorLB.Text = "Enter the lastname";
+                }
+                else
+                {
+                groupnameErrorLB.Visible = false;
+                }
+            
+        }
+
         private void GroupLeaveBtnClick(object sender, EventArgs e)
         {
             MessageConfirmForm messageConfirmForm = new MessageConfirmForm("Do you want Leave this group");
@@ -181,7 +203,7 @@ namespace ChatApplication.UForms
         }
         private void groupNameTBKeyDown(object sender, KeyEventArgs e)
         {
-            if (groupNameTB.Enabled == true && e.KeyCode == Keys.Enter&& groupNameTB.Text!="")
+            if (groupNameTB.Enabled == true && e.KeyCode == Keys.Enter&& groupNameTB.Text!=""&&groupnameErrorLB.Visible == false && groupNameTB.Text.Length > 0)
             {
                 groupNameTBEditBtn.Visible = true;
                 groupNameTB.Enabled = false;

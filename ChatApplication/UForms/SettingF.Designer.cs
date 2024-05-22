@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingF));
             this.settingMainTabControl = new System.Windows.Forms.TabControl();
             this.personalizationPage = new System.Windows.Forms.TabPage();
-            this.chatWallPaperColorChangeU = new ChatApplication.UControl.ChatWallPaper();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.accountPage = new System.Windows.Forms.TabPage();
@@ -39,7 +38,6 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.deleteAllMessagesBtn = new ChatApplication.EllipseButton();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.accountLB = new System.Windows.Forms.Label();
@@ -54,22 +52,26 @@
             this.aboutLB = new System.Windows.Forms.Label();
             this.profilePage = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.lastNameTB = new ChatApplication.CustomSearchBox();
-            this.lastNameTBEditBtn = new ChatApplication.EllipseButton();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.firstNameTBEditBtn = new ChatApplication.EllipseButton();
-            this.firstNameTB = new ChatApplication.CustomSearchBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dpPictureU = new ChatApplication.DpPictureU();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.ThemePage = new System.Windows.Forms.TabPage();
             this.themeCB = new System.Windows.Forms.ComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.firstnameErrorLB = new System.Windows.Forms.Label();
+            this.lastnameErrorLB = new System.Windows.Forms.Label();
+            this.chatWallPaperColorChangeU = new ChatApplication.UControl.ChatWallPaper();
+            this.toggleButton1 = new ChatApplication.CommonUserControl.ToggleButton();
+            this.deleteAllMessagesBtn = new ChatApplication.EllipseButton();
+            this.lastNameTB = new ChatApplication.CustomSearchBox();
+            this.lastNameTBEditBtn = new ChatApplication.EllipseButton();
+            this.firstNameTBEditBtn = new ChatApplication.EllipseButton();
+            this.firstNameTB = new ChatApplication.CustomSearchBox();
+            this.dpPictureU = new ChatApplication.DpPictureU();
             this.settingMenuControl = new ChatApplication.UControl.SettingMenuControl();
             this.ellipseControl1 = new ChatApplication.EllipseControl();
-            this.toggleButton1 = new ChatApplication.CommonUserControl.ToggleButton();
             this.settingMainTabControl.SuspendLayout();
             this.personalizationPage.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -117,16 +119,6 @@
             this.personalizationPage.Size = new System.Drawing.Size(299, 437);
             this.personalizationPage.TabIndex = 0;
             this.personalizationPage.Click += new System.EventHandler(this.personalizationPage_Click);
-            // 
-            // chatWallPaperColorChangeU
-            // 
-            this.chatWallPaperColorChangeU.BackColor = System.Drawing.Color.White;
-            this.chatWallPaperColorChangeU.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chatWallPaperColorChangeU.Location = new System.Drawing.Point(0, 59);
-            this.chatWallPaperColorChangeU.Margin = new System.Windows.Forms.Padding(4);
-            this.chatWallPaperColorChangeU.Name = "chatWallPaperColorChangeU";
-            this.chatWallPaperColorChangeU.Size = new System.Drawing.Size(299, 240);
-            this.chatWallPaperColorChangeU.TabIndex = 3;
             // 
             // panel5
             // 
@@ -202,27 +194,6 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(294, 117);
             this.panel11.TabIndex = 2;
-            // 
-            // deleteAllMessagesBtn
-            // 
-            this.deleteAllMessagesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.deleteAllMessagesBtn.BackgroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.deleteAllMessagesBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.deleteAllMessagesBtn.BorderRadius1 = 8;
-            this.deleteAllMessagesBtn.BorderSize1 = 0;
-            this.deleteAllMessagesBtn.EllipseColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.deleteAllMessagesBtn.FlatAppearance.BorderSize = 0;
-            this.deleteAllMessagesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteAllMessagesBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteAllMessagesBtn.ForeColor = System.Drawing.Color.Red;
-            this.deleteAllMessagesBtn.Location = new System.Drawing.Point(55, 55);
-            this.deleteAllMessagesBtn.Name = "deleteAllMessagesBtn";
-            this.deleteAllMessagesBtn.Size = new System.Drawing.Size(152, 35);
-            this.deleteAllMessagesBtn.SlowMotionInterval = 5;
-            this.deleteAllMessagesBtn.TabIndex = 1;
-            this.deleteAllMessagesBtn.Text = "Delete All Messages";
-            this.deleteAllMessagesBtn.TextColor = System.Drawing.Color.Red;
-            this.deleteAllMessagesBtn.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -366,101 +337,25 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.lastnameErrorLB);
             this.panel9.Controls.Add(this.lastNameTB);
             this.panel9.Controls.Add(this.lastNameTBEditBtn);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 246);
+            this.panel9.Location = new System.Drawing.Point(0, 276);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(299, 68);
+            this.panel9.Size = new System.Drawing.Size(299, 84);
             this.panel9.TabIndex = 3;
-            // 
-            // lastNameTB
-            // 
-            this.lastNameTB.BackColor = System.Drawing.Color.White;
-            this.lastNameTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lastNameTB.BorderSize = 4;
-            this.lastNameTB.Enabled = false;
-            this.lastNameTB.IsPlaceholder = true;
-            this.lastNameTB.IsSearchIconVisible = false;
-            this.lastNameTB.IsUnderLine = true;
-            this.lastNameTB.Location = new System.Drawing.Point(3, 6);
-            this.lastNameTB.Multiline = false;
-            this.lastNameTB.Name = "lastNameTB";
-            this.lastNameTB.Padding = new System.Windows.Forms.Padding(15, 7, 7, 7);
-            this.lastNameTB.PlaceholderText = "";
-            this.lastNameTB.ReadOnly = false;
-            this.lastNameTB.Size = new System.Drawing.Size(232, 45);
-            this.lastNameTB.TabIndex = 5;
-            this.lastNameTB.TabStop = false;
-            // 
-            // lastNameTBEditBtn
-            // 
-            this.lastNameTBEditBtn.BackColor = System.Drawing.Color.Transparent;
-            this.lastNameTBEditBtn.BackgroudColor = System.Drawing.Color.Transparent;
-            this.lastNameTBEditBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.lastNameTBEditBtn.BorderRadius1 = 10;
-            this.lastNameTBEditBtn.BorderSize1 = 0;
-            this.lastNameTBEditBtn.EllipseColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.lastNameTBEditBtn.FlatAppearance.BorderSize = 0;
-            this.lastNameTBEditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lastNameTBEditBtn.ForeColor = System.Drawing.Color.White;
-            this.lastNameTBEditBtn.Image = global::ChatApplication.Properties.Resources.edit_24_Black1;
-            this.lastNameTBEditBtn.Location = new System.Drawing.Point(250, 21);
-            this.lastNameTBEditBtn.Name = "lastNameTBEditBtn";
-            this.lastNameTBEditBtn.Size = new System.Drawing.Size(32, 30);
-            this.lastNameTBEditBtn.SlowMotionInterval = 5;
-            this.lastNameTBEditBtn.TabIndex = 4;
-            this.lastNameTBEditBtn.TextColor = System.Drawing.Color.White;
-            this.lastNameTBEditBtn.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.firstnameErrorLB);
             this.panel8.Controls.Add(this.firstNameTBEditBtn);
             this.panel8.Controls.Add(this.firstNameTB);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 178);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(299, 68);
+            this.panel8.Size = new System.Drawing.Size(299, 98);
             this.panel8.TabIndex = 2;
-            // 
-            // firstNameTBEditBtn
-            // 
-            this.firstNameTBEditBtn.BackColor = System.Drawing.Color.Transparent;
-            this.firstNameTBEditBtn.BackgroudColor = System.Drawing.Color.Transparent;
-            this.firstNameTBEditBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.firstNameTBEditBtn.BorderRadius1 = 10;
-            this.firstNameTBEditBtn.BorderSize1 = 0;
-            this.firstNameTBEditBtn.EllipseColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.firstNameTBEditBtn.FlatAppearance.BorderSize = 0;
-            this.firstNameTBEditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.firstNameTBEditBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.firstNameTBEditBtn.Image = global::ChatApplication.Properties.Resources.edit_24_Black1;
-            this.firstNameTBEditBtn.Location = new System.Drawing.Point(250, 21);
-            this.firstNameTBEditBtn.Name = "firstNameTBEditBtn";
-            this.firstNameTBEditBtn.Size = new System.Drawing.Size(32, 30);
-            this.firstNameTBEditBtn.SlowMotionInterval = 5;
-            this.firstNameTBEditBtn.TabIndex = 3;
-            this.firstNameTBEditBtn.TextColor = System.Drawing.Color.Transparent;
-            this.firstNameTBEditBtn.UseVisualStyleBackColor = false;
-            // 
-            // firstNameTB
-            // 
-            this.firstNameTB.BackColor = System.Drawing.Color.White;
-            this.firstNameTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.firstNameTB.BorderSize = 4;
-            this.firstNameTB.Enabled = false;
-            this.firstNameTB.IsPlaceholder = true;
-            this.firstNameTB.IsSearchIconVisible = false;
-            this.firstNameTB.IsUnderLine = true;
-            this.firstNameTB.Location = new System.Drawing.Point(3, 17);
-            this.firstNameTB.Multiline = false;
-            this.firstNameTB.Name = "firstNameTB";
-            this.firstNameTB.Padding = new System.Windows.Forms.Padding(15, 7, 7, 7);
-            this.firstNameTB.PlaceholderText = "";
-            this.firstNameTB.ReadOnly = false;
-            this.firstNameTB.Size = new System.Drawing.Size(232, 45);
-            this.firstNameTB.TabIndex = 2;
-            this.firstNameTB.TabStop = false;
             // 
             // panel6
             // 
@@ -470,18 +365,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(299, 119);
             this.panel6.TabIndex = 0;
-            // 
-            // dpPictureU
-            // 
-            this.dpPictureU.DpPicturPath = "";
-            this.dpPictureU.EditBtnImage = global::ChatApplication.Properties.Resources.icons8_edit_18;
-            this.dpPictureU.EditBtnVisible = false;
-            this.dpPictureU.Image = ((System.Drawing.Image)(resources.GetObject("dpPictureU.Image")));
-            this.dpPictureU.Location = new System.Drawing.Point(85, 14);
-            this.dpPictureU.Margin = new System.Windows.Forms.Padding(2);
-            this.dpPictureU.Name = "dpPictureU";
-            this.dpPictureU.Size = new System.Drawing.Size(100, 87);
-            this.dpPictureU.TabIndex = 0;
             // 
             // panel7
             // 
@@ -550,19 +433,39 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Theme";
             // 
-            // settingMenuControl
+            // firstnameErrorLB
             // 
-            this.settingMenuControl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.settingMenuControl.Location = new System.Drawing.Point(0, 0);
-            this.settingMenuControl.Margin = new System.Windows.Forms.Padding(4);
-            this.settingMenuControl.Name = "settingMenuControl";
-            this.settingMenuControl.Size = new System.Drawing.Size(143, 450);
-            this.settingMenuControl.TabIndex = 4;
+            this.firstnameErrorLB.AutoSize = true;
+            this.firstnameErrorLB.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstnameErrorLB.ForeColor = System.Drawing.Color.Red;
+            this.firstnameErrorLB.Location = new System.Drawing.Point(21, 65);
+            this.firstnameErrorLB.Name = "firstnameErrorLB";
+            this.firstnameErrorLB.Size = new System.Drawing.Size(38, 17);
+            this.firstnameErrorLB.TabIndex = 14;
+            this.firstnameErrorLB.Text = "Error";
+            this.firstnameErrorLB.Visible = false;
             // 
-            // ellipseControl1
+            // lastnameErrorLB
             // 
-            this.ellipseControl1.CornerRadius = 15;
-            this.ellipseControl1.TargetControl = this;
+            this.lastnameErrorLB.AutoSize = true;
+            this.lastnameErrorLB.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastnameErrorLB.ForeColor = System.Drawing.Color.Red;
+            this.lastnameErrorLB.Location = new System.Drawing.Point(21, 54);
+            this.lastnameErrorLB.Name = "lastnameErrorLB";
+            this.lastnameErrorLB.Size = new System.Drawing.Size(38, 17);
+            this.lastnameErrorLB.TabIndex = 15;
+            this.lastnameErrorLB.Text = "Error";
+            this.lastnameErrorLB.Visible = false;
+            // 
+            // chatWallPaperColorChangeU
+            // 
+            this.chatWallPaperColorChangeU.BackColor = System.Drawing.Color.White;
+            this.chatWallPaperColorChangeU.Dock = System.Windows.Forms.DockStyle.Top;
+            this.chatWallPaperColorChangeU.Location = new System.Drawing.Point(0, 59);
+            this.chatWallPaperColorChangeU.Margin = new System.Windows.Forms.Padding(4);
+            this.chatWallPaperColorChangeU.Name = "chatWallPaperColorChangeU";
+            this.chatWallPaperColorChangeU.Size = new System.Drawing.Size(299, 240);
+            this.chatWallPaperColorChangeU.TabIndex = 3;
             // 
             // toggleButton1
             // 
@@ -577,6 +480,131 @@
             this.toggleButton1.Text = "toggleButton1";
             this.toggleButton1.ToggleColor = System.Drawing.Color.White;
             this.toggleButton1.Value = true;
+            // 
+            // deleteAllMessagesBtn
+            // 
+            this.deleteAllMessagesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.deleteAllMessagesBtn.BackgroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.deleteAllMessagesBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.deleteAllMessagesBtn.BorderRadius1 = 8;
+            this.deleteAllMessagesBtn.BorderSize1 = 0;
+            this.deleteAllMessagesBtn.EllipseColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.deleteAllMessagesBtn.FlatAppearance.BorderSize = 0;
+            this.deleteAllMessagesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteAllMessagesBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteAllMessagesBtn.ForeColor = System.Drawing.Color.Red;
+            this.deleteAllMessagesBtn.Location = new System.Drawing.Point(55, 55);
+            this.deleteAllMessagesBtn.Name = "deleteAllMessagesBtn";
+            this.deleteAllMessagesBtn.Size = new System.Drawing.Size(152, 35);
+            this.deleteAllMessagesBtn.SlowMotionInterval = 5;
+            this.deleteAllMessagesBtn.TabIndex = 1;
+            this.deleteAllMessagesBtn.Text = "Delete All Messages";
+            this.deleteAllMessagesBtn.TextColor = System.Drawing.Color.Red;
+            this.deleteAllMessagesBtn.UseVisualStyleBackColor = false;
+            // 
+            // lastNameTB
+            // 
+            this.lastNameTB.BackColor = System.Drawing.Color.White;
+            this.lastNameTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.lastNameTB.BorderSize = 4;
+            this.lastNameTB.Enabled = false;
+            this.lastNameTB.IsPlaceholder = true;
+            this.lastNameTB.IsSearchIconVisible = false;
+            this.lastNameTB.IsUnderLine = true;
+            this.lastNameTB.Location = new System.Drawing.Point(3, 6);
+            this.lastNameTB.Multiline = false;
+            this.lastNameTB.Name = "lastNameTB";
+            this.lastNameTB.Padding = new System.Windows.Forms.Padding(15, 7, 7, 7);
+            this.lastNameTB.PlaceholderText = "";
+            this.lastNameTB.ReadOnly = false;
+            this.lastNameTB.Size = new System.Drawing.Size(232, 45);
+            this.lastNameTB.TabIndex = 5;
+            this.lastNameTB.TabStop = false;
+            // 
+            // lastNameTBEditBtn
+            // 
+            this.lastNameTBEditBtn.BackColor = System.Drawing.Color.Transparent;
+            this.lastNameTBEditBtn.BackgroudColor = System.Drawing.Color.Transparent;
+            this.lastNameTBEditBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.lastNameTBEditBtn.BorderRadius1 = 10;
+            this.lastNameTBEditBtn.BorderSize1 = 0;
+            this.lastNameTBEditBtn.EllipseColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.lastNameTBEditBtn.FlatAppearance.BorderSize = 0;
+            this.lastNameTBEditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lastNameTBEditBtn.ForeColor = System.Drawing.Color.White;
+            this.lastNameTBEditBtn.Image = global::ChatApplication.Properties.Resources.edit_24_Black1;
+            this.lastNameTBEditBtn.Location = new System.Drawing.Point(250, 21);
+            this.lastNameTBEditBtn.Name = "lastNameTBEditBtn";
+            this.lastNameTBEditBtn.Size = new System.Drawing.Size(32, 30);
+            this.lastNameTBEditBtn.SlowMotionInterval = 5;
+            this.lastNameTBEditBtn.TabIndex = 4;
+            this.lastNameTBEditBtn.TextColor = System.Drawing.Color.White;
+            this.lastNameTBEditBtn.UseVisualStyleBackColor = false;
+            // 
+            // firstNameTBEditBtn
+            // 
+            this.firstNameTBEditBtn.BackColor = System.Drawing.Color.Transparent;
+            this.firstNameTBEditBtn.BackgroudColor = System.Drawing.Color.Transparent;
+            this.firstNameTBEditBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.firstNameTBEditBtn.BorderRadius1 = 10;
+            this.firstNameTBEditBtn.BorderSize1 = 0;
+            this.firstNameTBEditBtn.EllipseColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.firstNameTBEditBtn.FlatAppearance.BorderSize = 0;
+            this.firstNameTBEditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.firstNameTBEditBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.firstNameTBEditBtn.Image = global::ChatApplication.Properties.Resources.edit_24_Black1;
+            this.firstNameTBEditBtn.Location = new System.Drawing.Point(250, 21);
+            this.firstNameTBEditBtn.Name = "firstNameTBEditBtn";
+            this.firstNameTBEditBtn.Size = new System.Drawing.Size(32, 30);
+            this.firstNameTBEditBtn.SlowMotionInterval = 5;
+            this.firstNameTBEditBtn.TabIndex = 3;
+            this.firstNameTBEditBtn.TextColor = System.Drawing.Color.Transparent;
+            this.firstNameTBEditBtn.UseVisualStyleBackColor = false;
+            // 
+            // firstNameTB
+            // 
+            this.firstNameTB.BackColor = System.Drawing.Color.White;
+            this.firstNameTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.firstNameTB.BorderSize = 4;
+            this.firstNameTB.Enabled = false;
+            this.firstNameTB.IsPlaceholder = true;
+            this.firstNameTB.IsSearchIconVisible = false;
+            this.firstNameTB.IsUnderLine = true;
+            this.firstNameTB.Location = new System.Drawing.Point(3, 17);
+            this.firstNameTB.Multiline = false;
+            this.firstNameTB.Name = "firstNameTB";
+            this.firstNameTB.Padding = new System.Windows.Forms.Padding(15, 7, 7, 7);
+            this.firstNameTB.PlaceholderText = "";
+            this.firstNameTB.ReadOnly = false;
+            this.firstNameTB.Size = new System.Drawing.Size(232, 45);
+            this.firstNameTB.TabIndex = 2;
+            this.firstNameTB.TabStop = false;
+            // 
+            // dpPictureU
+            // 
+            this.dpPictureU.DpPicturPath = "";
+            this.dpPictureU.EditBtnImage = global::ChatApplication.Properties.Resources.icons8_edit_18;
+            this.dpPictureU.EditBtnVisible = false;
+            this.dpPictureU.Image = ((System.Drawing.Image)(resources.GetObject("dpPictureU.Image")));
+            this.dpPictureU.Location = new System.Drawing.Point(85, 14);
+            this.dpPictureU.Margin = new System.Windows.Forms.Padding(2);
+            this.dpPictureU.Name = "dpPictureU";
+            this.dpPictureU.Size = new System.Drawing.Size(100, 87);
+            this.dpPictureU.TabIndex = 0;
+            // 
+            // settingMenuControl
+            // 
+            this.settingMenuControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.settingMenuControl.Location = new System.Drawing.Point(0, 0);
+            this.settingMenuControl.Margin = new System.Windows.Forms.Padding(4);
+            this.settingMenuControl.Name = "settingMenuControl";
+            this.settingMenuControl.Size = new System.Drawing.Size(143, 450);
+            this.settingMenuControl.TabIndex = 4;
+            // 
+            // ellipseControl1
+            // 
+            this.ellipseControl1.CornerRadius = 15;
+            this.ellipseControl1.TargetControl = this;
             // 
             // SettingF
             // 
@@ -610,7 +638,9 @@
             this.panel1.PerformLayout();
             this.profilePage.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -664,5 +694,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel11;
         private CommonUserControl.ToggleButton toggleButton1;
+        private System.Windows.Forms.Label firstnameErrorLB;
+        private System.Windows.Forms.Label lastnameErrorLB;
     }
 }

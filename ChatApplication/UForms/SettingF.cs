@@ -89,6 +89,44 @@ namespace ChatApplication.UForms
             lastNameTB.KeyPressDown += LastNameTBKeyDown;
             dpPictureU.OnClickDpPicturePathGet += dpPictureUOnClickDpPicturePathGet;
             FeaturesMethods.AltTabFormShowStop(this.Handle);
+            firstNameTB.Textchanged += FirstNameTB_Textchanged;
+            lastNameTB.Textchanged += LastNameTB_Textchanged;
+        }
+
+        private void LastNameTB_Textchanged(object sender, EventArgs e)
+        {
+            if (lastNameTB.Text.Length > 16)
+            {
+                lastnameErrorLB.Visible = true;
+                lastnameErrorLB.Text = "Lastname should be\nless  than 16 character";
+            }
+            else if (lastNameTB.Text.Length == 0)
+            {
+                lastnameErrorLB.Visible = true;
+                lastnameErrorLB.Text = "Enter the lastname";
+            }
+            else
+            {
+                lastnameErrorLB.Visible = false;
+            }
+        }
+
+        private void FirstNameTB_Textchanged(object sender, EventArgs e)
+        {
+            if (firstNameTB.Text.Length > 16)
+            {
+                firstnameErrorLB.Visible = true;
+                firstnameErrorLB.Text = "Firstname should be\nless than  16 character";
+            }
+            else if (firstNameTB.Text.Length == 0)
+            {
+                firstnameErrorLB.Visible = true;
+                firstnameErrorLB.Text = "Enter the firstname";
+            }
+            else
+            {
+                firstnameErrorLB.Visible = false;
+            }
         }
 
         private void SettingFDisposed(object sender, EventArgs e)
@@ -111,14 +149,13 @@ namespace ChatApplication.UForms
         {
             try
             {
-                // string DpPicturePath = FilesManager.SaveFileInFolder(FilesManager.ContactsFilesPath_D["DPPICTURE"], dpPicturePath, ContactsManager.PCContact.FirstName + "-" + ContactsManager.PCContact.LastName + "-" + NetworkManager.PcHostName);
+             
                 if (DatabaseManager.ChatApplicationServerConnection())
                 {
                     string imageStringFormat = FilesManager.ConvertImageToBase64(dpPicturePath);
                     ContactsManager.ChangeContactDppicture(ContactsManager.PCContact.HostName, imageStringFormat);
                     DatabaseManager.ChatApplicationLocalConnection();
                     ContactsManager.ChangeContactDppicture(ContactsManager.PCContact.HostName, imageStringFormat);
-                    //  ContactsManager.ContactManagerSetup();
                 }
                 else
                     SettingManager.notificationThrowManager.CreateNotification("Server not respond", NotificationType.Information);
@@ -196,7 +233,7 @@ namespace ChatApplication.UForms
         }
         private void FirstNameTBKeyDown(object sender, KeyEventArgs e)
         {
-            if (firstNameTB.Enabled == true && e.KeyCode == Keys.Enter)
+            if (firstNameTB.Enabled == true && e.KeyCode == Keys.Enter&& firstnameErrorLB.Visible == false && firstNameTB.Text.Length > 0)
             {
                 firstNameTBEditBtn.Visible = true;
                 firstNameTB.Enabled = false;
@@ -217,7 +254,7 @@ namespace ChatApplication.UForms
 
         private void LastNameTBKeyDown(object sender, KeyEventArgs e)
         {
-            if (lastNameTB.Enabled == true && e.KeyCode == Keys.Enter)
+            if (lastNameTB.Enabled == true && e.KeyCode == Keys.Enter&& lastnameErrorLB.Visible == false && lastNameTB.Text.Length > 0)
             {
                 lastNameTBEditBtn.Visible = true;
                 lastNameTB.Enabled = false;

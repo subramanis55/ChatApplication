@@ -57,6 +57,7 @@
             this.titleLB = new System.Windows.Forms.Label();
             this.groupMainTabControl = new System.Windows.Forms.TabControl();
             this.groupMenuControl = new ChatApplication.UControl.GroupMenuControl();
+            this.groupnameErrorLB = new System.Windows.Forms.Label();
             this.overviewPage.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -94,7 +95,7 @@
             // 
             this.adminNameLabel.AutoSize = true;
             this.adminNameLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminNameLabel.Location = new System.Drawing.Point(21, 287);
+            this.adminNameLabel.Location = new System.Drawing.Point(20, 300);
             this.adminNameLabel.Name = "adminNameLabel";
             this.adminNameLabel.Size = new System.Drawing.Size(101, 20);
             this.adminNameLabel.TabIndex = 5;
@@ -132,13 +133,14 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.groupnameErrorLB);
             this.panel11.Controls.Add(this.panel6);
             this.panel11.Controls.Add(this.groupNameTBEditBtn);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 199);
             this.panel11.Name = "panel11";
             this.panel11.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel11.Size = new System.Drawing.Size(281, 68);
+            this.panel11.Size = new System.Drawing.Size(281, 98);
             this.panel11.TabIndex = 2;
             // 
             // panel6
@@ -464,6 +466,18 @@
             this.groupMenuControl.Size = new System.Drawing.Size(97, 449);
             this.groupMenuControl.TabIndex = 4;
             // 
+            // groupnameErrorLB
+            // 
+            this.groupnameErrorLB.AutoSize = true;
+            this.groupnameErrorLB.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupnameErrorLB.ForeColor = System.Drawing.Color.Red;
+            this.groupnameErrorLB.Location = new System.Drawing.Point(21, 67);
+            this.groupnameErrorLB.Name = "groupnameErrorLB";
+            this.groupnameErrorLB.Size = new System.Drawing.Size(38, 17);
+            this.groupnameErrorLB.TabIndex = 14;
+            this.groupnameErrorLB.Text = "Error";
+            this.groupnameErrorLB.Visible = false;
+            // 
             // GroupDetailsF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,6 +495,7 @@
             this.overviewPage.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
@@ -527,5 +542,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label titleLB;
         private System.Windows.Forms.Label adminNameLabel;
+        private System.Windows.Forms.Label groupnameErrorLB;
     }
 }
