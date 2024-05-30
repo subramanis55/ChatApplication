@@ -624,6 +624,15 @@ namespace ChatApplication
                 GroupMessageSent(message, Group, messageChatU);
             }
         }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
         private void GroupMessageSent(Message message, Group group, ChatU messageChatU)
         {
             bool isMessageSentToALL = true;
@@ -803,7 +812,7 @@ namespace ChatApplication
             ChatPageColor = SettingManager.ChatPageBackGroundColor;
         }
 
-        //menu 
+
         private void StartedMessagePageBtnClicked(object sender, EventArgs e)
         {
 
@@ -915,10 +924,13 @@ namespace ChatApplication
 
         public void AlreadyExitsMessagedContactsCreate()
         {
+            alreadyMessagedContactsPanel.SuspendLayout();
             for (int i = 0; i < ContactsManager.MessagedContacts_list.Count; i++)
             {
                 ContactUCreateContact(ContactsManager.getContact(ContactsManager.MessagedContacts_list[i].HostName));
             }
+            alreadyMessagedContactsPanel.ResumeLayout();
+            alreadyMessagedContactsPanel.PerformLayout();
         }
     
         public void GroupsRefresh()
@@ -931,10 +943,13 @@ namespace ChatApplication
         }
         public void AlreadyExitsGroupsCreate()
         {
+            alreadyMessagedContactsPanel.SuspendLayout();
             for (int i = 0; i < GroupsManager.Groups_List.Count; i++)
             {
                 ContactUCreateGroup(GroupsManager.Groups_List[i]);
             }
+            alreadyMessagedContactsPanel.ResumeLayout();
+            alreadyMessagedContactsPanel.PerformLayout();
         }
         private void messageTB_TextChanged(object sender, EventArgs e)
         {

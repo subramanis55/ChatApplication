@@ -33,7 +33,11 @@
             this.chatPage = new System.Windows.Forms.TabPage();
             this.alreadyMessagedContactsPanel = new System.Windows.Forms.Panel();
             this.chatPageSearchBoxPanel = new System.Windows.Forms.Panel();
+            this.chatPageSearchBox = new ChatApplication.CustomSearchBox();
             this.chatPageTopPanel = new System.Windows.Forms.Panel();
+            this.refreshBtn = new ChatApplication.EllipseButton();
+            this.contactListBtn = new ChatApplication.EllipseButton();
+            this.filterContactsBtn = new ChatApplication.EllipseButton();
             this.chatLB = new System.Windows.Forms.Label();
             this.callsPage = new System.Windows.Forms.TabPage();
             this.StatusPage = new System.Windows.Forms.TabPage();
@@ -46,22 +50,18 @@
             this.chatTabpage = new System.Windows.Forms.TabPage();
             this.chatTabPageMainPanel = new System.Windows.Forms.Panel();
             this.messageShowP = new System.Windows.Forms.Panel();
+            this.chatPageTitleU = new ChatApplication.ChatPageTitleU();
             this.messageTextBoxPanel = new System.Windows.Forms.Panel();
             this.messageTB = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.attachmentBtn = new ChatApplication.EllipseButton();
             this.sentBtnP = new System.Windows.Forms.Panel();
+            this.sentBtn = new ChatApplication.EllipseButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.defaultPage = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.chatPageTitleU = new ChatApplication.ChatPageTitleU();
-            this.attachmentBtn = new ChatApplication.EllipseButton();
-            this.sentBtn = new ChatApplication.EllipseButton();
-            this.chatPageSearchBox = new ChatApplication.CustomSearchBox();
-            this.refreshBtn = new ChatApplication.EllipseButton();
-            this.contactListBtn = new ChatApplication.EllipseButton();
-            this.filterContactsBtn = new ChatApplication.EllipseButton();
             this.menuControl = new ChatApplication.MenuControl();
             this.customTooltip1 = new ChatApplication.CustomTooltip();
             this.menuTabControl.SuspendLayout();
@@ -129,6 +129,24 @@
             this.chatPageSearchBoxPanel.TabIndex = 1;
             this.chatPageSearchBoxPanel.Resize += new System.EventHandler(this.mainSearchBoxPanelResize);
             // 
+            // chatPageSearchBox
+            // 
+            this.chatPageSearchBox.BackColor = System.Drawing.Color.White;
+            this.chatPageSearchBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(69)))), ((int)(((byte)(96)))));
+            this.chatPageSearchBox.BorderSize = 4;
+            this.chatPageSearchBox.IsPlaceholder = true;
+            this.chatPageSearchBox.IsSearchIconVisible = false;
+            this.chatPageSearchBox.IsUnderLine = true;
+            this.chatPageSearchBox.Location = new System.Drawing.Point(34, 12);
+            this.chatPageSearchBox.MinimumSize = new System.Drawing.Size(0, 40);
+            this.chatPageSearchBox.Multiline = true;
+            this.chatPageSearchBox.Name = "chatPageSearchBox";
+            this.chatPageSearchBox.Padding = new System.Windows.Forms.Padding(7);
+            this.chatPageSearchBox.PlaceholderText = "Search or start new chat";
+            this.chatPageSearchBox.ReadOnly = false;
+            this.chatPageSearchBox.Size = new System.Drawing.Size(310, 43);
+            this.chatPageSearchBox.TabIndex = 0;
+            // 
             // chatPageTopPanel
             // 
             this.chatPageTopPanel.Controls.Add(this.refreshBtn);
@@ -142,6 +160,70 @@
             this.chatPageTopPanel.Padding = new System.Windows.Forms.Padding(15);
             this.chatPageTopPanel.Size = new System.Drawing.Size(392, 75);
             this.chatPageTopPanel.TabIndex = 0;
+            // 
+            // refreshBtn
+            // 
+            this.refreshBtn.BackColor = System.Drawing.Color.Transparent;
+            this.refreshBtn.BackgroudColor = System.Drawing.Color.Transparent;
+            this.refreshBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.refreshBtn.BorderRadius1 = 10;
+            this.refreshBtn.BorderSize1 = 0;
+            this.refreshBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.refreshBtn.EllipseColor = System.Drawing.Color.White;
+            this.refreshBtn.FlatAppearance.BorderSize = 0;
+            this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshBtn.ForeColor = System.Drawing.Color.White;
+            this.refreshBtn.Image = global::ChatApplication.Properties.Resources.RefreshIcon__2_;
+            this.refreshBtn.Location = new System.Drawing.Point(237, 15);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(54, 45);
+            this.refreshBtn.SlowMotionInterval = 5;
+            this.refreshBtn.TabIndex = 3;
+            this.refreshBtn.TextColor = System.Drawing.Color.White;
+            this.refreshBtn.UseVisualStyleBackColor = false;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtnClicked);
+            // 
+            // contactListBtn
+            // 
+            this.contactListBtn.BackColor = System.Drawing.Color.Transparent;
+            this.contactListBtn.BackgroudColor = System.Drawing.Color.Transparent;
+            this.contactListBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.contactListBtn.BorderRadius1 = 10;
+            this.contactListBtn.BorderSize1 = 0;
+            this.contactListBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.contactListBtn.EllipseColor = System.Drawing.Color.White;
+            this.contactListBtn.FlatAppearance.BorderSize = 0;
+            this.contactListBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contactListBtn.ForeColor = System.Drawing.Color.White;
+            this.contactListBtn.Image = global::ChatApplication.Properties.Resources.icons8_create_20;
+            this.contactListBtn.Location = new System.Drawing.Point(291, 15);
+            this.contactListBtn.Name = "contactListBtn";
+            this.contactListBtn.Size = new System.Drawing.Size(42, 45);
+            this.contactListBtn.SlowMotionInterval = 5;
+            this.contactListBtn.TabIndex = 2;
+            this.contactListBtn.TextColor = System.Drawing.Color.White;
+            this.contactListBtn.UseVisualStyleBackColor = false;
+            // 
+            // filterContactsBtn
+            // 
+            this.filterContactsBtn.BackColor = System.Drawing.Color.Transparent;
+            this.filterContactsBtn.BackgroudColor = System.Drawing.Color.Transparent;
+            this.filterContactsBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.filterContactsBtn.BorderRadius1 = 10;
+            this.filterContactsBtn.BorderSize1 = 0;
+            this.filterContactsBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.filterContactsBtn.EllipseColor = System.Drawing.Color.White;
+            this.filterContactsBtn.FlatAppearance.BorderSize = 0;
+            this.filterContactsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filterContactsBtn.ForeColor = System.Drawing.Color.White;
+            this.filterContactsBtn.Image = global::ChatApplication.Properties.Resources.icons8_align_left_19;
+            this.filterContactsBtn.Location = new System.Drawing.Point(333, 15);
+            this.filterContactsBtn.Name = "filterContactsBtn";
+            this.filterContactsBtn.Size = new System.Drawing.Size(44, 45);
+            this.filterContactsBtn.SlowMotionInterval = 5;
+            this.filterContactsBtn.TabIndex = 1;
+            this.filterContactsBtn.TextColor = System.Drawing.Color.White;
+            this.filterContactsBtn.UseVisualStyleBackColor = false;
             // 
             // chatLB
             // 
@@ -273,6 +355,26 @@
             this.messageShowP.TabIndex = 5;
             this.messageShowP.Scroll += new System.Windows.Forms.ScrollEventHandler(this.messageShowPScroll);
             // 
+            // chatPageTitleU
+            // 
+            this.chatPageTitleU.BackColor = System.Drawing.Color.White;
+            this.chatPageTitleU.ConatctName = "label1";
+            this.chatPageTitleU.Contact = null;
+            this.chatPageTitleU.ContactImagePath = null;
+            this.chatPageTitleU.Dock = System.Windows.Forms.DockStyle.Top;
+            this.chatPageTitleU.Group = null;
+            this.chatPageTitleU.groupinfoText = "Offline";
+            this.chatPageTitleU.IsArchived = false;
+            this.chatPageTitleU.IsGroup = false;
+            this.chatPageTitleU.IsOnline = false;
+            this.chatPageTitleU.Location = new System.Drawing.Point(0, 0);
+            this.chatPageTitleU.Margin = new System.Windows.Forms.Padding(4);
+            this.chatPageTitleU.MinimumSize = new System.Drawing.Size(0, 70);
+            this.chatPageTitleU.Name = "chatPageTitleU";
+            this.chatPageTitleU.Padding = new System.Windows.Forms.Padding(6);
+            this.chatPageTitleU.Size = new System.Drawing.Size(493, 75);
+            this.chatPageTitleU.TabIndex = 6;
+            // 
             // messageTextBoxPanel
             // 
             this.messageTextBoxPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
@@ -309,6 +411,29 @@
             this.panel1.Size = new System.Drawing.Size(66, 64);
             this.panel1.TabIndex = 3;
             // 
+            // attachmentBtn
+            // 
+            this.attachmentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.attachmentBtn.BackgroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.attachmentBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.attachmentBtn.BorderRadius1 = 10;
+            this.attachmentBtn.BorderSize1 = 0;
+            this.attachmentBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.attachmentBtn.EllipseColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.attachmentBtn.FlatAppearance.BorderSize = 0;
+            this.attachmentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.attachmentBtn.ForeColor = System.Drawing.Color.White;
+            this.attachmentBtn.Image = global::ChatApplication.Properties.Resources.paper_clip__3_;
+            this.attachmentBtn.Location = new System.Drawing.Point(10, 10);
+            this.attachmentBtn.Name = "attachmentBtn";
+            this.attachmentBtn.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.attachmentBtn.Size = new System.Drawing.Size(46, 44);
+            this.attachmentBtn.SlowMotionInterval = 5;
+            this.attachmentBtn.TabIndex = 3;
+            this.attachmentBtn.TextColor = System.Drawing.Color.White;
+            this.attachmentBtn.UseVisualStyleBackColor = false;
+            this.attachmentBtn.Click += new System.EventHandler(this.attachmentBtnClick);
+            // 
             // sentBtnP
             // 
             this.sentBtnP.Controls.Add(this.sentBtn);
@@ -318,6 +443,28 @@
             this.sentBtnP.Padding = new System.Windows.Forms.Padding(10);
             this.sentBtnP.Size = new System.Drawing.Size(97, 64);
             this.sentBtnP.TabIndex = 1;
+            // 
+            // sentBtn
+            // 
+            this.sentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.sentBtn.BackgroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.sentBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.sentBtn.BorderRadius1 = 10;
+            this.sentBtn.BorderSize1 = 0;
+            this.sentBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sentBtn.EllipseColor = System.Drawing.Color.Cyan;
+            this.sentBtn.FlatAppearance.BorderSize = 0;
+            this.sentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sentBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sentBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.sentBtn.Image = global::ChatApplication.Properties.Resources.SentIconBlack;
+            this.sentBtn.Location = new System.Drawing.Point(10, 10);
+            this.sentBtn.Name = "sentBtn";
+            this.sentBtn.Size = new System.Drawing.Size(77, 44);
+            this.sentBtn.SlowMotionInterval = 12;
+            this.sentBtn.TabIndex = 0;
+            this.sentBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.sentBtn.UseVisualStyleBackColor = false;
             // 
             // tabPage2
             // 
@@ -364,153 +511,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(984, 600);
             this.panel5.TabIndex = 3;
-            // 
-            // chatPageTitleU
-            // 
-            this.chatPageTitleU.BackColor = System.Drawing.Color.White;
-            this.chatPageTitleU.ConatctName = "label1";
-            this.chatPageTitleU.Contact = null;
-            this.chatPageTitleU.ContactImagePath = null;
-            this.chatPageTitleU.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chatPageTitleU.Group = null;
-            this.chatPageTitleU.groupinfoText = "Offline";
-            this.chatPageTitleU.IsArchived = false;
-            this.chatPageTitleU.IsGroup = false;
-            this.chatPageTitleU.IsOnline = false;
-            this.chatPageTitleU.Location = new System.Drawing.Point(0, 0);
-            this.chatPageTitleU.Margin = new System.Windows.Forms.Padding(4);
-            this.chatPageTitleU.MinimumSize = new System.Drawing.Size(0, 70);
-            this.chatPageTitleU.Name = "chatPageTitleU";
-            this.chatPageTitleU.Padding = new System.Windows.Forms.Padding(6);
-            this.chatPageTitleU.Size = new System.Drawing.Size(493, 75);
-            this.chatPageTitleU.TabIndex = 6;
-            // 
-            // attachmentBtn
-            // 
-            this.attachmentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.attachmentBtn.BackgroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.attachmentBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.attachmentBtn.BorderRadius1 = 10;
-            this.attachmentBtn.BorderSize1 = 0;
-            this.attachmentBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.attachmentBtn.EllipseColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.attachmentBtn.FlatAppearance.BorderSize = 0;
-            this.attachmentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.attachmentBtn.ForeColor = System.Drawing.Color.White;
-            this.attachmentBtn.Image = global::ChatApplication.Properties.Resources.paper_clip__3_;
-            this.attachmentBtn.Location = new System.Drawing.Point(10, 10);
-            this.attachmentBtn.Name = "attachmentBtn";
-            this.attachmentBtn.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.attachmentBtn.Size = new System.Drawing.Size(46, 44);
-            this.attachmentBtn.SlowMotionInterval = 5;
-            this.attachmentBtn.TabIndex = 3;
-            this.attachmentBtn.TextColor = System.Drawing.Color.White;
-            this.attachmentBtn.UseVisualStyleBackColor = false;
-            this.attachmentBtn.Click += new System.EventHandler(this.attachmentBtnClick);
-            // 
-            // sentBtn
-            // 
-            this.sentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.sentBtn.BackgroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.sentBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.sentBtn.BorderRadius1 = 10;
-            this.sentBtn.BorderSize1 = 0;
-            this.sentBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sentBtn.EllipseColor = System.Drawing.Color.Cyan;
-            this.sentBtn.FlatAppearance.BorderSize = 0;
-            this.sentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sentBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sentBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.sentBtn.Image = global::ChatApplication.Properties.Resources.SentIconBlack;
-            this.sentBtn.Location = new System.Drawing.Point(10, 10);
-            this.sentBtn.Name = "sentBtn";
-            this.sentBtn.Size = new System.Drawing.Size(77, 44);
-            this.sentBtn.SlowMotionInterval = 12;
-            this.sentBtn.TabIndex = 0;
-            this.sentBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.sentBtn.UseVisualStyleBackColor = false;
-            // 
-            // chatPageSearchBox
-            // 
-            this.chatPageSearchBox.BackColor = System.Drawing.Color.White;
-            this.chatPageSearchBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(69)))), ((int)(((byte)(96)))));
-            this.chatPageSearchBox.BorderSize = 4;
-            this.chatPageSearchBox.IsPlaceholder = true;
-            this.chatPageSearchBox.IsSearchIconVisible = false;
-            this.chatPageSearchBox.IsUnderLine = true;
-            this.chatPageSearchBox.Location = new System.Drawing.Point(34, 12);
-            this.chatPageSearchBox.MinimumSize = new System.Drawing.Size(0, 40);
-            this.chatPageSearchBox.Multiline = true;
-            this.chatPageSearchBox.Name = "chatPageSearchBox";
-            this.chatPageSearchBox.Padding = new System.Windows.Forms.Padding(7);
-            this.chatPageSearchBox.PlaceholderText = "Search or start new chat";
-            this.chatPageSearchBox.ReadOnly = false;
-            this.chatPageSearchBox.Size = new System.Drawing.Size(310, 43);
-            this.chatPageSearchBox.TabIndex = 0;
-            // 
-            // refreshBtn
-            // 
-            this.refreshBtn.BackColor = System.Drawing.Color.Transparent;
-            this.refreshBtn.BackgroudColor = System.Drawing.Color.Transparent;
-            this.refreshBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.refreshBtn.BorderRadius1 = 10;
-            this.refreshBtn.BorderSize1 = 0;
-            this.refreshBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.refreshBtn.EllipseColor = System.Drawing.Color.White;
-            this.refreshBtn.FlatAppearance.BorderSize = 0;
-            this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshBtn.ForeColor = System.Drawing.Color.White;
-            this.refreshBtn.Image = global::ChatApplication.Properties.Resources.RefreshIcon__2_;
-            this.refreshBtn.Location = new System.Drawing.Point(237, 15);
-            this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(54, 45);
-            this.refreshBtn.SlowMotionInterval = 5;
-            this.refreshBtn.TabIndex = 3;
-            this.refreshBtn.TextColor = System.Drawing.Color.White;
-            this.refreshBtn.UseVisualStyleBackColor = false;
-            this.refreshBtn.Click += new System.EventHandler(this.refreshBtnClicked);
-            // 
-            // contactListBtn
-            // 
-            this.contactListBtn.BackColor = System.Drawing.Color.Transparent;
-            this.contactListBtn.BackgroudColor = System.Drawing.Color.Transparent;
-            this.contactListBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.contactListBtn.BorderRadius1 = 10;
-            this.contactListBtn.BorderSize1 = 0;
-            this.contactListBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.contactListBtn.EllipseColor = System.Drawing.Color.White;
-            this.contactListBtn.FlatAppearance.BorderSize = 0;
-            this.contactListBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.contactListBtn.ForeColor = System.Drawing.Color.White;
-            this.contactListBtn.Image = global::ChatApplication.Properties.Resources.icons8_create_20;
-            this.contactListBtn.Location = new System.Drawing.Point(291, 15);
-            this.contactListBtn.Name = "contactListBtn";
-            this.contactListBtn.Size = new System.Drawing.Size(42, 45);
-            this.contactListBtn.SlowMotionInterval = 5;
-            this.contactListBtn.TabIndex = 2;
-            this.contactListBtn.TextColor = System.Drawing.Color.White;
-            this.contactListBtn.UseVisualStyleBackColor = false;
-            // 
-            // filterContactsBtn
-            // 
-            this.filterContactsBtn.BackColor = System.Drawing.Color.Transparent;
-            this.filterContactsBtn.BackgroudColor = System.Drawing.Color.Transparent;
-            this.filterContactsBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.filterContactsBtn.BorderRadius1 = 10;
-            this.filterContactsBtn.BorderSize1 = 0;
-            this.filterContactsBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.filterContactsBtn.EllipseColor = System.Drawing.Color.White;
-            this.filterContactsBtn.FlatAppearance.BorderSize = 0;
-            this.filterContactsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filterContactsBtn.ForeColor = System.Drawing.Color.White;
-            this.filterContactsBtn.Image = global::ChatApplication.Properties.Resources.icons8_align_left_19;
-            this.filterContactsBtn.Location = new System.Drawing.Point(333, 15);
-            this.filterContactsBtn.Name = "filterContactsBtn";
-            this.filterContactsBtn.Size = new System.Drawing.Size(44, 45);
-            this.filterContactsBtn.SlowMotionInterval = 5;
-            this.filterContactsBtn.TabIndex = 1;
-            this.filterContactsBtn.TextColor = System.Drawing.Color.White;
-            this.filterContactsBtn.UseVisualStyleBackColor = false;
             // 
             // menuControl
             // 

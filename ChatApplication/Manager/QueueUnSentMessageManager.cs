@@ -51,15 +51,23 @@ namespace ChatApplication.Manager
         }
         public static async void QueueGroupMessageSent(Message message)
         {
-            var data = NetworkManager.MessageSent(message, ContactsManager.ContactDictionary[message.ToHostName]);    
-            if (data.Status != TaskStatus.Faulted)
-            {
-                MessagesManager.DeleteUnSentGroupMessage(message);
-                if (!MessagesManager.IsUnSentGroupMessage(message))
+            Task data;
+            try{
+                data= NetworkManager.MessageSent(message, ContactsManager.ContactDictionary[message.ToHostName]);
+                if (data.Status != TaskStatus.Faulted)
                 {
-                    MessagesManager.UpdateIsSent(message);
+                    MessagesManager.DeleteUnSentGroupMessage(message);
+                    if (!MessagesManager.IsUnSentGroupMessage(message))
+                    {
+                        MessagesManager.UpdateIsSent(message);
+                    }
                 }
             }
+            catch{
+
+            }
+          
+          
         }
 
     }
