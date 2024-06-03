@@ -111,6 +111,16 @@ namespace ChatApplication
                 return messageShowP.BackColor;
             }
         }
+        //Flicker Issuee solve tempory code
+        //protected override CreateParams CreateParams
+        //{
+        //    get
+        //    {
+        //        CreateParams cp = base.CreateParams;
+        //        cp.ExStyle |= 0x02000000;
+        //        return cp;
+        //    }
+        //}
         public MainForm()
         {
             InitializeComponent();
@@ -160,6 +170,9 @@ namespace ChatApplication
             chatPageSearchBox.Textchanged += ChatPageSearchBoxTextchanged;
             editSheet.Show();
             editSheet.Visible = false;
+
+            //Flicker issue Solve tempory
+            //FeaturesMethods.SetPanelExStyle(messageShowP);
         }
 
         private void OnlineStatusUpdateToContact(object sender, Contact contact)
@@ -624,15 +637,7 @@ namespace ChatApplication
                 GroupMessageSent(message, Group, messageChatU);
             }
         }
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000;
-                return cp;
-            }
-        }
+     
         private void GroupMessageSent(Message message, Group group, ChatU messageChatU)
         {
             bool isMessageSentToALL = true;
@@ -687,13 +692,11 @@ namespace ChatApplication
             TransparentForm transparentForm = new TransparentForm();
             contactListF.transparentFormObj = transparentForm;
             transparentForm.Control = contactListF;
-            Point point = contactListBtn.PointToScreen(new Point(0, 0));
-            //Point point = contactListBtn.PointToScreen(new Point(0, 0));         
+            Point point = contactListBtn.PointToScreen(new Point(0, 0));             
             contactListF.Location = new Point(point.X, point.Y + 60);
             contactListF.onClickContactGet += ContactListOnclickContactGet;
             contactListF.OnGroupCreatedInvoke += CreateGroupPageUOnClickGroupCreate;
             contactListF.OnclickClose += transparentForm.TransparentFormClick;
-            //contactListU.Location = Cursor.Position;
             transparentForm.Show();
             contactListF.Show();
         }

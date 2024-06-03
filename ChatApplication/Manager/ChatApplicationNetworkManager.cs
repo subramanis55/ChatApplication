@@ -85,7 +85,7 @@ namespace ChatApplication
         public static void NetWorkSetUp()
         {
             PcHostName = Dns.GetHostName();
-            string publicIpAddress = GetPublicIpAddressAsync().Result;
+          //  string publicIpAddress = GetPublicIpAddressAsync().Result;
             PcIpAddress = GetPcIPAddress(PcHostName);
             ServerIpAddress = GetPcIPAddress(ServerHostName);
             PcMacAddress = GetPcMacAddress();

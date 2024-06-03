@@ -22,7 +22,7 @@ namespace ChatApplication
         private bool isSelected;
         private int startPoint = -3;
         private int endPoint = -3;
-        private int unreadMessageContactCount=0;
+        private int unreadMessageContactCount = 0;
         System.Windows.Forms.Timer timer;
 
         public bool IsSelected
@@ -37,8 +37,8 @@ namespace ChatApplication
                 isSelected = value;
                 if (isSelected)
                 {
-                    startPoint = Height / 4 + 2;
-                    endPoint = (Height / 4 - 2) * 3;
+                    startPoint = Height / 4 - 1;
+                    endPoint = (Height / 4) * 3 - 1;
                 }
 
                 Invalidate();
@@ -85,8 +85,8 @@ namespace ChatApplication
         {
             if (isSelected)
             {
-                startPoint = Height / 4 + 2;
-                endPoint = (Height / 4 - 2) * 3;
+                startPoint = Height / 4 - 1;
+                endPoint = (Height / 4) * 3 - 1;
                 Invalidate();
             }
 
@@ -97,14 +97,14 @@ namespace ChatApplication
             if (isSelected == true)
             {
                 isSelected = false;
-                startPoint = Height / 4 + 2;
-                endPoint = (Height / 4 - 2) * 3;
+                startPoint = Height / 4 - 1;
+                endPoint = (Height / 4) * 3 - 1;
                 timer.Tick += SideLineEffectGo;
                 timer.Start();
             }
 
         }
-      public void SideLineEffectMouseClick(object sender, MouseEventArgs e)
+        public void SideLineEffectMouseClick(object sender, MouseEventArgs e)
         {
             timer.Interval = 1;
             if (!isSelected)
@@ -130,7 +130,7 @@ namespace ChatApplication
         {
             if (IsFormUp)
             {
-                if (endPoint < (((Height / 4) - 2) * 3))
+                if (endPoint < (((Height / 4)) * 3) - 1)
                 {
                     endPoint = endPoint + Height / 4;
                     Invalidate();
@@ -139,13 +139,14 @@ namespace ChatApplication
                 {
                     timer.Stop();
                     timer.Tick -= SideLineEffectCome;
-                    startPoint = Height / 4 + 2;
+                    startPoint = Height / 4 - 1;
+                    endPoint = (Height / 4) * 3 - 1;
                     Invalidate();
                 }
             }
             else
             {
-                if (startPoint > (Height / 4 + 2))
+                if (startPoint > (Height / 4 - 1))
                 {
                     startPoint = startPoint - Height / 4;
                     Invalidate();
@@ -154,7 +155,8 @@ namespace ChatApplication
                 {
                     timer.Stop();
                     timer.Tick -= SideLineEffectCome;
-                    endPoint = (Height / 4 - 2) * 3;
+                    startPoint = Height / 4 - 1;
+                    endPoint = (Height / 4) * 3 - 1;
                     Invalidate();
                 }
             }
@@ -242,10 +244,10 @@ namespace ChatApplication
 
                     if (unreadMessageContactCount > 99)
                     {
-                        newMessageCountSize= e.MeasureString( "99+", new Font("Segoe UI", 8, FontStyle.Bold));
-                        rectangleF = new RectangleF(Width - newMessageCountSize.Width - 9,  4, newMessageCountSize.Width - 5, newMessageCountSize.Height - 2);
+                        newMessageCountSize = e.MeasureString("99+", new Font("Segoe UI", 8, FontStyle.Bold));
+                        rectangleF = new RectangleF(Width - newMessageCountSize.Width - 9, 4, newMessageCountSize.Width - 5, newMessageCountSize.Height - 2);
                         e.FillPath(p, GetFigurePath(rectangleF, newMessageCountSize.Height - 1));
-                        e.DrawString(99+"+", new Font("Segoe UI", 9, FontStyle.Bold), new SolidBrush(Color.White), new PointF(rectangleF.X + 12, rectangleF.Y + 1));
+                        e.DrawString(99 + "+", new Font("Segoe UI", 9, FontStyle.Bold), new SolidBrush(Color.White), new PointF(rectangleF.X + 12, rectangleF.Y + 1));
                     }
                     else if (unreadMessageContactCount > 9)
                     {
@@ -262,7 +264,7 @@ namespace ChatApplication
 
                 }
             }
-                using (SolidBrush brush = new SolidBrush(ButtonSideHoverlineColor))
+            using (SolidBrush brush = new SolidBrush(ButtonSideHoverlineColor))
             {
                 e.FillPath(brush, path1);
             }

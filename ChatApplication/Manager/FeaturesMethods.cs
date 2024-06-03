@@ -5,12 +5,13 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ChatApplication.Manager
 {
     public static class FeaturesMethods
     {
-        // Import the GetWindowLong and SetWindowLong functions from user32.dll
+        //Alt + Tab Tab show avoid 
         [DllImport("user32.dll", SetLastError = true)]
         private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
 
@@ -21,8 +22,43 @@ namespace ChatApplication.Manager
         private const int GWL_EXSTYLE = -20;
         private const int WS_EX_TOOLWINDOW = 0x80;
 
+
+        const int WS_EX_COMPOSITED = 0x02000000;
+        //Flicker issue solve DLL
+        // PInvoke declarations for 32-bit systems
+        [DllImport("user32.dll", EntryPoint = "GetWindowLong", SetLastError = true)]
+        static extern int GetWindowLong32(IntPtr hWnd, int nIndex);
+
+        [DllImport("user32.dll", EntryPoint = "SetWindowLong", SetLastError = true)]
+        static extern int SetWindowLong32(IntPtr hWnd, int nIndex, int dwNewLong);
+
+        // PInvoke declarations for 64-bit systems
+        [DllImport("user32.dll", EntryPoint = "GetWindowLongPtr", SetLastError = true)]
+        static extern IntPtr GetWindowLongPtr64(IntPtr hWnd, int nIndex);
+
+        [DllImport("user32.dll", EntryPoint = "SetWindowLongPtr", SetLastError = true)]
+        static extern IntPtr SetWindowLongPtr64(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
+
+
+        //Flicker issue solve method
+        public static void SetPanelExStyle(Panel panel)
+        {
+            if (IntPtr.Size == 8) // Check if the system is 64-bit
+            {
+                IntPtr style = GetWindowLongPtr64(panel.Handle, GWL_EXSTYLE);
+                style = new IntPtr(style.ToInt64() | WS_EX_COMPOSITED);
+                SetWindowLongPtr64(panel.Handle, GWL_EXSTYLE, style);
+            }
+            else // The system is 32-bit
+            {
+                int style = GetWindowLong32(panel.Handle, GWL_EXSTYLE);
+                style |= WS_EX_COMPOSITED;
+                SetWindowLong32(panel.Handle, GWL_EXSTYLE, style);
+            }
+        }
+
         // Method to set the WS_EX_TOOLWINDOW style to remove the form from Alt+Tab
-       public static void AltTabFormShowStop(IntPtr handle)
+        public static void AltTabFormShowStop(IntPtr handle)
         {
             int extendedStyle = GetWindowLong(handle, GWL_EXSTYLE);
             extendedStyle |= WS_EX_TOOLWINDOW;
