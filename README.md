@@ -41,7 +41,7 @@
 - SQL
 - Protocols:TCP,FTP
  
-<h3>Prerequisites</h3>
+<h2>Prerequisites</h2>
 
  [.Net ](https://dotnet.microsoft.com/en-us/)
 
