@@ -3,8 +3,7 @@
 <h1 align="center" style="font-weight: bold;">Messager </h1>
 
 <p align="center">
-<a href="#technologies">Technologies  </a>        <a href="#colab">Collaborators</a>
- 
+<a href="#technologies">Technologies  </a> <br><a href="#colab">Collaborators</a>
 </p>
 
 
