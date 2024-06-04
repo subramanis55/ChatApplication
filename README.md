@@ -15,7 +15,7 @@
 
 
  
-<h2 id="layout">🎨 Layout</h2>
+<h2 id="layout"> Layout</h2>
 
 <p align="center">
 
@@ -29,7 +29,7 @@
 <img src="https://i.ibb.co/vQRB2Cf/Screenshot-7.png" alt="ArchievedPage" width="400px">
 </p>
  
-<h2 id="technologies">💻 Technologies</h2>
+<h2 id="technologies"> Technologies</h2>
 
 - C#
 - .Net Framework
@@ -43,7 +43,7 @@
  [.Net ](https://dotnet.microsoft.com/en-us/)
 
  
-<h2 id="colab">🤝 Collaborators</h2>
+<h2 id="colab"> Collaborators</h2>
 
 <p>Special thank you for all people that contributed for this project.</p>
 <table>
