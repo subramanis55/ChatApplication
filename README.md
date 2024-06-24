@@ -60,4 +60,4 @@
 
 </tr>
 </table>
-[Demo Vedio Click  Here ](https://youtu.be/YLEFA-T10Q8?feature=shared)
+[Demo Video Click  Here ](https://youtu.be/YLEFA-T10Q8?feature=shared)
